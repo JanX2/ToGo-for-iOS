@@ -1,0 +1,818 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* HopToAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* HopToAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		28C286E10D94DF7D0034E888 /* MainView_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* MainView_ViewController.m */; };
+		28F335F11007B36200424DE2 /* MainView_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* MainView_ViewController.xib */; };
+		3A1050EA11A7E5F00009BFE4 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A1050E811A7E5F00009BFE4 /* Icon-Small.png */; };
+		3A1050F111A7E5FF0009BFE4 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A1050F011A7E5FF0009BFE4 /* Icon-Small.png */; };
+		3A10512E11A7ED340009BFE4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A10512D11A7ED340009BFE4 /* Reachability.m */; };
+		3A10512F11A7ED340009BFE4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A10512D11A7ED340009BFE4 /* Reachability.m */; };
+		3A10514C11A7F2C10009BFE4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A10514B11A7F2C10009BFE4 /* SystemConfiguration.framework */; };
+		3A10516811A7F7050009BFE4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A10514B11A7F2C10009BFE4 /* SystemConfiguration.framework */; };
+		3A2047A91185938100554744 /* SendURL_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2047A71185938100554744 /* SendURL_ViewController.m */; };
+		3A2047AA1185938100554744 /* SendURL_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2047A81185938100554744 /* SendURL_ViewController.xib */; };
+		3A215914118BC38E00E009B5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A215913118BC38E00E009B5 /* Default.png */; };
+		3A215933118BC81100E009B5 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A215930118BC80D00E009B5 /* Default-Portrait.png */; };
+		3A215934118BC81200E009B5 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A21592F118BC80D00E009B5 /* Default-Landscape.png */; };
+		3A2D5CEA118BF41100125C29 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A2D5CE8118BF40800125C29 /* Icon.png */; };
+		3A2D5D1C118C078000125C29 /* Background_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F65F9118AE1A400EE2EBB /* Background_1.png */; };
+		3A36BCF91173AB1B00FE4A6D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A36BCF81173AB1B00FE4A6D /* CFNetwork.framework */; };
+		3A36BCFD1173AB3500FE4A6D /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A36BCFC1173AB3500FE4A6D /* libz.1.2.3.dylib */; };
+		3A36BCFF1173AB3E00FE4A6D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A36BCFE1173AB3E00FE4A6D /* AudioToolbox.framework */; };
+		3A50F1CB1174636100EECD86 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A50F1CA1174636000EECD86 /* Icon.png */; };
+		3A5F62F71177C6F4000F7EC4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5F62F61177C6F4000F7EC4 /* QuartzCore.framework */; };
+		3A5F632A1177CE0F000F7EC4 /* UIViewControllerSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F63271177CE0F000F7EC4 /* UIViewControllerSingleton.m */; };
+		3A5F632B1177CE0F000F7EC4 /* Foundation+.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F63291177CE0F000F7EC4 /* Foundation+.m */; };
+		3A5F635E11780107000F7EC4 /* FUURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F635D11780107000F7EC4 /* FUURLManager.m */; };
+		3A5F6405117827E3000F7EC4 /* PreviousURLs_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F6403117827E3000F7EC4 /* PreviousURLs_ViewController.m */; };
+		3A5F6406117827E3000F7EC4 /* OlderURL_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F6404117827E3000F7EC4 /* OlderURL_ViewController.xib */; };
+		3A6F65FA118AE1A400EE2EBB /* Background_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F65F9118AE1A400EE2EBB /* Background_1.png */; };
+		3A707D2D118893870009A293 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		3A707D2E118893870009A293 /* HopToAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* HopToAppDelegate.m */; };
+		3A707D2F118893870009A293 /* MainView_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* MainView_ViewController.m */; };
+		3A707D30118893870009A293 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB31E911638F790033E972 /* Constants.m */; };
+		3A707D31118893870009A293 /* Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB320A1163927B0033E972 /* Functions.m */; };
+		3A707D35118893870009A293 /* UIViewControllerSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F63271177CE0F000F7EC4 /* UIViewControllerSingleton.m */; };
+		3A707D36118893870009A293 /* Foundation+.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F63291177CE0F000F7EC4 /* Foundation+.m */; };
+		3A707D37118893870009A293 /* FUURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F635D11780107000F7EC4 /* FUURLManager.m */; };
+		3A707D38118893870009A293 /* PreviousURLs_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F6403117827E3000F7EC4 /* PreviousURLs_ViewController.m */; };
+		3A707D39118893870009A293 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF27ADA117AF9C000492582 /* Server.m */; };
+		3A707D3A118893870009A293 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF27ADD117AF9C000492582 /* Connection.m */; };
+		3A707D3B118893870009A293 /* ServerBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB35F6F117B9D3000B0D12A /* ServerBrowser.m */; };
+		3A707D3C118893870009A293 /* SendURL_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2047A71185938100554744 /* SendURL_ViewController.m */; };
+		3A707D42118893870009A293 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		3A707D43118893870009A293 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		3A707D44118893870009A293 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		3A707D45118893870009A293 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A36BCF81173AB1B00FE4A6D /* CFNetwork.framework */; };
+		3A707D46118893870009A293 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A36BCFC1173AB3500FE4A6D /* libz.1.2.3.dylib */; };
+		3A707D47118893870009A293 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A36BCFE1173AB3E00FE4A6D /* AudioToolbox.framework */; };
+		3A707D48118893870009A293 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5F62F61177C6F4000F7EC4 /* QuartzCore.framework */; };
+		3A707D561188938E0009A293 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A707D4F1188938E0009A293 /* MainWindow.xib */; };
+		3A707D571188938E0009A293 /* MainView_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A707D501188938E0009A293 /* MainView_ViewController.xib */; };
+		3A707D581188938E0009A293 /* OlderURL_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A707D511188938E0009A293 /* OlderURL_ViewController.xib */; };
+		3A707D591188938E0009A293 /* SendURL_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A707D521188938E0009A293 /* SendURL_ViewController.xib */; };
+		3A8838AD11910CED004A7550 /* WebView_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8838A911910CED004A7550 /* WebView_ViewController.m */; };
+		3A8838AE11910CED004A7550 /* WebView_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8838AA11910CED004A7550 /* WebView_ViewController.xib */; };
+		3A896B6C118EA9E7008DEF0C /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A896B6B118EA9E7008DEF0C /* Entitlements.plist */; };
+		3A896B6D118EA9E7008DEF0C /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A896B6B118EA9E7008DEF0C /* Entitlements.plist */; };
+		3A896CC2118F0625008DEF0C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A896C6B118F05A5008DEF0C /* CoreLocation.framework */; };
+		3A920E7E1194AAEB008C83B7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A896C6B118F05A5008DEF0C /* CoreLocation.framework */; };
+		3AB35F71117B9D3000B0D12A /* ServerBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB35F6F117B9D3000B0D12A /* ServerBrowser.m */; };
+		3AD3558B1198DFF500F56C32 /* swoosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD3558A1198DFF500F56C32 /* swoosh.wav */; };
+		3AD3558C1198DFF500F56C32 /* swoosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD3558A1198DFF500F56C32 /* swoosh.wav */; };
+		3AF27AE1117AF9C000492582 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF27ADA117AF9C000492582 /* Server.m */; };
+		3AF27AE2117AF9C000492582 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF27ADD117AF9C000492582 /* Connection.m */; };
+		3AFB31EA11638F790033E972 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB31E911638F790033E972 /* Constants.m */; };
+		3AFB320B1163927B0033E972 /* Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB320A1163927B0033E972 /* Functions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* HopToAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HopToAppDelegate.h; path = Classes/HopToAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* HopToAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HopToAppDelegate.m; path = Classes/HopToAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* ToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AAE50D9B0CCF005BE974 /* HopTo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HopTo_Prefix.pch; sourceTree = "<group>"; };
+		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
+		28C286DF0D94DF7D0034E888 /* MainView_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView_ViewController.h; sourceTree = "<group>"; };
+		28C286E00D94DF7D0034E888 /* MainView_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView_ViewController.m; sourceTree = "<group>"; };
+		28F335F01007B36200424DE2 /* MainView_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainView_ViewController.xib; path = "Projects/iPhone Apps/HopTo/trunk/MainView_ViewController.xib"; sourceTree = DEVELOPER_DIR; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3A1050E811A7E5F00009BFE4 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Projects/iPhone Apps/HopTo/trunk/Resources-iPad/Icon-Small.png"; sourceTree = DEVELOPER_DIR; };
+		3A1050F011A7E5FF0009BFE4 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Projects/iPhone Apps/HopTo/trunk/Icon-Small.png"; sourceTree = DEVELOPER_DIR; };
+		3A10512C11A7ED340009BFE4 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = "Projects/iPhone Apps/HopTo/trunk/Reachability.h"; sourceTree = DEVELOPER_DIR; };
+		3A10512D11A7ED340009BFE4 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = "Projects/iPhone Apps/HopTo/trunk/Reachability.m"; sourceTree = DEVELOPER_DIR; };
+		3A10514B11A7F2C10009BFE4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3A2047A61185938100554744 /* SendURL_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendURL_ViewController.h; path = "Projects/iPhone Apps/HopTo/trunk/Classes/SendURL_ViewController.h"; sourceTree = DEVELOPER_DIR; };
+		3A2047A71185938100554744 /* SendURL_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SendURL_ViewController.m; path = "Projects/iPhone Apps/HopTo/trunk/Classes/SendURL_ViewController.m"; sourceTree = DEVELOPER_DIR; };
+		3A2047A81185938100554744 /* SendURL_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SendURL_ViewController.xib; path = "Projects/iPhone Apps/HopTo/trunk/Classes/SendURL_ViewController.xib"; sourceTree = DEVELOPER_DIR; };
+		3A215913118BC38E00E009B5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "Projects/iPhone Apps/HopTo/trunk/Default.png"; sourceTree = DEVELOPER_DIR; };
+		3A21592F118BC80D00E009B5 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape.png"; path = "Projects/iPhone Apps/HopTo/trunk/Default-Landscape.png"; sourceTree = DEVELOPER_DIR; };
+		3A215930118BC80D00E009B5 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait.png"; path = "Projects/iPhone Apps/HopTo/trunk/Default-Portrait.png"; sourceTree = DEVELOPER_DIR; };
+		3A2D5CE8118BF40800125C29 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = "Projects/iPhone Apps/HopTo/trunk/Resources-iPad/Icon.png"; sourceTree = DEVELOPER_DIR; };
+		3A36BCE81173A97800FE4A6D /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIFormDataRequest.h; path = "Projects/iPhone Apps/HopTo/trunk/ASIFormDataRequest.h"; sourceTree = DEVELOPER_DIR; };
+		3A36BCE91173A97800FE4A6D /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIFormDataRequest.m; path = "Projects/iPhone Apps/HopTo/trunk/ASIFormDataRequest.m"; sourceTree = DEVELOPER_DIR; };
+		3A36BCEA1173A97800FE4A6D /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = "Projects/iPhone Apps/HopTo/trunk/ASIHTTPRequest.h"; sourceTree = DEVELOPER_DIR; };
+		3A36BCEB1173A97800FE4A6D /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIHTTPRequest.m; path = "Projects/iPhone Apps/HopTo/trunk/ASIHTTPRequest.m"; sourceTree = DEVELOPER_DIR; };
+		3A36BCEC1173A97800FE4A6D /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASINetworkQueue.h; path = "Projects/iPhone Apps/HopTo/trunk/ASINetworkQueue.h"; sourceTree = DEVELOPER_DIR; };
+		3A36BCED1173A97800FE4A6D /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASINetworkQueue.m; path = "Projects/iPhone Apps/HopTo/trunk/ASINetworkQueue.m"; sourceTree = DEVELOPER_DIR; };
+		3A36BCF81173AB1B00FE4A6D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3A36BCFC1173AB3500FE4A6D /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		3A36BCFE1173AB3E00FE4A6D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3A50F1CA1174636000EECD86 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = "Projects/iPhone Apps/HopTo/trunk/Icon.png"; sourceTree = DEVELOPER_DIR; };
+		3A5F62F61177C6F4000F7EC4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3A5F63261177CE0F000F7EC4 /* UIViewControllerSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIViewControllerSingleton.h; path = "Projects/iPhone Apps/HopTo/trunk/UIViewControllerSingleton.h"; sourceTree = DEVELOPER_DIR; };
+		3A5F63271177CE0F000F7EC4 /* UIViewControllerSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIViewControllerSingleton.m; path = "Projects/iPhone Apps/HopTo/trunk/UIViewControllerSingleton.m"; sourceTree = DEVELOPER_DIR; };
+		3A5F63281177CE0F000F7EC4 /* Foundation+.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Foundation+.h"; path = "Projects/iPhone Apps/HopTo/trunk/Foundation+.h"; sourceTree = DEVELOPER_DIR; };
+		3A5F63291177CE0F000F7EC4 /* Foundation+.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Foundation+.m"; path = "Projects/iPhone Apps/HopTo/trunk/Foundation+.m"; sourceTree = DEVELOPER_DIR; };
+		3A5F635C11780107000F7EC4 /* FUURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FUURLManager.h; path = "Projects/iPhone Apps/HopTo/trunk/FUURLManager.h"; sourceTree = DEVELOPER_DIR; };
+		3A5F635D11780107000F7EC4 /* FUURLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FUURLManager.m; path = "Projects/iPhone Apps/HopTo/trunk/FUURLManager.m"; sourceTree = DEVELOPER_DIR; };
+		3A5F6402117827E3000F7EC4 /* PreviousURLs_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreviousURLs_ViewController.h; path = "Projects/iPhone Apps/HopTo/trunk/Classes/PreviousURLs_ViewController.h"; sourceTree = DEVELOPER_DIR; };
+		3A5F6403117827E3000F7EC4 /* PreviousURLs_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreviousURLs_ViewController.m; path = "Projects/iPhone Apps/HopTo/trunk/Classes/PreviousURLs_ViewController.m"; sourceTree = DEVELOPER_DIR; };
+		3A5F6404117827E3000F7EC4 /* OlderURL_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = OlderURL_ViewController.xib; path = "Projects/iPhone Apps/HopTo/trunk/Classes/OlderURL_ViewController.xib"; sourceTree = DEVELOPER_DIR; };
+		3A692F6D119A626000ADAE2F /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20-gear2.png"; path = "Projects/iPhone Apps/HopTo/trunk/20-gear2.png"; sourceTree = DEVELOPER_DIR; };
+		3A6F65F9118AE1A400EE2EBB /* Background_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background_1.png; path = "Projects/iPhone Apps/HopTo/trunk/Background_1.png"; sourceTree = DEVELOPER_DIR; };
+		3A707D4C118893870009A293 /* ToGoXL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToGoXL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A707D4F1188938E0009A293 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = "Projects/iPhone Apps/HopTo/trunk/Resources-iPad/MainWindow.xib"; sourceTree = DEVELOPER_DIR; };
+		3A707D501188938E0009A293 /* MainView_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainView_ViewController.xib; path = "Projects/iPhone Apps/HopTo/trunk/Resources-iPad/MainView_ViewController.xib"; sourceTree = DEVELOPER_DIR; };
+		3A707D511188938E0009A293 /* OlderURL_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = OlderURL_ViewController.xib; path = "Projects/iPhone Apps/HopTo/trunk/Resources-iPad/Classes/OlderURL_ViewController.xib"; sourceTree = DEVELOPER_DIR; };
+		3A707D521188938E0009A293 /* SendURL_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SendURL_ViewController.xib; path = "Projects/iPhone Apps/HopTo/trunk/Resources-iPad/Classes/SendURL_ViewController.xib"; sourceTree = DEVELOPER_DIR; };
+		3A707D531188938E0009A293 /* PairingRemote_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PairingRemote_ViewController.xib; path = "Projects/iPhone Apps/HopTo/trunk/Resources-iPad/Classes/PairingRemote_ViewController.xib"; sourceTree = DEVELOPER_DIR; };
+		3A707D541188938E0009A293 /* PairingPINEntry_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PairingPINEntry_ViewController.xib; path = "Projects/iPhone Apps/HopTo/trunk/Resources-iPad/Classes/PairingPINEntry_ViewController.xib"; sourceTree = DEVELOPER_DIR; };
+		3A707D551188938E0009A293 /* GenericWebView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GenericWebView.xib; path = "Projects/iPhone Apps/HopTo/trunk/Resources-iPad/GenericWebView.xib"; sourceTree = DEVELOPER_DIR; };
+		3A8838A811910CED004A7550 /* WebView_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebView_ViewController.h; path = "Projects/iPhone Apps/HopTo/trunk/Classes/WebView_ViewController.h"; sourceTree = DEVELOPER_DIR; };
+		3A8838A911910CED004A7550 /* WebView_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebView_ViewController.m; path = "Projects/iPhone Apps/HopTo/trunk/Classes/WebView_ViewController.m"; sourceTree = DEVELOPER_DIR; };
+		3A8838AA11910CED004A7550 /* WebView_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WebView_ViewController.xib; path = "Projects/iPhone Apps/HopTo/trunk/Resources-iPad/WebView_ViewController.xib"; sourceTree = DEVELOPER_DIR; };
+		3A896B6B118EA9E7008DEF0C /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = "Projects/iPhone Apps/HopTo/trunk/Entitlements.plist"; sourceTree = DEVELOPER_DIR; };
+		3A896C6B118F05A5008DEF0C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3A896CBB118F05C4008DEF0C /* libisimulate.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libisimulate.a; path = "Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218/libisimulate.a"; sourceTree = DEVELOPER_DIR; };
+		3A920E4211948195008C83B7 /* WebView_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WebView_ViewController.xib; path = "Projects/iPhone Apps/HopTo/trunk/Classes/WebView_ViewController.xib"; sourceTree = DEVELOPER_DIR; };
+		3AB35F6E117B9D3000B0D12A /* ServerBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerBrowser.h; path = "Projects/iPhone Apps/HopTo/trunk/ServerBrowser.h"; sourceTree = DEVELOPER_DIR; };
+		3AB35F6F117B9D3000B0D12A /* ServerBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerBrowser.m; path = "Projects/iPhone Apps/HopTo/trunk/ServerBrowser.m"; sourceTree = DEVELOPER_DIR; };
+		3AB35F70117B9D3000B0D12A /* ServerBrowserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerBrowserDelegate.h; path = "Projects/iPhone Apps/HopTo/trunk/ServerBrowserDelegate.h"; sourceTree = DEVELOPER_DIR; };
+		3AB36072117ED0A400B0D12A /* PairingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PairingService.m; path = "Projects/iPhone Apps/HopTo/trunk/PairingService.m"; sourceTree = DEVELOPER_DIR; };
+		3AB4E6871182EA1200EEF685 /* Thumbalizr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thumbalizr.h; path = "Projects/iPhone Apps/HopTo/trunk/Thumbalizr.h"; sourceTree = DEVELOPER_DIR; };
+		3AB4E6881182EA1200EEF685 /* Thumbalizr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Thumbalizr.m; path = "Projects/iPhone Apps/HopTo/trunk/Thumbalizr.m"; sourceTree = DEVELOPER_DIR; };
+		3AD3558A1198DFF500F56C32 /* swoosh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = swoosh.wav; path = "Projects/iPhone Apps/HopTo/trunk/swoosh.wav"; sourceTree = DEVELOPER_DIR; };
+		3AF27AD9117AF9C000492582 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Server.h; path = "Projects/iPhone Apps/HopTo/trunk/Server.h"; sourceTree = DEVELOPER_DIR; };
+		3AF27ADA117AF9C000492582 /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Server.m; path = "Projects/iPhone Apps/HopTo/trunk/Server.m"; sourceTree = DEVELOPER_DIR; };
+		3AF27ADB117AF9C000492582 /* ServerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerDelegate.h; path = "Projects/iPhone Apps/HopTo/trunk/ServerDelegate.h"; sourceTree = DEVELOPER_DIR; };
+		3AF27ADC117AF9C000492582 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = "Projects/iPhone Apps/HopTo/trunk/Connection.h"; sourceTree = DEVELOPER_DIR; };
+		3AF27ADD117AF9C000492582 /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connection.m; path = "Projects/iPhone Apps/HopTo/trunk/Connection.m"; sourceTree = DEVELOPER_DIR; };
+		3AF27ADE117AF9C000492582 /* ConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionDelegate.h; path = "Projects/iPhone Apps/HopTo/trunk/ConnectionDelegate.h"; sourceTree = DEVELOPER_DIR; };
+		3AF27ADF117AF9C000492582 /* PairingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PairingService.h; path = "Projects/iPhone Apps/HopTo/trunk/PairingService.h"; sourceTree = DEVELOPER_DIR; };
+		3AF27AE8117AFDE000492582 /* PairingRemote_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PairingRemote_ViewController.h; path = "Projects/iPhone Apps/HopTo/trunk/Classes/PairingRemote_ViewController.h"; sourceTree = DEVELOPER_DIR; };
+		3AF27AE9117AFDE000492582 /* PairingRemote_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PairingRemote_ViewController.m; path = "Projects/iPhone Apps/HopTo/trunk/Classes/PairingRemote_ViewController.m"; sourceTree = DEVELOPER_DIR; };
+		3AF27AEA117AFDE000492582 /* PairingRemote_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PairingRemote_ViewController.xib; path = "Projects/iPhone Apps/HopTo/trunk/Classes/PairingRemote_ViewController.xib"; sourceTree = DEVELOPER_DIR; };
+		3AF27AED117AFDF300492582 /* PairingPINEntry_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PairingPINEntry_ViewController.h; path = "Projects/iPhone Apps/HopTo/trunk/Classes/PairingPINEntry_ViewController.h"; sourceTree = DEVELOPER_DIR; };
+		3AF27AEE117AFDF300492582 /* PairingPINEntry_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PairingPINEntry_ViewController.m; path = "Projects/iPhone Apps/HopTo/trunk/Classes/PairingPINEntry_ViewController.m"; sourceTree = DEVELOPER_DIR; };
+		3AF27AEF117AFDF300492582 /* PairingPINEntry_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PairingPINEntry_ViewController.xib; path = "Projects/iPhone Apps/HopTo/trunk/Classes/PairingPINEntry_ViewController.xib"; sourceTree = DEVELOPER_DIR; };
+		3AFB31E811638F790033E972 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "Projects/iPhone Apps/HopTo/trunk/Constants.h"; sourceTree = DEVELOPER_DIR; };
+		3AFB31E911638F790033E972 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = "Projects/iPhone Apps/HopTo/trunk/Constants.m"; sourceTree = DEVELOPER_DIR; };
+		3AFB32091163927B0033E972 /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Functions.h; path = "Projects/iPhone Apps/HopTo/trunk/Functions.h"; sourceTree = DEVELOPER_DIR; };
+		3AFB320A1163927B0033E972 /* Functions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Functions.m; path = "Projects/iPhone Apps/HopTo/trunk/Functions.m"; sourceTree = DEVELOPER_DIR; };
+		3AFB32171163932B0033E972 /* GenericWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericWebView.h; path = Classes/GenericWebView.h; sourceTree = SOURCE_ROOT; };
+		3AFB32181163932B0033E972 /* GenericWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericWebView.m; path = "Projects/iPhone Apps/HopTo/trunk/Classes/GenericWebView.m"; sourceTree = DEVELOPER_DIR; };
+		3AFB321A116393340033E972 /* GenericWebView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GenericWebView.xib; path = "Projects/iPhone Apps/HopTo/trunk/GenericWebView.xib"; sourceTree = DEVELOPER_DIR; };
+		8D1107310486CEB800E47090 /* HopTo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HopTo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+				3A36BCF91173AB1B00FE4A6D /* CFNetwork.framework in Frameworks */,
+				3A36BCFD1173AB3500FE4A6D /* libz.1.2.3.dylib in Frameworks */,
+				3A36BCFF1173AB3E00FE4A6D /* AudioToolbox.framework in Frameworks */,
+				3A5F62F71177C6F4000F7EC4 /* QuartzCore.framework in Frameworks */,
+				3A920E7E1194AAEB008C83B7 /* CoreLocation.framework in Frameworks */,
+				3A10514C11A7F2C10009BFE4 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A707D41118893870009A293 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A707D42118893870009A293 /* Foundation.framework in Frameworks */,
+				3A707D43118893870009A293 /* UIKit.framework in Frameworks */,
+				3A707D44118893870009A293 /* CoreGraphics.framework in Frameworks */,
+				3A707D45118893870009A293 /* CFNetwork.framework in Frameworks */,
+				3A707D46118893870009A293 /* libz.1.2.3.dylib in Frameworks */,
+				3A707D47118893870009A293 /* AudioToolbox.framework in Frameworks */,
+				3A707D48118893870009A293 /* QuartzCore.framework in Frameworks */,
+				3A896CC2118F0625008DEF0C /* CoreLocation.framework in Frameworks */,
+				3A10516811A7F7050009BFE4 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* View - iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				3AFB320C116392E60033E972 /* Main View */,
+				3AF27AE7117AFDB200492582 /* Pairing */,
+				3AFB320D116392F00033E972 /* Reusables */,
+			);
+			name = "View - iPhone";
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* ToGo.app */,
+				3A707D4C118893870009A293 /* ToGoXL.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* HopToAppDelegate.h */,
+				1D3623250D0F684500981E51 /* HopToAppDelegate.m */,
+				3A36BCF11173A98500FE4A6D /* Model */,
+				080E96DDFE201D6D7F000001 /* View - iPhone */,
+				3A707D4E118893870009A293 /* View - iPad */,
+				29B97315FDCFA39411CA2CEA /* Main Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Main Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3AFB31E811638F790033E972 /* Constants.h */,
+				3AFB31E911638F790033E972 /* Constants.m */,
+				3AFB32091163927B0033E972 /* Functions.h */,
+				3AFB320A1163927B0033E972 /* Functions.m */,
+				28A0AAE50D9B0CCF005BE974 /* HopTo_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Main Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3AD3558A1198DFF500F56C32 /* swoosh.wav */,
+				3AFB31EC1163900A0033E972 /* Images */,
+				8D1107310486CEB800E47090 /* HopTo-Info.plist */,
+				3A896B6B118EA9E7008DEF0C /* Entitlements.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+				3A36BCF81173AB1B00FE4A6D /* CFNetwork.framework */,
+				3A36BCFC1173AB3500FE4A6D /* libz.1.2.3.dylib */,
+				3A5F62F61177C6F4000F7EC4 /* QuartzCore.framework */,
+				3A36BCFE1173AB3E00FE4A6D /* AudioToolbox.framework */,
+				3A896C6B118F05A5008DEF0C /* CoreLocation.framework */,
+				3A896CBB118F05C4008DEF0C /* libisimulate.a */,
+				3A10514B11A7F2C10009BFE4 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A2047A51185935D00554744 /* Device Interaction */ = {
+			isa = PBXGroup;
+			children = (
+				3A2047A61185938100554744 /* SendURL_ViewController.h */,
+				3A2047A71185938100554744 /* SendURL_ViewController.m */,
+				3A2047A81185938100554744 /* SendURL_ViewController.xib */,
+			);
+			name = "Device Interaction";
+			sourceTree = "<group>";
+		};
+		3A36BCF11173A98500FE4A6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A5F63171177CDEC000F7EC4 /* Framework Extensions */,
+				3A36BCF21173A98C00FE4A6D /* Urban Airship */,
+				3A5F62AE1177BF4E000F7EC4 /* Networking */,
+				3A5F635B117800EE000F7EC4 /* Business Logic */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3A36BCF21173A98C00FE4A6D /* Urban Airship */ = {
+			isa = PBXGroup;
+			children = (
+				3A36BCE81173A97800FE4A6D /* ASIFormDataRequest.h */,
+				3A36BCE91173A97800FE4A6D /* ASIFormDataRequest.m */,
+				3A36BCEA1173A97800FE4A6D /* ASIHTTPRequest.h */,
+				3A36BCEB1173A97800FE4A6D /* ASIHTTPRequest.m */,
+				3A36BCEC1173A97800FE4A6D /* ASINetworkQueue.h */,
+				3A36BCED1173A97800FE4A6D /* ASINetworkQueue.m */,
+			);
+			name = "Urban Airship";
+			sourceTree = "<group>";
+		};
+		3A5F62AE1177BF4E000F7EC4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3AF27AD9117AF9C000492582 /* Server.h */,
+				3AF27ADA117AF9C000492582 /* Server.m */,
+				3AF27ADB117AF9C000492582 /* ServerDelegate.h */,
+				3AF27ADC117AF9C000492582 /* Connection.h */,
+				3AF27ADD117AF9C000492582 /* Connection.m */,
+				3AF27ADE117AF9C000492582 /* ConnectionDelegate.h */,
+				3AF27ADF117AF9C000492582 /* PairingService.h */,
+				3AB36072117ED0A400B0D12A /* PairingService.m */,
+				3AB35F6E117B9D3000B0D12A /* ServerBrowser.h */,
+				3AB35F6F117B9D3000B0D12A /* ServerBrowser.m */,
+				3AB35F70117B9D3000B0D12A /* ServerBrowserDelegate.h */,
+				3AB4E6871182EA1200EEF685 /* Thumbalizr.h */,
+				3AB4E6881182EA1200EEF685 /* Thumbalizr.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		3A5F63171177CDEC000F7EC4 /* Framework Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A5F63261177CE0F000F7EC4 /* UIViewControllerSingleton.h */,
+				3A5F63271177CE0F000F7EC4 /* UIViewControllerSingleton.m */,
+				3A5F63281177CE0F000F7EC4 /* Foundation+.h */,
+				3A5F63291177CE0F000F7EC4 /* Foundation+.m */,
+			);
+			name = "Framework Extensions";
+			sourceTree = "<group>";
+		};
+		3A5F635B117800EE000F7EC4 /* Business Logic */ = {
+			isa = PBXGroup;
+			children = (
+				3A10512C11A7ED340009BFE4 /* Reachability.h */,
+				3A10512D11A7ED340009BFE4 /* Reachability.m */,
+				3A5F635C11780107000F7EC4 /* FUURLManager.h */,
+				3A5F635D11780107000F7EC4 /* FUURLManager.m */,
+			);
+			name = "Business Logic";
+			sourceTree = "<group>";
+		};
+		3A5F64011178276C000F7EC4 /* URL List */ = {
+			isa = PBXGroup;
+			children = (
+				3A5F6402117827E3000F7EC4 /* PreviousURLs_ViewController.h */,
+				3A5F6403117827E3000F7EC4 /* PreviousURLs_ViewController.m */,
+				3A5F6404117827E3000F7EC4 /* OlderURL_ViewController.xib */,
+			);
+			name = "URL List";
+			sourceTree = "<group>";
+		};
+		3A707D4E118893870009A293 /* View - iPad */ = {
+			isa = PBXGroup;
+			children = (
+				3A707D4F1188938E0009A293 /* MainWindow.xib */,
+				3A707D501188938E0009A293 /* MainView_ViewController.xib */,
+				3A8838AA11910CED004A7550 /* WebView_ViewController.xib */,
+				3A707D511188938E0009A293 /* OlderURL_ViewController.xib */,
+				3A707D521188938E0009A293 /* SendURL_ViewController.xib */,
+				3A707D531188938E0009A293 /* PairingRemote_ViewController.xib */,
+				3A707D541188938E0009A293 /* PairingPINEntry_ViewController.xib */,
+				3A707D551188938E0009A293 /* GenericWebView.xib */,
+			);
+			name = "View - iPad";
+			sourceTree = "<group>";
+		};
+		3A8838A711910C33004A7550 /* Web View */ = {
+			isa = PBXGroup;
+			children = (
+				3A8838A811910CED004A7550 /* WebView_ViewController.h */,
+				3A8838A911910CED004A7550 /* WebView_ViewController.m */,
+				3A920E4211948195008C83B7 /* WebView_ViewController.xib */,
+			);
+			name = "Web View";
+			sourceTree = "<group>";
+		};
+		3AF27AE7117AFDB200492582 /* Pairing */ = {
+			isa = PBXGroup;
+			children = (
+				3AF27AE8117AFDE000492582 /* PairingRemote_ViewController.h */,
+				3AF27AE9117AFDE000492582 /* PairingRemote_ViewController.m */,
+				3AF27AEA117AFDE000492582 /* PairingRemote_ViewController.xib */,
+				3AF27AED117AFDF300492582 /* PairingPINEntry_ViewController.h */,
+				3AF27AEE117AFDF300492582 /* PairingPINEntry_ViewController.m */,
+				3AF27AEF117AFDF300492582 /* PairingPINEntry_ViewController.xib */,
+			);
+			name = Pairing;
+			sourceTree = "<group>";
+		};
+		3AFB31EC1163900A0033E972 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3A692F6D119A626000ADAE2F /* 20-gear2.png */,
+				3A50F1CA1174636000EECD86 /* Icon.png */,
+				3A2D5CE8118BF40800125C29 /* Icon.png */,
+				3A215913118BC38E00E009B5 /* Default.png */,
+				3A1050F011A7E5FF0009BFE4 /* Icon-Small.png */,
+				3A1050E811A7E5F00009BFE4 /* Icon-Small.png */,
+				3A21592F118BC80D00E009B5 /* Default-Landscape.png */,
+				3A215930118BC80D00E009B5 /* Default-Portrait.png */,
+				3A6F65F9118AE1A400EE2EBB /* Background_1.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		3AFB320C116392E60033E972 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				28C286DF0D94DF7D0034E888 /* MainView_ViewController.h */,
+				28C286E00D94DF7D0034E888 /* MainView_ViewController.m */,
+				28F335F01007B36200424DE2 /* MainView_ViewController.xib */,
+				3A8838A711910C33004A7550 /* Web View */,
+				3A5F64011178276C000F7EC4 /* URL List */,
+				3A2047A51185935D00554744 /* Device Interaction */,
+			);
+			name = "Main View";
+			sourceTree = "<group>";
+		};
+		3AFB320D116392F00033E972 /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				3AFB32171163932B0033E972 /* GenericWebView.h */,
+				3AFB32181163932B0033E972 /* GenericWebView.m */,
+				3AFB321A116393340033E972 /* GenericWebView.xib */,
+			);
+			name = Reusables;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* HopTo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "HopTo" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HopTo;
+			productName = HopTo;
+			productReference = 1D6058910D05DD3D006BFB54 /* ToGo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A707D22118893870009A293 /* HopTo-iPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A707D49118893870009A293 /* Build configuration list for PBXNativeTarget "HopTo-iPad" */;
+			buildPhases = (
+				3A707D23118893870009A293 /* Resources */,
+				3A707D2C118893870009A293 /* Sources */,
+				3A707D41118893870009A293 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HopTo-iPad";
+			productName = HopTo;
+			productReference = 3A707D4C118893870009A293 /* ToGoXL.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HopTo" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* HopTo */,
+				3A707D22118893870009A293 /* HopTo-iPad */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
+				28F335F11007B36200424DE2 /* MainView_ViewController.xib in Resources */,
+				3A50F1CB1174636100EECD86 /* Icon.png in Resources */,
+				3A5F6406117827E3000F7EC4 /* OlderURL_ViewController.xib in Resources */,
+				3A2047AA1185938100554744 /* SendURL_ViewController.xib in Resources */,
+				3A6F65FA118AE1A400EE2EBB /* Background_1.png in Resources */,
+				3A215914118BC38E00E009B5 /* Default.png in Resources */,
+				3A896B6C118EA9E7008DEF0C /* Entitlements.plist in Resources */,
+				3AD3558B1198DFF500F56C32 /* swoosh.wav in Resources */,
+				3A1050F111A7E5FF0009BFE4 /* Icon-Small.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A707D23118893870009A293 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A707D561188938E0009A293 /* MainWindow.xib in Resources */,
+				3A707D571188938E0009A293 /* MainView_ViewController.xib in Resources */,
+				3A707D581188938E0009A293 /* OlderURL_ViewController.xib in Resources */,
+				3A707D591188938E0009A293 /* SendURL_ViewController.xib in Resources */,
+				3A215933118BC81100E009B5 /* Default-Portrait.png in Resources */,
+				3A215934118BC81200E009B5 /* Default-Landscape.png in Resources */,
+				3A2D5CEA118BF41100125C29 /* Icon.png in Resources */,
+				3A2D5D1C118C078000125C29 /* Background_1.png in Resources */,
+				3A896B6D118EA9E7008DEF0C /* Entitlements.plist in Resources */,
+				3A8838AE11910CED004A7550 /* WebView_ViewController.xib in Resources */,
+				3AD3558C1198DFF500F56C32 /* swoosh.wav in Resources */,
+				3A1050EA11A7E5F00009BFE4 /* Icon-Small.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* HopToAppDelegate.m in Sources */,
+				28C286E10D94DF7D0034E888 /* MainView_ViewController.m in Sources */,
+				3AFB31EA11638F790033E972 /* Constants.m in Sources */,
+				3AFB320B1163927B0033E972 /* Functions.m in Sources */,
+				3A5F632A1177CE0F000F7EC4 /* UIViewControllerSingleton.m in Sources */,
+				3A5F632B1177CE0F000F7EC4 /* Foundation+.m in Sources */,
+				3A5F635E11780107000F7EC4 /* FUURLManager.m in Sources */,
+				3A5F6405117827E3000F7EC4 /* PreviousURLs_ViewController.m in Sources */,
+				3AF27AE1117AF9C000492582 /* Server.m in Sources */,
+				3AF27AE2117AF9C000492582 /* Connection.m in Sources */,
+				3AB35F71117B9D3000B0D12A /* ServerBrowser.m in Sources */,
+				3A2047A91185938100554744 /* SendURL_ViewController.m in Sources */,
+				3A10512E11A7ED340009BFE4 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A707D2C118893870009A293 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A707D2D118893870009A293 /* main.m in Sources */,
+				3A707D2E118893870009A293 /* HopToAppDelegate.m in Sources */,
+				3A707D2F118893870009A293 /* MainView_ViewController.m in Sources */,
+				3A707D30118893870009A293 /* Constants.m in Sources */,
+				3A707D31118893870009A293 /* Functions.m in Sources */,
+				3A707D35118893870009A293 /* UIViewControllerSingleton.m in Sources */,
+				3A707D36118893870009A293 /* Foundation+.m in Sources */,
+				3A707D37118893870009A293 /* FUURLManager.m in Sources */,
+				3A707D38118893870009A293 /* PreviousURLs_ViewController.m in Sources */,
+				3A707D39118893870009A293 /* Server.m in Sources */,
+				3A707D3A118893870009A293 /* Connection.m in Sources */,
+				3A707D3B118893870009A293 /* ServerBrowser.m in Sources */,
+				3A707D3C118893870009A293 /* SendURL_ViewController.m in Sources */,
+				3A8838AD11910CED004A7550 /* WebView_ViewController.m in Sources */,
+				3A10512F11A7ED340009BFE4 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_ID = us.fappulo.togo;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DISPLAY_TITLE = ToGo;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HopTo_Prefix.pch;
+				INFOPLIST_FILE = "HopTo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ToGo;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_ID = us.fappulo.togo;
+				COPY_PHASE_STRIP = YES;
+				DISPLAY_TITLE = ToGo;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HopTo_Prefix.pch;
+				INFOPLIST_FILE = "HopTo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218\"",
+				);
+				PRODUCT_NAME = ToGo;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A707D4A118893870009A293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				BUNDLE_ID = us.fappulo.togoxl;
+				COPY_PHASE_STRIP = NO;
+				DISPLAY_TITLE = "ToGo XL";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HopTo_Prefix.pch;
+				INFOPLIST_FILE = "HopTo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ToGoXL;
+				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		3A707D4B118893870009A293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				BUNDLE_ID = us.fappulo.togoxl;
+				COPY_PHASE_STRIP = YES;
+				DISPLAY_TITLE = "ToGo XL";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HopTo_Prefix.pch;
+				INFOPLIST_FILE = "HopTo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218\"",
+				);
+				PRODUCT_NAME = ToGoXL;
+				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A896B59118EA884008DEF0C /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Distribution;
+		};
+		3A896B5A118EA884008DEF0C /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_ID = us.fappulo.togo;
+				COPY_PHASE_STRIP = YES;
+				DISPLAY_TITLE = ToGo;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HopTo_Prefix.pch;
+				INFOPLIST_FILE = "HopTo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218\"",
+				);
+				PRODUCT_NAME = ToGo;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		3A896B5B118EA884008DEF0C /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				BUNDLE_ID = us.fappulo.togoxl;
+				COPY_PHASE_STRIP = YES;
+				DISPLAY_TITLE = "ToGo XL";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HopTo_Prefix.pch;
+				INFOPLIST_FILE = "HopTo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218\"",
+				);
+				PRODUCT_NAME = ToGoXL;
+				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "HopTo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				3A896B5A118EA884008DEF0C /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A707D49118893870009A293 /* Build configuration list for PBXNativeTarget "HopTo-iPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A707D4A118893870009A293 /* Debug */,
+				3A707D4B118893870009A293 /* Release */,
+				3A896B5B118EA884008DEF0C /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HopTo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				3A896B59118EA884008DEF0C /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
