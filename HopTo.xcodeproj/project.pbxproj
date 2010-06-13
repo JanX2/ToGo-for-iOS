@@ -71,7 +71,6 @@
 		3AD3558B1198DFF500F56C32 /* swoosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD3558A1198DFF500F56C32 /* swoosh.wav */; };
 		3AD3558C1198DFF500F56C32 /* swoosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD3558A1198DFF500F56C32 /* swoosh.wav */; };
 		3AE077AA11C43826007E0FD5 /* MainView_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE077A911C43826007E0FD5 /* MainView_ViewController.xib */; };
-		3AE077AB11C43826007E0FD5 /* MainView_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE077A911C43826007E0FD5 /* MainView_ViewController.xib */; };
 		3AF27AE1117AF9C000492582 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF27ADA117AF9C000492582 /* Server.m */; };
 		3AF27AE2117AF9C000492582 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF27ADD117AF9C000492582 /* Connection.m */; };
 		3AFB31EA11638F790033E972 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB31E911638F790033E972 /* Constants.m */; };
@@ -540,7 +539,6 @@
 				3A8838AE11910CED004A7550 /* WebView_ViewController.xib in Resources */,
 				3AD3558C1198DFF500F56C32 /* swoosh.wav in Resources */,
 				3A1050EA11A7E5F00009BFE4 /* Icon-Small.png in Resources */,
-				3AE077AB11C43826007E0FD5 /* MainView_ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

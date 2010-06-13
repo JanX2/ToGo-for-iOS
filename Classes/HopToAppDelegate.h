@@ -14,6 +14,19 @@
 @protocol ServerDelegate;
 @protocol ConnectionDelegate;
 
+// Typedefs
+typedef enum {
+	kFUiOSVersion3 = 300,
+	kFUiOSVersion3_1 = 310,
+	kFUiOSVersion3_2 = 320,
+	kFUiOSVersion4 = 400
+} FUiOSVersion;
+
+typedef enum {
+	kFUDeviceiPhone,
+	kFUDeviceiPad
+} FUDevice;
+
 @interface HopToAppDelegate : NSObject <UIApplicationDelegate, UIAlertViewDelegate, ServerDelegate, ConnectionDelegate> 
 {
 	// Backend
@@ -22,6 +35,8 @@
 	Reachability *wifiMonitor;
 	
 	// Flags
+	FUiOSVersion osVersion;
+	FUDevice deviceType;
 	BOOL backgroundMode;
 	BOOL firstLaunchMode;
 	BOOL wifi;
@@ -40,6 +55,8 @@
 @property (nonatomic, retain) Server *urlServer;
 @property (nonatomic, retain) NSMutableSet *urlClients;
 @property (nonatomic, retain) Reachability *wifiMonitor;
+@property (nonatomic, assign, readonly) FUiOSVersion osVersion;
+@property (nonatomic, assign, readonly) FUDevice deviceType;
 @property (nonatomic) BOOL backgroundMode, firstLaunchMode, wifi;
 @property (nonatomic, copy) NSString *appBundle, *documentsDirectory;
 @property (nonatomic, copy) NSString *deviceToken, *deviceAlias;

@@ -65,9 +65,7 @@
 
 // View Controllers
 #import "MainView_ViewController.h"
-#ifdef IPAD
 #import "WebView_ViewController.h"
-#endif
 //#import "PairingRemote_ViewController.h"
 //#import "PairingPINEntry_ViewController.h"
 #import "PreviousURLs_ViewController.h"
@@ -83,6 +81,7 @@
 // Data Access
 #define BACKGROUND_MODE [APP_DELEGATE backgroundMode]
 #define FIRST_LAUNCH_MODE [APP_DELEGATE firstLaunchMode]
+#define DEVICE_TYPE [APP_DELEGATE deviceType]
 #define WIFI [APP_DELEGATE wifi]
 #define DEVICE_NAME [[UIDevice currentDevice] name]
 #define SAVE_DOWN [APP_DELEGATE saveDown]

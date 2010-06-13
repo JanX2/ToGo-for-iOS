@@ -16,6 +16,8 @@ static id kSharedDelegate;
 @synthesize urlServer;
 @synthesize urlClients;
 @synthesize wifiMonitor;
+@synthesize osVersion;
+@synthesize deviceType;
 @synthesize backgroundMode, firstLaunchMode, wifi;
 @synthesize appBundle, documentsDirectory;
 @synthesize deviceToken, deviceAlias;
@@ -62,6 +64,12 @@ static id kSharedDelegate;
 	kSharedDelegate = self;
 	
 	application.statusBarStyle = UIStatusBarStyleDefault;
+	
+	// Set the OS Version.
+	osVersion = [[[UIDevice currentDevice] systemVersion] doubleValue] * 100;
+	
+	// Determine the device.
+	deviceType = (int) ( [[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPhone );
 	
 	self.wifi = YES;
 	

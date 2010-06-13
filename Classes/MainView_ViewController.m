@@ -10,14 +10,9 @@
 static MainView_ViewController *kSharedController;
 
 enum _kTableSections {
-#ifndef IPAD
 	kTableSectionOpenURL,
-#endif
 	kTableSectionSendURL,
-	kTableSectionOlderURLs, 
-#ifdef IPAD
-	kTableSectionOpenURL
-#endif
+	kTableSectionOlderURLs
 } kTableSection;
 
 #pragma mark Macros
@@ -96,14 +91,17 @@ enum _kTableSections {
 	webContainerLayer.masksToBounds = YES;
 	webContainerLayer.cornerRadius = 10.0;
 	
-#ifdef IPAD
-	// Set up the table view right.
-	urlTable.backgroundView = nil;
-	urlTable.opaque = NO;
-	
-	// Sign up for reachability notifications.
-	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(loadInfo) name: kReachabilityChangedNotification object: nil];
-#endif
+	if ( DEVICE_TYPE == kFUDeviceiPad ) {
+		
+		// Set up the table view right.
+		urlTable.backgroundView = nil;
+		urlTable.opaque = NO;
+		
+		// Sign up for reachability notifications.
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(loadInfo) 
+													 name: kReachabilityChangedNotification object: nil];
+		
+	}
 	
 	// Now the corner radius for the text view.
 	CALayer *textViewLayer = [urlText layer];
@@ -157,9 +155,9 @@ saved sites for later. Thank you and enjoy ToGo!"
 
 -(BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) toInterfaceOrientation
 {
-#ifndef IPAD
-	return ( toInterfaceOrientation == UIInterfaceOrientationPortrait || toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown );
-#endif
+	if ( DEVICE_TYPE == kFUDeviceiPhone )
+		return ( toInterfaceOrientation == UIInterfaceOrientationPortrait 
+				|| toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown );
 	
 	if ( [[[UIDevice currentDevice] model] isEqualToString: @"iPhone"] 
 		|| [[[UIDevice currentDevice] model] isEqualToString: @"iPhone Simulator"] ) 
@@ -211,10 +209,12 @@ saved sites for later. Thank you and enjoy ToGo!"
 -(void) willAnimateSecondHalfOfRotationFromInterfaceOrientation: (UIInterfaceOrientation) fromInterfaceOrientation 
 													   duration: (NSTimeInterval) duration
 {
-#ifdef IPAD
-	if ( [UIApplication sharedApplication].statusBarHidden )
-		[[UIApplication sharedApplication] setStatusBarHidden: NO withAnimation: UIStatusBarAnimationSlide];
-#endif
+	if ( DEVICE_TYPE == kFUDeviceiPad ) {
+		
+		if ( [UIApplication sharedApplication].statusBarHidden )
+			[[UIApplication sharedApplication] setStatusBarHidden: NO withAnimation: UIStatusBarAnimationSlide];
+		
+	}
 }
 
 #pragma mark User Interaction Management
@@ -304,17 +304,17 @@ saved sites for later. Thank you and enjoy ToGo!"
 	[urlText loadHTMLString: urlTextStr baseURL: nil];
 	noURLsLabel.hidden = TRUE;
 	
-#ifdef IPAD
-	
-	[urlView stopLoading];
-	[urlView loadHTMLString: nil baseURL: nil];
-	
-	// Start loading the web view.
-	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString: urlStr]];
-	[request setCachePolicy: NSURLRequestReloadIgnoringCacheData];
-	[urlView loadRequest: request];
-	
-#endif
+	if ( DEVICE_TYPE == kFUDeviceiPad ) {
+		
+		[urlView stopLoading];
+		[urlView loadHTMLString: nil baseURL: nil];
+		
+		// Start loading the web view.
+		NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString: urlStr]];
+		[request setCachePolicy: NSURLRequestReloadIgnoringCacheData];
+		[urlView loadRequest: request];
+		
+	}
 	
 makeTable: ;
 	
@@ -325,13 +325,15 @@ makeTable: ;
 	
 	STANDARD_TABLE_DATA_ARRAY
 	
-#ifndef IPAD
-	NEW_SECTION(@"");
-	
-	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, @"Open in Safari", nil)];
-	
-	[tableData addObject: eachSection];
-#endif
+	// ( DEVICE_TYPE != kFUDeviceiPad ) {
+		
+		NEW_SECTION(@"");
+		
+		[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, @"Open in Safari", nil)];
+		
+		[tableData addObject: eachSection];
+		
+	//}
 	
 	NEW_SECTION(@"");
 	
@@ -345,13 +347,15 @@ makeTable: ;
 	
 	[tableData addObject: eachSection];
 	
-#ifdef IPAD
-	NEW_SECTION(@"");
-	
-	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, @"Open in Safari", nil)];
-	
-	[tableData addObject: eachSection];
-#endif
+	/*if ( DEVICE_TYPE == kFUDeviceiPad ) {
+			
+		NEW_SECTION(@"");
+		
+		[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, @"Open in Safari", nil)];
+		
+		[tableData addObject: eachSection];
+		
+	}*/
 	
 	END_STANDARD_TABLE_DATA_ARRAY
 }
