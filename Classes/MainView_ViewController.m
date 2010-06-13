@@ -236,7 +236,6 @@ saved sites for later. Thank you and enjoy ToGo!"
 	[[FUURLManager sharedManager] openURL: [FUURLManager sharedManager].currentURL];
 }
 
-#ifdef IPAD
 -(IBAction) browseAction: (id) sender
 {
 	// Set up a web view.
@@ -248,7 +247,6 @@ saved sites for later. Thank you and enjoy ToGo!"
 	// Push it.
 	[self.navigationController pushViewController: webView animated: YES];
 }
-#endif
 
 #pragma mark Data Management
 // Data Management

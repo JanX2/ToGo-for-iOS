@@ -90,9 +90,9 @@
 
 -(BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) toInterfaceOrientation
 {
-#ifndef IPAD
-	return ( toInterfaceOrientation == UIInterfaceOrientationPortrait || toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown );
-#endif 
+	if ( DEVICE_TYPE != kFUDeviceiPad )
+		return ( toInterfaceOrientation == UIInterfaceOrientationPortrait 
+				|| toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown );
 	
 	return YES;
 }
@@ -286,10 +286,9 @@
 	if ( [urlSearch.text length] > 0 ) 
 		[self searchTable];
 	
-#ifndef IPAD
-	// Make the table fit.
-	urlTable.frame = CGRectMake(urlTable.frame.origin.x, urlTable.frame.origin.y, urlTable.frame.size.width, 156);
-#endif
+	// Make the table fit, if needed.
+	if ( DEVICE_TYPE != kFUDeviceiPad )
+		urlTable.frame = CGRectMake(urlTable.frame.origin.x, urlTable.frame.origin.y, urlTable.frame.size.width, 156);
 }
 
 -(void) searchBar: (UISearchBar *) searchBar textDidChange: (NSString *) searchText
@@ -316,10 +315,9 @@
 
 -(void) searchBarTextDidEndEditing: (UISearchBar *) searchBar
 {
-#ifndef IPAD
 	// Make the table fit.
-	urlTable.frame = CGRectMake(urlTable.frame.origin.x, urlTable.frame.origin.y, urlTable.frame.size.width, 372);
-#endif
+	if ( DEVICE_TYPE != kFUDeviceiPad )
+		urlTable.frame = CGRectMake(urlTable.frame.origin.x, urlTable.frame.origin.y, urlTable.frame.size.width, 372);
 }
 
 #pragma mark -
@@ -391,11 +389,13 @@
 	else 
 		currentURL = [[FUURLManager sharedManager] URLAtIndex: IPRow];
 	
-#ifdef IPAD
-	NSString *openTitle = @"View Site";
-#else
-	NSString *openTitle = @"Open in Safari";
-#endif
+	NSString *openTitle = nil;
+	
+	if ( DEVICE_TYPE == kFUDeviceiPad )
+		openTitle = @"View Site";
+	else 
+		openTitle = @"Open in Safari";
+	
 	
 	// Open an action sheet.
 	UIActionSheet *urlSheet = [[[UIActionSheet alloc] initWithTitle: @"What would you like to do?" delegate: self 
@@ -427,12 +427,13 @@
 	urlInfoLayer.borderWidth = 1;
 	
 	// Add it in. 
-#ifdef IPAD
-	urlInfo.frame = CGRectMake(10, 10, 310, 175);
-	[self.view addSubview: urlInfo];
-#else
-	[urlSheet addSubview: urlInfo];
-#endif
+	if ( DEVICE_TYPE == kFUDeviceiPad ) {
+		
+		urlInfo.frame = CGRectMake(10, 10, 310, 175);
+		[self.view addSubview: urlInfo];
+		
+	} else 
+		[urlSheet addSubview: urlInfo];
 	
 	// Show the action sheet.
 	[urlSheet showInView: self.view];
@@ -472,12 +473,15 @@ forRowAtIndexPath: (NSIndexPath *) indexPath
 	[UIView setAnimationDuration: 0.15];
 	
 	urlInfo.alpha = 0.5;
-#ifdef IPAD
-	urlInfo.alpha = 0.0;
 	
-	[urlInfo performSelector: @selector(removeFromSuperview) withObject: nil afterDelay: 0.15];
-	[self performSelector: @selector(setUrlInfo:) withObject: nil afterDelay: 0.15];
-#endif
+	if ( DEVICE_TYPE == kFUDeviceiPad ) {
+		
+		urlInfo.alpha = 0.0;
+		
+		[urlInfo performSelector: @selector(removeFromSuperview) withObject: nil afterDelay: 0.15];
+		[self performSelector: @selector(setUrlInfo:) withObject: nil afterDelay: 0.15];
+		
+	}
 	
 	urlInfo.frame = CGRectMake(5, 5, 310, 175);
 	
@@ -501,18 +505,19 @@ forRowAtIndexPath: (NSIndexPath *) indexPath
 	
 	if ( buttonIndex == 0 ) {
 		
-#ifdef IPAD
-		
-		// Open the fullscreen browser.
-		WebView_ViewController *webView = [[[WebView_ViewController alloc] init] autorelease];
-		
-		[webView loadViewWithURL: selectedURL];
-		
-		// Push it.
-		[self.navigationController pushViewController: webView animated: YES];
-		
-		return;
-#endif
+		if ( DEVICE_TYPE == kFUDeviceiPad ) {
+			
+			// Open the fullscreen browser.
+			WebView_ViewController *webView = [[[WebView_ViewController alloc] init] autorelease];
+			
+			[webView loadViewWithURL: selectedURL];
+			
+			// Push it.
+			[self.navigationController pushViewController: webView animated: YES];
+			
+			return;
+			
+		}
 		
 		// Open.
 		[urlManager openURL: selectedURL];

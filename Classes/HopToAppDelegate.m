@@ -69,7 +69,10 @@ static id kSharedDelegate;
 	osVersion = [[[UIDevice currentDevice] systemVersion] doubleValue] * 100;
 	
 	// Determine the device.
-	deviceType = (int) ( [[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPhone );
+	if ( osVersion >= kFUiOSVersion3_2 )
+		deviceType = (int) ( [[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPhone );
+	else 
+		deviceType = 0;
 	
 	self.wifi = YES;
 	

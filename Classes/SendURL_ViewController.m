@@ -54,9 +54,8 @@ enum _kTableSections {
 	// Set the title.
 	self.navigationItem.title = @"Send a Website";
 	
-#ifdef IPAD
-	serverList.backgroundView = nil;
-#endif
+	if ( DEVICE_TYPE == kFUDeviceiPad )
+		serverList.backgroundView = nil;
 	
 //#ifndef IPAD
 	// Set up the colors.
@@ -122,9 +121,9 @@ enum _kTableSections {
 
 -(BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) toInterfaceOrientation
 {
-#ifndef IPAD
-	return ( toInterfaceOrientation == UIInterfaceOrientationPortrait || toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown );
-#endif
+	if ( DEVICE_TYPE != kFUDeviceiPad )
+		return ( toInterfaceOrientation == UIInterfaceOrientationPortrait 
+				|| toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown );
 	
 	return YES;
 }

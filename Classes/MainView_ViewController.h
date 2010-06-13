@@ -61,9 +61,7 @@
 // User Interaction Management
 //-(IBAction) settingsAction: (id) sender;
 -(IBAction) safariAction: (id) sender;
-#ifdef IPAD
 -(IBAction) browseAction: (id) sender;
-#endif
 
 #pragma mark Data Management
 // Data Management
