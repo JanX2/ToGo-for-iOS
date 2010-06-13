@@ -47,7 +47,7 @@
 		activeArchitecturePreference = armv6;
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 3AE1E6DC11637CA200981DF0 /* HopTo */;
-		activeSDKPreference = iphoneos4.0;
+		activeSDKPreference = iphonesimulator4.0;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* HopTo */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* HopTo */,
@@ -187,6 +187,12 @@
 			3AF1BCE611C58E8C00A8B446 /* PBXTextBookmark */ = 3AF1BCE611C58E8C00A8B446 /* PBXTextBookmark */;
 			3AF1BCE711C58E8C00A8B446 /* PBXTextBookmark */ = 3AF1BCE711C58E8C00A8B446 /* PBXTextBookmark */;
 			3AF1BCE811C58E9000A8B446 /* PBXTextBookmark */ = 3AF1BCE811C58E9000A8B446 /* PBXTextBookmark */;
+			3AF1BCEB11C58EF700A8B446 /* PBXTextBookmark */ = 3AF1BCEB11C58EF700A8B446 /* PBXTextBookmark */;
+			3AF1BCEC11C58F2100A8B446 /* PBXTextBookmark */ = 3AF1BCEC11C58F2100A8B446 /* PBXTextBookmark */;
+			3AF1BCEF11C58F2700A8B446 /* PBXTextBookmark */ = 3AF1BCEF11C58F2700A8B446 /* PBXTextBookmark */;
+			3AF1BCF511C58F4D00A8B446 /* PBXTextBookmark */ = 3AF1BCF511C58F4D00A8B446 /* PBXTextBookmark */;
+			3AF1BCF611C58F4D00A8B446 /* PBXTextBookmark */ = 3AF1BCF611C58F4D00A8B446 /* PBXTextBookmark */;
+			3AF1BCF711C58F4D00A8B446 /* PBXTextBookmark */ = 3AF1BCF711C58F4D00A8B446 /* PBXTextBookmark */;
 			3AFE780111AE91B9004D5DFE = 3AFE780111AE91B9004D5DFE /* PBXTextBookmark */;
 			3AFE780411AE91B9004D5DFE = 3AFE780411AE91B9004D5DFE /* PBXTextBookmark */;
 		};
@@ -211,9 +217,9 @@
 	};
 	3A10512D11A7ED340009BFE4 /* Reachability.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1379, 4031}}";
-			sepNavSelRange = "{6318, 0}";
-			sepNavVisRange = "{6090, 651}";
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 3905}}";
+			sepNavSelRange = "{6971, 0}";
+			sepNavVisRange = "{6133, 1005}";
 		};
 	};
 	3A2047A61185938100554744 /* SendURL_ViewController.h */ = {
@@ -444,7 +450,7 @@
 		fRef = 3A10512D11A7ED340009BFE4 /* Reachability.m */;
 		name = "Reachability.m: 175";
 		rLen = 0;
-		rLoc = 6318;
+		rLoc = 6320;
 		rType = 0;
 		vrLen = 1364;
 		vrLoc = 5637;
@@ -560,7 +566,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 0;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -843,6 +849,63 @@
 		rType = 0;
 		vrLen = 942;
 		vrLoc = 1374;
+	};
+	3AF1BCEB11C58EF700A8B446 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* HopToAppDelegate.m */;
+		name = "HopToAppDelegate.m: 75";
+		rLen = 0;
+		rLoc = 1750;
+		rType = 0;
+		vrLen = 940;
+		vrLoc = 1374;
+	};
+	3AF1BCEC11C58F2100A8B446 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* HopToAppDelegate.m */;
+		name = "HopToAppDelegate.m: 75";
+		rLen = 0;
+		rLoc = 1750;
+		rType = 0;
+		vrLen = 942;
+		vrLoc = 1374;
+	};
+	3AF1BCEF11C58F2700A8B446 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* HopToAppDelegate.m */;
+		name = "HopToAppDelegate.m: 75";
+		rLen = 0;
+		rLoc = 1750;
+		rType = 0;
+		vrLen = 940;
+		vrLoc = 1374;
+	};
+	3AF1BCF511C58F4D00A8B446 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* HopToAppDelegate.m */;
+		name = "HopToAppDelegate.m: 75";
+		rLen = 0;
+		rLoc = 1750;
+		rType = 0;
+		vrLen = 530;
+		vrLoc = 1484;
+	};
+	3AF1BCF611C58F4D00A8B446 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3A10512D11A7ED340009BFE4 /* Reachability.m */;
+		rLen = 0;
+		rLoc = 174;
+		rType = 1;
+	};
+	3AF1BCF711C58F4D00A8B446 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3A10512D11A7ED340009BFE4 /* Reachability.m */;
+		name = "Reachability.m: 175";
+		rLen = 0;
+		rLoc = 6318;
+		rType = 0;
+		vrLen = 456;
+		vrLoc = 6777;
 	};
 	3AF27AD9117AF9C000492582 /* Server.h */ = {
 		uiCtxt = {

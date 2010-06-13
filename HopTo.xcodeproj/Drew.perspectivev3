@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ActivePerspectiveName</key>
-	<string>Project</string>
+	<string>Debug</string>
 	<key>AllowedModules</key>
 	<array>
 		<dict>
@@ -321,8 +321,6 @@
 							<string>MainColumn</string>
 							<real>283</real>
 						</array>
-						<key>RubberWindowFrame</key>
-						<string>0 152 1440 726 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -333,8 +331,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -352,7 +348,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3AF1BCE811C58E9000A8B446</string>
+										<string>3AF1BCEF11C58F2700A8B446</string>
 										<key>history</key>
 										<array>
 											<string>3AB4E68F1182F00700EEF685</string>
@@ -386,8 +382,6 @@
 							<dict>
 								<key>Frame</key>
 								<string>{{0, 0}, {1091, 476}}</string>
-								<key>RubberWindowFrame</key>
-								<string>0 152 1440 726 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -486,8 +480,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1091, 177}}</string>
-										<key>RubberWindowFrame</key>
-										<string>0 152 1440 726 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -560,6 +552,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
@@ -571,6 +565,8 @@
 					<dict>
 						<key>Frame</key>
 						<string>{{0, 0}, {1440, 259}}</string>
+						<key>RubberWindowFrame</key>
+						<string>0 152 1440 726 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
@@ -645,7 +641,11 @@
 							</array>
 							<key>Frame</key>
 							<string>{{703, 0}, {737, 160}}</string>
+							<key>RubberWindowFrame</key>
+							<string>0 152 1440 726 0 0 1440 878 </string>
 						</dict>
+						<key>RubberWindowFrame</key>
+						<string>0 152 1440 726 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
@@ -709,6 +709,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>3AF1BCF011C58F2700A8B446</string>
 		<string>3AF1BCCB11C58C4100A8B446</string>
 		<string>3AF1BCC311C5896D00A8B446</string>
 		<string>/Developer/Projects/iPhone Apps/HopTo/trunk/HopTo.xcodeproj</string>
