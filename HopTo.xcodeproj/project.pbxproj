@@ -10,7 +10,7 @@
 		1D3623260D0F684500981E51 /* HopToAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* HopToAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* MainView_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* MainView_ViewController.m */; };
@@ -67,7 +67,6 @@
 		3A896B6C118EA9E7008DEF0C /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A896B6B118EA9E7008DEF0C /* Entitlements.plist */; };
 		3A896B6D118EA9E7008DEF0C /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A896B6B118EA9E7008DEF0C /* Entitlements.plist */; };
 		3A896CC2118F0625008DEF0C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A896C6B118F05A5008DEF0C /* CoreLocation.framework */; };
-		3A920E7E1194AAEB008C83B7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A896C6B118F05A5008DEF0C /* CoreLocation.framework */; };
 		3AB35F71117B9D3000B0D12A /* ServerBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB35F6F117B9D3000B0D12A /* ServerBrowser.m */; };
 		3AD3558B1198DFF500F56C32 /* swoosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD3558A1198DFF500F56C32 /* swoosh.wav */; };
 		3AD3558C1198DFF500F56C32 /* swoosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD3558A1198DFF500F56C32 /* swoosh.wav */; };
@@ -138,7 +137,6 @@
 		3A8838AA11910CED004A7550 /* WebView_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WebView_ViewController.xib; path = "/Developer/Projects/iPhone Apps/HopTo/trunk/Resources-iPad/WebView_ViewController.xib"; sourceTree = "<absolute>"; };
 		3A896B6B118EA9E7008DEF0C /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = "/Developer/Projects/iPhone Apps/HopTo/trunk/Entitlements.plist"; sourceTree = "<absolute>"; };
 		3A896C6B118F05A5008DEF0C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		3A896CBB118F05C4008DEF0C /* libisimulate.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libisimulate.a; path = "Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218/libisimulate.a"; sourceTree = DEVELOPER_DIR; };
 		3A920E4211948195008C83B7 /* WebView_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WebView_ViewController.xib; path = "/Developer/Projects/iPhone Apps/HopTo/trunk/Classes/WebView_ViewController.xib"; sourceTree = "<absolute>"; };
 		3AB35F6E117B9D3000B0D12A /* ServerBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerBrowser.h; path = "/Developer/Projects/iPhone Apps/HopTo/trunk/ServerBrowser.h"; sourceTree = "<absolute>"; };
 		3AB35F6F117B9D3000B0D12A /* ServerBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerBrowser.m; path = "/Developer/Projects/iPhone Apps/HopTo/trunk/ServerBrowser.m"; sourceTree = "<absolute>"; };
@@ -183,7 +181,6 @@
 				3A36BCFD1173AB3500FE4A6D /* libz.1.2.3.dylib in Frameworks */,
 				3A36BCFF1173AB3E00FE4A6D /* AudioToolbox.framework in Frameworks */,
 				3A5F62F71177C6F4000F7EC4 /* QuartzCore.framework in Frameworks */,
-				3A920E7E1194AAEB008C83B7 /* CoreLocation.framework in Frameworks */,
 				3A10514C11A7F2C10009BFE4 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +276,6 @@
 				3A5F62F61177C6F4000F7EC4 /* QuartzCore.framework */,
 				3A36BCFE1173AB3E00FE4A6D /* AudioToolbox.framework */,
 				3A896C6B118F05A5008DEF0C /* CoreLocation.framework */,
-				3A896CBB118F05C4008DEF0C /* libisimulate.a */,
 				3A10514B11A7F2C10009BFE4 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
@@ -615,7 +611,7 @@
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = ToGo;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos4.0;
@@ -638,6 +634,7 @@
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218\"",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = ToGo;
 				SDKROOT = iphoneos4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -727,6 +724,7 @@
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218\"",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = ToGo;
 				SDKROOT = iphoneos4.0;
 				TARGETED_DEVICE_FAMILY = 1;

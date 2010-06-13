@@ -79,6 +79,8 @@ static id kSharedDelegate;
 	// Determine if this is first launch mode.
 	self.firstLaunchMode = [self determineFirstLaunchMode];
 	
+	[[NSUserDefaults standardUserDefaults] setBool: YES forKey: FUHTLaunchedUserDefaultsKey];
+	
 	// Set up the directories.
 	self.appBundle = [[NSBundle mainBundle] bundlePath];
 	
