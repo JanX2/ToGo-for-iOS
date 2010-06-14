@@ -117,7 +117,7 @@ typedef enum {
 
 #pragma mark Network Control
 // Network Control
--(BOOL) checkReachablility;
+-(BOOL) checkReachablility: (NSNotification *) notification;
 -(void) internetReachabilityDidChange: (NSNotification *) notification;
 -(void) showWifiWarning;
 

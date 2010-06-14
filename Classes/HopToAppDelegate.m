@@ -89,7 +89,7 @@ static id kSharedDelegate;
 	self.internetMonitor = [Reachability reachabilityWithHostName: @"www.google.com"];
 	[internetMonitor startNotifer];
 	
-	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(checkReachablility) 
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(checkReachablility:) 
 												 name: kReachabilityChangedNotification object: wifiMonitor];
 	
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(internetReachabilityDidChange:) 
@@ -108,7 +108,7 @@ static id kSharedDelegate;
 	
 	self.documentsDirectory = basePath;
 	
-	[self checkReachablility];
+	[self checkReachablility: nil];
 	[self internetReachabilityDidChange: nil];
 	
 	// Defaults Override
@@ -418,10 +418,15 @@ static id kSharedDelegate;
 
 #pragma mark Network Control
 // Network Control
--(BOOL) checkReachablility
+-(BOOL) checkReachablility: (NSNotification *) notification
 {
+	Reachability *reacher = [notification object];
+	
+	if ( notification == nil ) 
+		reacher = [Reachability reachabilityForLocalWiFi];
+	
 	// Check for anything other than wifi.
-	if ( [[Reachability reachabilityForLocalWiFi] currentReachabilityStatus] != ReachableViaWiFi ) {
+	if ( [reacher currentReachabilityStatus] != ReachableViaWiFi || [reacher connectionRequired] ) {
 		
 		if ( !wifi )
 			return NO;
@@ -432,7 +437,7 @@ static id kSharedDelegate;
 		
 		[self stopURLServer];
 		
-	} else if ( [[Reachability reachabilityForLocalWiFi] currentReachabilityStatus] == ReachableViaWiFi ) {
+	} else {
 		
 		self.wifi = TRUE;
 		
