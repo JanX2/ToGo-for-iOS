@@ -95,9 +95,6 @@ static id kSharedDelegate;
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(internetReachabilityDidChange:) 
 												 name: kReachabilityChangedNotification object: internetMonitor];
 	
-	[self checkReachablility];
-	[self internetReachabilityDidChange: nil];
-	
 	// Determine if this is first launch mode.
 	self.firstLaunchMode = [self determineFirstLaunchMode];
 	
@@ -110,6 +107,9 @@ static id kSharedDelegate;
 	NSString *basePath = ( [paths count] > 0 ) ? [paths objectAtIndex: 0] : nil;
 	
 	self.documentsDirectory = basePath;
+	
+	[self checkReachablility];
+	[self internetReachabilityDidChange: nil];
 	
 	// Defaults Override
 	[[NSUserDefaults standardUserDefaults] setBool: TRUE forKey: @"FU_Debug_Mode"];

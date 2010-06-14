@@ -301,7 +301,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {327, 667}}</string>
+							<string>{{0, 658}, {327, 667}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -340,7 +340,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>3AE1E6EC11638A2100981DF0</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FUURLManager.m</string>
+								<string>HopToAppDelegate.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -348,11 +348,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>3AE1E6ED11638A2100981DF0</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FUURLManager.m</string>
+										<string>HopToAppDelegate.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3A17520611C5B6BC00B5D91A</string>
+										<string>3A9D6FBD11C5D3EC00DA762E</string>
 										<key>history</key>
 										<array>
 											<string>3AB4E68F1182F00700EEF685</string>
@@ -376,8 +376,8 @@
 											<string>3A1751EB11C5B4C200B5D91A</string>
 											<string>3A1751F011C5B52000B5D91A</string>
 											<string>3A1751F111C5B52000B5D91A</string>
+											<string>3A9D6FB611C5D3BD00DA762E</string>
 											<string>3A1751FD11C5B59400B5D91A</string>
-											<string>3A17520511C5B6B700B5D91A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -521,11 +521,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>3A17519C11C5AE0400B5D91A</string>
+				<string>3A9D6FB811C5D3BD00DA762E</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>3A17519D11C5AE0400B5D91A</string>
+				<string>3A9D6FB911C5D3BD00DA762E</string>
 				<string>3AE1E6EC11638A2100981DF0</string>
-				<string>3A17519E11C5AE0400B5D91A</string>
+				<string>3A9D6FBA11C5D3BD00DA762E</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -715,8 +715,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>3A1751B311C5AF1600B5D91A</string>
-		<string>3A1751AA11C5AE5A00B5D91A</string>
 		<string>/Developer/Projects/iPhone Apps/HopTo/trunk/HopTo.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
