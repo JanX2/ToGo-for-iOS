@@ -83,6 +83,7 @@
 #define FIRST_LAUNCH_MODE [APP_DELEGATE firstLaunchMode]
 #define DEVICE_TYPE [APP_DELEGATE deviceType]
 #define WIFI [APP_DELEGATE wifi]
+#define INTERNET_MONTITOR [APP_DELEGATE internetMonitor]
 #define DEVICE_NAME [[UIDevice currentDevice] name]
 #define SAVE_DOWN [APP_DELEGATE saveDown]
 #define MANAGED_OBJECT_CONTEXT [APP_DELEGATE managedObjectContext]

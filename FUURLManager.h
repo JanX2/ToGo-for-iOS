@@ -47,6 +47,7 @@ extern NSString * const FUURLManagerWillOpenURLNotification;
 
 #pragma mark Data Control
 // Data Control
+-(void) checkMetadataForAllURLs;
 -(NSMutableDictionary *) fetchMetadataForURL: (NSString *) theURL;
 -(void) updateCurrentURL;
 -(NSDictionary *) addURL: (NSString *) url from: (NSString *) nameOfDevice;

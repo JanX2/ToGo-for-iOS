@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* HopToAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* HopToAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -72,6 +71,9 @@
 		3AD3558C1198DFF500F56C32 /* swoosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD3558A1198DFF500F56C32 /* swoosh.wav */; };
 		3AE077AA11C43826007E0FD5 /* MainView_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE077A911C43826007E0FD5 /* MainView_ViewController.xib */; };
 		3AF1BCD411C58D3700A8B446 /* WebView_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8838A911910CED004A7550 /* WebView_ViewController.m */; };
+		3AF1BCFB11C5908500A8B446 /* HopToAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* HopToAppDelegate.m */; };
+		3AF1BD0811C593F800A8B446 /* GoogleFavicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF1BD0711C593F800A8B446 /* GoogleFavicon.png */; };
+		3AF1BD0911C593F800A8B446 /* GoogleFavicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF1BD0711C593F800A8B446 /* GoogleFavicon.png */; };
 		3AF27AE1117AF9C000492582 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF27ADA117AF9C000492582 /* Server.m */; };
 		3AF27AE2117AF9C000492582 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF27ADD117AF9C000492582 /* Connection.m */; };
 		3AFB31EA11638F790033E972 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB31E911638F790033E972 /* Constants.m */; };
@@ -146,6 +148,7 @@
 		3AB4E6881182EA1200EEF685 /* Thumbalizr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Thumbalizr.m; path = "/Developer/Projects/iPhone Apps/HopTo/trunk/Thumbalizr.m"; sourceTree = "<absolute>"; };
 		3AD3558A1198DFF500F56C32 /* swoosh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = swoosh.wav; path = "/Developer/Projects/iPhone Apps/HopTo/trunk/swoosh.wav"; sourceTree = "<absolute>"; };
 		3AE077A911C43826007E0FD5 /* MainView_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView_ViewController.xib; sourceTree = SOURCE_ROOT; };
+		3AF1BD0711C593F800A8B446 /* GoogleFavicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GoogleFavicon.png; sourceTree = "<group>"; };
 		3AF27AD9117AF9C000492582 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Server.h; path = "/Developer/Projects/iPhone Apps/HopTo/trunk/Server.h"; sourceTree = "<absolute>"; };
 		3AF27ADA117AF9C000492582 /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Server.m; path = "/Developer/Projects/iPhone Apps/HopTo/trunk/Server.m"; sourceTree = "<absolute>"; };
 		3AF27ADB117AF9C000492582 /* ServerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerDelegate.h; path = "/Developer/Projects/iPhone Apps/HopTo/trunk/ServerDelegate.h"; sourceTree = "<absolute>"; };
@@ -408,6 +411,7 @@
 		3AFB31EC1163900A0033E972 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3AF1BD0711C593F800A8B446 /* GoogleFavicon.png */,
 				3A692F6D119A626000ADAE2F /* 20-gear2.png */,
 				3A50F1CA1174636000EECD86 /* Icon.png */,
 				3A2D5CE8118BF40800125C29 /* Icon.png */,
@@ -521,6 +525,7 @@
 				3AD3558B1198DFF500F56C32 /* swoosh.wav in Resources */,
 				3A1050F111A7E5FF0009BFE4 /* Icon-Small.png in Resources */,
 				3AE077AA11C43826007E0FD5 /* MainView_ViewController.xib in Resources */,
+				3AF1BD0811C593F800A8B446 /* GoogleFavicon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +545,7 @@
 				3A8838AE11910CED004A7550 /* WebView_ViewController.xib in Resources */,
 				3AD3558C1198DFF500F56C32 /* swoosh.wav in Resources */,
 				3A1050EA11A7E5F00009BFE4 /* Icon-Small.png in Resources */,
+				3AF1BD0911C593F800A8B446 /* GoogleFavicon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,7 +557,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* HopToAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* MainView_ViewController.m in Sources */,
 				3AFB31EA11638F790033E972 /* Constants.m in Sources */,
 				3AFB320B1163927B0033E972 /* Functions.m in Sources */,
@@ -565,6 +570,7 @@
 				3A2047A91185938100554744 /* SendURL_ViewController.m in Sources */,
 				3A10512E11A7ED340009BFE4 /* Reachability.m in Sources */,
 				3AF1BCD411C58D3700A8B446 /* WebView_ViewController.m in Sources */,
+				3AF1BCFB11C5908500A8B446 /* HopToAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

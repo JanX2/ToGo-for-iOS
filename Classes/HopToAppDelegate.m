@@ -16,11 +16,13 @@ static id kSharedDelegate;
 @synthesize urlServer;
 @synthesize urlClients;
 @synthesize wifiMonitor;
+@synthesize internetMonitor;
 @synthesize osVersion;
 @synthesize deviceType;
 @synthesize backgroundMode, firstLaunchMode, wifi;
 @synthesize appBundle, documentsDirectory;
 @synthesize deviceToken, deviceAlias;
+@synthesize incomingMessage;
 @synthesize window;
 @synthesize navigationController;
 
@@ -36,10 +38,12 @@ static id kSharedDelegate;
 	[urlServer release];
 	[urlClients release];
 	[wifiMonitor release];
+	[internetMonitor release];
 	[appBundle release];
 	[documentsDirectory release];
 	[deviceAlias release];
 	[deviceToken release];
+	[incomingMessage release];
 	[navigationController release];
 	[window release];
 	
@@ -82,8 +86,14 @@ static id kSharedDelegate;
 	self.wifiMonitor = [Reachability reachabilityForLocalWiFi];
 	[wifiMonitor startNotifer];
 	
+	self.internetMonitor = [Reachability reachabilityForInternetConnection];
+	[internetMonitor startNotifer];
+	
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(checkReachablility) 
 												 name: kReachabilityChangedNotification object: wifiMonitor];
+	
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(internetReachabilityDidChange:) 
+												 name: kReachabilityChangedNotification object: internetMonitor];
 	
 	[self checkReachablility];
 	
@@ -432,6 +442,12 @@ static id kSharedDelegate;
 	return wifi;
 }
 
+-(void) internetReachabilityDidChange: (NSNotification *) notification
+{
+	if ( [[notification object] currentReachabilityStatus] != NotReachable )
+		[[FUURLManager sharedManager] checkMetadataForAllURLs];
+}
+
 -(void) showWifiWarning
 {
 	UIAlertView *wifiAlert = [[[UIAlertView alloc] initWithTitle: @"No WiFi" 
@@ -473,6 +489,10 @@ receive websites via ToGo."
 	
 	[urlClients removeObject: connection];
 	
+	// Handle the message if needed.
+	if ( self.incomingMessage != nil ) 
+		[self handleIncomingMessage];
+	
 	NSLog(@"Connection terminated!");
 }
 
@@ -493,7 +513,21 @@ receive websites via ToGo."
 		
 		return;
 		
+	} else {
+		
+		[connection sendNetworkPacket: DICTIONARY(BOOLOBJ(YES), @"didReceiveURL", DEVICE_NAME, @"sendingDeviceName")];
+		
+		self.incomingMessage = message;
+		
 	}
+}
+
+-(void) handleIncomingMessage
+{
+	SHOW_NETWORK_INDICATOR;
+	
+	// Grab the message.
+	NSDictionary *message = self.incomingMessage;
 	
 	// Get the strings.
 	NSString *urlStr = [message objectForKey: @"url"];
@@ -501,8 +535,6 @@ receive websites via ToGo."
 	
 	// Send it off to the URL manager.
 	NSDictionary *theURL = [[FUURLManager sharedManager] addURL: urlStr from: from];
-	
-	[connection sendNetworkPacket: DICTIONARY(BOOLOBJ(YES), @"didReceiveURL", DEVICE_NAME, @"sendingDeviceName")];
 	
 	if ( backgroundMode ) {
 		
@@ -523,16 +555,20 @@ receive websites via ToGo."
 														message:  STRING_WITH_FORMAT(@"%@ has been sent to you by %@. Would you like to open it now?",
 																					 [theURL objectForKey: @"title"], from)
 													   delegate: self cancelButtonTitle: @"Not Now" otherButtonTitles: @"Open", nil] autorelease];
-#ifdef IPAD
 	
-	if ( [navigationController visibleViewController] != [MainView_ViewController sharedController] ) 
+	if ( deviceType == kFUDeviceiPad ) {
+		
+		
+		if ( [navigationController visibleViewController] != [MainView_ViewController sharedController] ) 
+			[urlAlert show];
+		
+	} else 
 		[urlAlert show];
 	
-#else
+	// Get rid of the incoming message now.
+	self.incomingMessage = nil;
 	
-	[urlAlert show];
-	
-#endif
+	HIDE_NETWORK_INDICATOR;
 }
 
 #pragma mark -

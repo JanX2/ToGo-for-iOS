@@ -134,13 +134,59 @@ static FUURLManager *kSharedManager;
 
 #pragma mark Data Control
 // Data Control
+-(void) checkMetadataForAllURLs
+{
+	// Enumerate through.
+	for ( int i = 0; i < [urlList count]; ++i ) {
+		
+		// Grab the current object.
+		NSDictionary *aDict = [[urlList objectAtIndex: i] retain];
+		
+		// Check it.
+		if ( [[aDict objectForKey: @"needsRefresh"] boolValue] ) {
+			
+			// Remove it.
+			[urlList removeObjectAtIndex: i];
+			
+			// Create a new dictionary.
+			NSMutableDictionary *newDict = [self fetchMetadataForURL: [aDict objectForKey: @"url"]];
+			
+			// Add in the necessary data.
+			[newDict setObject: [aDict objectForKey: @"url"] forKey: @"url"];
+			[newDict setObject: [aDict objectForKey: @"sendingDeviceName"] forKey: @"sendingDeviceName"];
+			
+			// Now add it back into the list.
+			[urlList insertObject: newDict atIndex: i];
+			
+		}
+		
+		[aDict release];
+		aDict = nil;
+		
+	}
+	
+	[self saveDown];
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName: FUURLManagerURLListDidChangeNotification object: self];
+}
+
 -(NSMutableDictionary *) fetchMetadataForURL: (NSString *) theURL
 {
 	// Set up a URL request to the Fappulous app hub.
 	NSURL *url = [NSURL URLWithString: STRING_WITH_FORMAT(@"http://fappulo.us/apps_backend/HopTo/websiteMeta.php?url=%@", theURL)];
 	
+	BOOL noInternet = FALSE;
+	
+	// First, test the internet connection.
+	noInternet = ( [INTERNET_MONTITOR currentReachabilityStatus] == NotReachable );
+	
 	// Now get the metadata.
-	NSMutableDictionary *metaData = [NSMutableDictionary dictionaryWithContentsOfURL: url];
+	NSMutableDictionary *metaData = nil;
+	
+	if ( noInternet ) 
+		metaData = nil;
+	else 
+		metaData = [NSMutableDictionary dictionaryWithContentsOfURL: url];
 	
 	// Set up the base dictionary.
 	NSMutableDictionary *urlDict = [NSMutableDictionary dictionary];
@@ -148,17 +194,25 @@ static FUURLManager *kSharedManager;
 	// Let's try getting the favicon.
 	NSURL *favURL;
 	NSURL *favURLSrc = [NSURL URLWithString: theURL];
+	NSData *iconData = nil;
 	
 	BOOL useGoogle = FALSE;
 	
 getIcon: ;
 	
-	if ( !useGoogle ) 
+	if ( !useGoogle && !noInternet ) 
 		favURL = [NSURL URLWithString: STRING_WITH_FORMAT(@"%@://%@/favicon.ico", [favURLSrc scheme], [favURLSrc host])];
-	else 
-		favURL = [NSURL URLWithString: STRING_WITH_FORMAT(@"http://www.google.com/s2/favicons?domain=%@", [favURLSrc host])];
+	else {
+		
+		NSString *base = @"file://";
+		
+		favURL = [NSURL URLWithString: [base stringByAppendingPathComponent: [[NSBundle mainBundle] pathForResource: @"GoogleFavicon" ofType: @"png"]]];
+		
+	}
 	
-	NSData *iconData = [NSData dataWithContentsOfURL: favURL];
+	iconData = [NSData dataWithContentsOfURL: favURL];
+	
+makeDict: ;
 	
 	UIImage *favIconSrc = [UIImage imageWithData: iconData];
 	NSData *favIconData = UIImagePNGRepresentation(favIconSrc);
@@ -196,6 +250,15 @@ getIcon: ;
 	else 
 		[urlDict setObject: [[metaData objectForKey: @"description"] stringByReplacingOccurrencesOfString: @"\\" withString: @""] 
 						forKey: @"description"];
+	
+	// If no internet, set a flag for later so we'll know to get the metadata again.
+	if ( noInternet ) {
+		
+		[urlDict setObject: BOOLOBJ(YES) forKey: @"needsRefresh"];
+		
+		[urlDict setObject: @"Couldn't connect to internet to download information. Will try again later." forKey: @"description"];
+		
+	}
 	
 	metaData = nil;
 	

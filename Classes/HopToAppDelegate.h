@@ -33,6 +33,7 @@ typedef enum {
 	Server *urlServer;
 	NSMutableSet *urlClients;
 	Reachability *wifiMonitor;
+	Reachability *internetMonitor;
 	
 	// Flags
 	FUiOSVersion osVersion;
@@ -44,6 +45,7 @@ typedef enum {
     // Data
 	NSString *appBundle, *documentsDirectory;
 	NSString *deviceToken, *deviceAlias;
+	NSDictionary *incomingMessage;
 	
 	// View
     UIWindow *window;
@@ -55,11 +57,13 @@ typedef enum {
 @property (nonatomic, retain) Server *urlServer;
 @property (nonatomic, retain) NSMutableSet *urlClients;
 @property (nonatomic, retain) Reachability *wifiMonitor;
+@property (nonatomic, retain) Reachability *internetMonitor;
 @property (nonatomic, assign, readonly) FUiOSVersion osVersion;
 @property (nonatomic, assign, readonly) FUDevice deviceType;
 @property (nonatomic) BOOL backgroundMode, firstLaunchMode, wifi;
 @property (nonatomic, copy) NSString *appBundle, *documentsDirectory;
 @property (nonatomic, copy) NSString *deviceToken, *deviceAlias;
+@property (nonatomic, retain) NSDictionary *incomingMessage;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 
@@ -114,6 +118,7 @@ typedef enum {
 #pragma mark Network Control
 // Network Control
 -(BOOL) checkReachablility;
+-(void) internetReachabilityDidChange: (NSNotification *) notification;
 -(void) showWifiWarning;
 
 #pragma mark -
@@ -130,6 +135,7 @@ typedef enum {
 #pragma mark Data Flow
 // Data Flow
 -(void) receivedNetworkPacket: (NSDictionary *) message viaConnection: (Connection *) connection;
+-(void) handleIncomingMessage;
 
 #pragma mark -
 #pragma mark Alert View Delegation
