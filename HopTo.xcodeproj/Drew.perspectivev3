@@ -352,7 +352,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3A17519B11C5AE0400B5D91A</string>
+										<string>3A17520611C5B6BC00B5D91A</string>
 										<key>history</key>
 										<array>
 											<string>3AB4E68F1182F00700EEF685</string>
@@ -364,18 +364,20 @@
 											<string>3AE078A711C5753D007E0FD5</string>
 											<string>3AF1BCB911C5896D00A8B446</string>
 											<string>3AF1BCC411C58C3E00A8B446</string>
-											<string>3AF1BCDB11C58D8E00A8B446</string>
 											<string>3AF1BCE011C58E0F00A8B446</string>
 											<string>3AF1BD0A11C598F900A8B446</string>
-											<string>3AF1BD1D11C59BFC00A8B446</string>
-											<string>3AF1BD2611C59C4000A8B446</string>
 											<string>3AF1BD3411C59D7300A8B446</string>
 											<string>3AF1BD4111C5A14B00A8B446</string>
-											<string>3AF1BD4511C5A28100A8B446</string>
 											<string>3AF1BD4811C5A2EE00A8B446</string>
 											<string>3AF1BD4911C5A2EE00A8B446</string>
-											<string>3AF1BDC911C5AD5300A8B446</string>
-											<string>3AF1BDCD11C5ADE200A8B446</string>
+											<string>3A1751B711C5B09000B5D91A</string>
+											<string>3A1751CA11C5B10B00B5D91A</string>
+											<string>3A1751E911C5B4C200B5D91A</string>
+											<string>3A1751EB11C5B4C200B5D91A</string>
+											<string>3A1751F011C5B52000B5D91A</string>
+											<string>3A1751F111C5B52000B5D91A</string>
+											<string>3A1751FD11C5B59400B5D91A</string>
+											<string>3A17520511C5B6B700B5D91A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -713,6 +715,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>3A1751B311C5AF1600B5D91A</string>
+		<string>3A1751AA11C5AE5A00B5D91A</string>
 		<string>/Developer/Projects/iPhone Apps/HopTo/trunk/HopTo.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

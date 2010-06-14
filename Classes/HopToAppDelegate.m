@@ -86,7 +86,7 @@ static id kSharedDelegate;
 	self.wifiMonitor = [Reachability reachabilityForLocalWiFi];
 	[wifiMonitor startNotifer];
 	
-	self.internetMonitor = [Reachability reachabilityForInternetConnection];
+	self.internetMonitor = [Reachability reachabilityWithHostName: @"www.google.com"];
 	[internetMonitor startNotifer];
 	
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(checkReachablility) 
@@ -96,6 +96,7 @@ static id kSharedDelegate;
 												 name: kReachabilityChangedNotification object: internetMonitor];
 	
 	[self checkReachablility];
+	[self internetReachabilityDidChange: nil];
 	
 	// Determine if this is first launch mode.
 	self.firstLaunchMode = [self determineFirstLaunchMode];
@@ -444,7 +445,7 @@ static id kSharedDelegate;
 
 -(void) internetReachabilityDidChange: (NSNotification *) notification
 {
-	if ( [[notification object] currentReachabilityStatus] != NotReachable )
+	if ( [[Reachability reachabilityWithHostName: @"www.google.com"] currentReachabilityStatus] != NotReachable )
 		[[FUURLManager sharedManager] checkMetadataForAllURLs];
 }
 

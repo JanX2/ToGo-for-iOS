@@ -100,7 +100,8 @@
 
 -(void) viewDidAppear: (BOOL) animated
 {
-	
+	if ( [INTERNET_MONTITOR currentReachabilityStatus] == NotReachable )
+		[self.navigationController popViewControllerAnimated: YES];
 }
 
 -(void) viewWillDisappear: (BOOL) animated

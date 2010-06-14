@@ -310,7 +310,11 @@ saved sites for later. Thank you and enjoy ToGo!"
 		// Start loading the web view.
 		NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString: urlStr]];
 		[request setCachePolicy: NSURLRequestReloadIgnoringCacheData];
-		[urlView loadRequest: request];
+		
+		if ( [INTERNET_MONTITOR currentReachabilityStatus] != NotReachable )
+			[urlView loadRequest: request];
+		else 
+			[urlView loadHTMLString: @"Err." baseURL: nil];
 		
 	}
 	

@@ -140,10 +140,12 @@ static FUURLManager *kSharedManager;
 	for ( int i = 0; i < [urlList count]; ++i ) {
 		
 		// Grab the current object.
-		NSDictionary *aDict = [[urlList objectAtIndex: i] retain];
+		NSDictionary *aDict = [urlList objectAtIndex: i];
 		
 		// Check it.
 		if ( [[aDict objectForKey: @"needsRefresh"] boolValue] ) {
+			
+			[aDict retain];
 			
 			// Remove it.
 			[urlList removeObjectAtIndex: i];
@@ -160,7 +162,6 @@ static FUURLManager *kSharedManager;
 			
 		}
 		
-		[aDict release];
 		aDict = nil;
 		
 	}
@@ -200,17 +201,17 @@ static FUURLManager *kSharedManager;
 	
 getIcon: ;
 	
-	if ( !useGoogle && !noInternet ) 
+	if ( !useGoogle && !noInternet ) {
+		
 		favURL = [NSURL URLWithString: STRING_WITH_FORMAT(@"%@://%@/favicon.ico", [favURLSrc scheme], [favURLSrc host])];
-	else {
 		
-		NSString *base = @"file://";
+		iconData = [NSData dataWithContentsOfURL: favURL];
 		
-		favURL = [NSURL URLWithString: [base stringByAppendingPathComponent: [[NSBundle mainBundle] pathForResource: @"GoogleFavicon" ofType: @"png"]]];
+	} else {
+		
+		iconData = [NSData dataWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"GoogleFavicon" ofType: @"png"]];
 		
 	}
-	
-	iconData = [NSData dataWithContentsOfURL: favURL];
 	
 makeDict: ;
 	
