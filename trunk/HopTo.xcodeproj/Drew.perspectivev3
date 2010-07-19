@@ -257,13 +257,11 @@
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
 								<real>22</real>
-								<real>22</real>
-								<real>283</real>
+								<real>305</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
 								<string>TargetStatusColumn</string>
-								<string>SCMStatusColumn</string>
 								<string>MainColumn</string>
 							</array>
 						</dict>
@@ -302,7 +300,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 1004}, {327, 667}}</string>
+							<string>{{0, 0}, {327, 667}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -317,10 +315,8 @@
 						<array>
 							<string>TargetStatusColumn</string>
 							<real>22</real>
-							<string>SCMStatusColumn</string>
-							<real>22</real>
 							<string>MainColumn</string>
-							<real>283</real>
+							<real>305</real>
 						</array>
 						<key>RubberWindowFrame</key>
 						<string>0 152 1440 726 0 0 1440 878 </string>
@@ -351,7 +347,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3A1FA14A11F3E3FD00784254</string>
+										<string>3AF4507511F3EC0F008F56A9</string>
 										<key>history</key>
 										<array>
 											<string>3AB4E68F1182F00700EEF685</string>
@@ -362,7 +358,7 @@
 											<string>3A1751B711C5B09000B5D91A</string>
 											<string>3A1751E911C5B4C200B5D91A</string>
 											<string>3A9D6FCE11C5D87F00DA762E</string>
-											<string>3A1FA13811F3E31300784254</string>
+											<string>3A1FA14A11F3E3FD00784254</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -506,11 +502,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>3A1FA14B11F3E3FD00784254</string>
+				<string>3AF4507611F3EC0F008F56A9</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>3A1FA14C11F3E3FD00784254</string>
+				<string>3AF4507711F3EC0F008F56A9</string>
 				<string>3AE1E6EC11638A2100981DF0</string>
-				<string>3A1FA14D11F3E3FD00784254</string>
+				<string>3AF4507811F3EC0F008F56A9</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
