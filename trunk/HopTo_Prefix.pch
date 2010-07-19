@@ -19,15 +19,6 @@
 	#import <SystemConfiguration/SystemConfiguration.h>
 #endif
 
-// Target Identification
-#ifdef __AVAILABILITY_INTERNAL__IPHONE_3_2
-#ifdef __AVAILABILITY_INTERNAL__IPHONE_4_0
-#define OS4
-#else
-#define IPAD
-#endif
-#endif
-
 // Delegate Protocols
 #import "ServerDelegate.h"
 #import "ConnectionDelegate.h"
