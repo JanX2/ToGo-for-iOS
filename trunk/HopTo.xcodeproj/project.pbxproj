@@ -127,13 +127,13 @@
 		3A692F6D119A626000ADAE2F /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = SOURCE_ROOT; };
 		3A6F65F9118AE1A400EE2EBB /* Background_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background_1.png; sourceTree = SOURCE_ROOT; };
 		3A707D4C118893870009A293 /* ToGoXL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToGoXL.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A707D4F1188938E0009A293 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		3A707D501188938E0009A293 /* MainView_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView_ViewController.xib; sourceTree = "<group>"; };
+		3A707D4F1188938E0009A293 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = "Resources-iPad/MainWindow.xib"; sourceTree = SOURCE_ROOT; };
+		3A707D501188938E0009A293 /* MainView_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainView_ViewController.xib; path = "Resources-iPad/MainView_ViewController.xib"; sourceTree = SOURCE_ROOT; };
 		3A707D511188938E0009A293 /* OlderURL_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = OlderURL_ViewController.xib; path = "Resources-iPad/Classes/OlderURL_ViewController.xib"; sourceTree = SOURCE_ROOT; };
 		3A707D521188938E0009A293 /* SendURL_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SendURL_ViewController.xib; path = "Resources-iPad/Classes/SendURL_ViewController.xib"; sourceTree = SOURCE_ROOT; };
 		3A707D531188938E0009A293 /* PairingRemote_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PairingRemote_ViewController.xib; path = "Resources-iPad/Classes/PairingRemote_ViewController.xib"; sourceTree = SOURCE_ROOT; };
 		3A707D541188938E0009A293 /* PairingPINEntry_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PairingPINEntry_ViewController.xib; path = "Resources-iPad/Classes/PairingPINEntry_ViewController.xib"; sourceTree = SOURCE_ROOT; };
-		3A707D551188938E0009A293 /* GenericWebView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericWebView.xib; sourceTree = "<group>"; };
+		3A707D551188938E0009A293 /* GenericWebView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GenericWebView.xib; path = "Resources-iPad/GenericWebView.xib"; sourceTree = SOURCE_ROOT; };
 		3A8838A811910CED004A7550 /* WebView_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebView_ViewController.h; path = Classes/WebView_ViewController.h; sourceTree = SOURCE_ROOT; };
 		3A8838A911910CED004A7550 /* WebView_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebView_ViewController.m; path = Classes/WebView_ViewController.m; sourceTree = SOURCE_ROOT; };
 		3A8838AA11910CED004A7550 /* WebView_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WebView_ViewController.xib; path = "Resources-iPad/WebView_ViewController.xib"; sourceTree = SOURCE_ROOT; };
@@ -664,7 +664,8 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HopTo_Prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = IPAD;
+				GCC_PREPROCESSOR_DEFINITIONS = IPAD;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INFOPLIST_FILE = "HopTo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				LIBRARY_SEARCH_PATHS = (
@@ -689,7 +690,8 @@
 				DISPLAY_TITLE = "ToGo XL";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HopTo_Prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = IPAD;
+				GCC_PREPROCESSOR_DEFINITIONS = IPAD;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INFOPLIST_FILE = "HopTo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				LIBRARY_SEARCH_PATHS = (
@@ -754,7 +756,8 @@
 				DISPLAY_TITLE = "ToGo XL";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HopTo_Prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = IPAD;
+				GCC_PREPROCESSOR_DEFINITIONS = IPAD;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INFOPLIST_FILE = "HopTo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				LIBRARY_SEARCH_PATHS = (

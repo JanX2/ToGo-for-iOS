@@ -86,7 +86,7 @@ static id kSharedDelegate;
 	self.wifiMonitor = [Reachability reachabilityForLocalWiFi];
 	[wifiMonitor startNotifer];
 	
-	self.internetMonitor = [Reachability reachabilityWithHostName: @"www.google.com"];
+	self.internetMonitor = [Reachability reachabilityForInternetConnection];
 	[internetMonitor startNotifer];
 	
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(checkReachablility:) 
@@ -129,17 +129,6 @@ static id kSharedDelegate;
 		return YES;
 		
 	}
-	
-#if !TARGET_IPHONE_SIMULATOR
-	
-	/*[[UIApplication sharedApplication] unregisterForRemoteNotifications];
-	
-	[[UIApplication sharedApplication] registerForRemoteNotificationTypes: 
-	 ( UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound )];
-	
-	[[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];*/
-	
-#endif
 	
 	[window addSubview: [navigationController view]];
 	[window makeKeyAndVisible];
