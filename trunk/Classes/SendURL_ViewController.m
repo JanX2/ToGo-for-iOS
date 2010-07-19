@@ -57,12 +57,11 @@ enum _kTableSections {
 	if ( DEVICE_TYPE == kFUDeviceiPad )
 		serverList.backgroundView = nil;
 	
-//#ifndef IPAD
-	// Set up the colors.
-	self.view.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed: @"Background_1.png"]];
+#ifndef IPAD
+	self.view.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed: @"Background_iPhone.png"]];
 	serverList.backgroundColor = [UIColor clearColor];
+#endif
 	toolbar.tintColor = self.navigationController.navigationBar.tintColor;
-//#endif
 	
 	// Set up the Finder.
 	self.finder = [[ServerBrowser alloc] init];

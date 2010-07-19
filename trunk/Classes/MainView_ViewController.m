@@ -72,10 +72,10 @@ enum _kTableSections {
 																			  action: @selector(settingsAction:)] 
 											  autorelease];*/
 	
-//#ifndef IPAD
-	self.view.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed: @"Background_1.png"]];
+#ifndef IPAD
+	self.view.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed: @"Background_iPhone.png"]];
 	urlTable.backgroundColor = [UIColor clearColor];
-//#endif
+#endif
 	
 	// Set the title.
 	self.navigationItem.title = @"Current Site";
