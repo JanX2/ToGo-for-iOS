@@ -8,8 +8,11 @@
 	<string>${DISPLAY_TITLE}</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIconFile</key>
-	<string>Icon.png</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon.png</string>
+		<string>Icon@2x.png</string>
+	</array>
 	<key>CFBundleIdentifier</key>
 	<string>${BUNDLE_ID}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -49,6 +52,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIApplicationExitsOnSuspend</key>
-	<true/>
+	<false/>
 </dict>
 </plist>
