@@ -41,6 +41,8 @@
 		3A5DDD5C11F54D5B0068F1E8 /* URLInfo_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDD5A11F54D5B0068F1E8 /* URLInfo_ViewController.xib */; };
 		3A5DDD5D11F54D5B0068F1E8 /* URLInfo_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5DDD5911F54D5B0068F1E8 /* URLInfo_ViewController.m */; };
 		3A5DDD5E11F54D5B0068F1E8 /* URLInfo_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDD5A11F54D5B0068F1E8 /* URLInfo_ViewController.xib */; };
+		3A5DDD8611F55CF30068F1E8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDD8511F55CF30068F1E8 /* Default@2x.png */; };
+		3A5DDD8711F55CF30068F1E8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDD8511F55CF30068F1E8 /* Default@2x.png */; };
 		3A5F62F71177C6F4000F7EC4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5F62F61177C6F4000F7EC4 /* QuartzCore.framework */; };
 		3A5F632A1177CE0F000F7EC4 /* UIViewControllerSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F63271177CE0F000F7EC4 /* UIViewControllerSingleton.m */; };
 		3A5F632B1177CE0F000F7EC4 /* Foundation+.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F63291177CE0F000F7EC4 /* Foundation+.m */; };
@@ -131,6 +133,7 @@
 		3A5DDD5811F54D5B0068F1E8 /* URLInfo_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLInfo_ViewController.h; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Classes/URLInfo_ViewController.h"; sourceTree = DEVELOPER_DIR; };
 		3A5DDD5911F54D5B0068F1E8 /* URLInfo_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLInfo_ViewController.m; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Classes/URLInfo_ViewController.m"; sourceTree = DEVELOPER_DIR; };
 		3A5DDD5A11F54D5B0068F1E8 /* URLInfo_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = URLInfo_ViewController.xib; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Classes/URLInfo_ViewController.xib"; sourceTree = DEVELOPER_DIR; };
+		3A5DDD8511F55CF30068F1E8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Default@2x.png"; sourceTree = DEVELOPER_DIR; };
 		3A5F62F61177C6F4000F7EC4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3A5F63261177CE0F000F7EC4 /* UIViewControllerSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerSingleton.h; sourceTree = SOURCE_ROOT; };
 		3A5F63271177CE0F000F7EC4 /* UIViewControllerSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerSingleton.m; sourceTree = SOURCE_ROOT; };
@@ -435,6 +438,7 @@
 				3A2D5CE8118BF40800125C29 /* Icon.png */,
 				3A5DDBDE11F4F14A0068F1E8 /* Icon@2x.png */,
 				3A215913118BC38E00E009B5 /* Default.png */,
+				3A5DDD8511F55CF30068F1E8 /* Default@2x.png */,
 				3A1050F011A7E5FF0009BFE4 /* Icon-Small.png */,
 				3A1050E811A7E5F00009BFE4 /* Icon-Small.png */,
 				3A21592F118BC80D00E009B5 /* Default-Landscape.png */,
@@ -557,6 +561,7 @@
 				3A5DDC1311F4F6380068F1E8 /* Background_iPhone@2x.png in Resources */,
 				3A5DDC6B11F514E40068F1E8 /* WebView_ViewController.xib in Resources */,
 				3A5DDD5C11F54D5B0068F1E8 /* URLInfo_ViewController.xib in Resources */,
+				3A5DDD8611F55CF30068F1E8 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +586,7 @@
 				3A5DDC1411F4F6380068F1E8 /* Background_iPhone.png in Resources */,
 				3A5DDC1511F4F6380068F1E8 /* Background_iPhone@2x.png in Resources */,
 				3A5DDD5E11F54D5B0068F1E8 /* URLInfo_ViewController.xib in Resources */,
+				3A5DDD8711F55CF30068F1E8 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
