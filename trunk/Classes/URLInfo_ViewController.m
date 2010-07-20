@@ -199,7 +199,7 @@ typedef enum {
 			
 		} else {
 			
-			[[FUURLManager sharedManager] openURL: [FUURLManager sharedManager].currentURL];
+			[[FUURLManager sharedManager] openURL: urlObj];
 			
 		}
 		
@@ -215,25 +215,9 @@ typedef enum {
 		// Set up a send view.
 		SendURL_ViewController *sendView = [[[SendURL_ViewController alloc] init] autorelease];
 		
-		[sendView loadViewWithURL: [FUURLManager sharedManager].currentURL];
-		
-		// Push it.
-		/*#ifdef IPAD
-		 
-		 UINavigationController *sendNav = [[[UINavigationController alloc] initWithRootViewController: sendView] autorelease];
-		 
-		 UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController: sendNav];
-		 popover.popoverContentSize = CGSizeMake(320, 400);
-		 
-		 CGRect cellRect = [tableView rectForRowAtIndexPath: indexPath];
-		 
-		 [popover presentPopoverFromRect: cellRect inView: tableView permittedArrowDirections: UIPopoverArrowDirectionAny animated: YES];
-		 
-		 #else*/
+		[sendView loadViewWithURL: urlObj];
 		
 		[self.navigationController pushViewController: sendView animated: YES];
-		
-		//#endif
 		
 	}
 }

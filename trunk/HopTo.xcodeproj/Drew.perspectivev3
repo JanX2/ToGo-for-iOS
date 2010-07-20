@@ -294,12 +294,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>1</integer>
-									<integer>0</integer>
+									<integer>116</integer>
+									<integer>115</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 188}, {327, 667}}</string>
+							<string>{{0, 1543}, {327, 667}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -329,14 +329,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>3AE1E6EC11638A2100981DF0</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>HopToAppDelegate.m</string>
+								<string>Entitlements.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -344,18 +342,17 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>3AE1E6ED11638A2100981DF0</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>HopToAppDelegate.m</string>
+										<string>Entitlements.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3A5DDDFA11F56DCF0068F1E8</string>
+										<string>3A31C3D611F601050072D743</string>
 										<key>history</key>
 										<array>
 											<string>3AB4E68F1182F00700EEF685</string>
 											<string>3AFE780411AE91B9004D5DFE</string>
 											<string>3A1751E911C5B4C200B5D91A</string>
 											<string>3A5DDB6511F4A01B0068F1E8</string>
-											<string>3A5DDBA411F4DE1E0068F1E8</string>
 											<string>3A5DDBE511F4F1730068F1E8</string>
 											<string>3A5DDBF811F4F21F0068F1E8</string>
 											<string>3A5DDBFB11F4F2840068F1E8</string>
@@ -374,9 +371,10 @@
 											<string>3A5DDD8F11F55DCF0068F1E8</string>
 											<string>3A5DDD9011F55DCF0068F1E8</string>
 											<string>3A5DDDA711F55F3E0068F1E8</string>
-											<string>3A5DDDB811F563EA0068F1E8</string>
 											<string>3A5DDDB911F563EA0068F1E8</string>
-											<string>3A5DDDF911F56DB80068F1E8</string>
+											<string>3A31C3D311F601050072D743</string>
+											<string>3A31C3D411F601050072D743</string>
+											<string>3A31C3D511F601050072D743</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -390,18 +388,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1091, 680}}</string>
+								<string>{{0, 0}, {1091, 476}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 152 1440 726 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>680pt</string>
+							<string>476pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>204pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -415,7 +413,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1091, -27}}</string>
+										<string>{{10, 27}, {1091, 177}}</string>
 										<key>RubberWindowFrame</key>
 										<string>0 152 1440 726 0 0 1440 878 </string>
 									</dict>
@@ -499,11 +497,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>3A5DDDAA11F55F3E0068F1E8</string>
+				<string>3A31C3BC11F5F1DF0072D743</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>3A5DDDAB11F55F3E0068F1E8</string>
+				<string>3A31C3BD11F5F1DF0072D743</string>
 				<string>3AE1E6EC11638A2100981DF0</string>
-				<string>3A5DDDAC11F55F3E0068F1E8</string>
+				<string>3A31C3BE11F5F1DF0072D743</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -652,14 +650,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>3A5DDDC311F565220068F1E8</string>
+				<string>3A31C3D711F601050072D743</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>3A5DDDC411F565220068F1E8</string>
-				<string>3A5DDDC511F565220068F1E8</string>
-				<string>3A5DDDC611F565220068F1E8</string>
-				<string>3A5DDDC711F565220068F1E8</string>
-				<string>3AE1E6EC11638A2100981DF0</string>
+				<string>3A31C3D811F601050072D743</string>
+				<string>3A31C3D911F601050072D743</string>
+				<string>3A31C3DA11F601050072D743</string>
+				<string>3A31C3DB11F601050072D743</string>
+				<string>3A31C3DC11F601050072D743</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -693,8 +691,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>3A5DDDC911F565220068F1E8</string>
-		<string>3A5DDDCA11F565220068F1E8</string>
+		<string>3A31C3DD11F601050072D743</string>
+		<string>3A31C3DE11F601050072D743</string>
 		<string>/Developer/Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/HopTo.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

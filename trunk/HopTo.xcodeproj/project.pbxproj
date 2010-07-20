@@ -767,6 +767,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_ID = us.fappulo.togo;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Paula Hood";
 				COPY_PHASE_STRIP = YES;
 				DISPLAY_TITLE = ToGo;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -779,6 +780,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = ToGo;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "454E7456-5C98-4DD6-AEAA-774F3EF27BCC";
 				SDKROOT = iphoneos4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
