@@ -121,6 +121,7 @@ enum _kTableSections {
 	[urlTable reloadData];
 	
 	self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed: 0.28627451 green: 0.58039216 blue: 0.79607843 alpha: 1.0];
 	
 	[self shouldAutorotateToInterfaceOrientation: self.interfaceOrientation];
 	
@@ -149,6 +150,8 @@ saved sites for later. Thank you and enjoy ToGo!"
 -(void) viewWillDisappear: (BOOL) animated
 {
 	[urlView stopLoading];
+	
+	HIDE_NETWORK_INDICATOR;
 	
 	[super viewWillDisappear: animated];
 }
@@ -327,15 +330,18 @@ makeTable: ;
 	
 	STANDARD_TABLE_DATA_ARRAY
 	
-	// ( DEVICE_TYPE != kFUDeviceiPad ) {
+	NEW_SECTION(@"");
+	
+	// Determine what to say.
+#ifndef IPAD
+	NSString *safariTitle = @"View Site";
+#else
+	NSString *safariTitle = @"Open in Safari";
+#endif
 		
-		NEW_SECTION(@"");
-		
-		[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, @"Open in Safari", nil)];
-		
-		[tableData addObject: eachSection];
-		
-	//}
+	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, safariTitle, nil)];
+	
+	[tableData addObject: eachSection];
 	
 	NEW_SECTION(@"");
 	
@@ -408,7 +414,16 @@ makeTable: ;
 	
 	if ( IPSection == kTableSectionOpenURL ) {
 		
-		[[FUURLManager sharedManager] openURL: [FUURLManager sharedManager].currentURL];
+		// Set up a web view.
+		WebView_ViewController *webView = [[[WebView_ViewController alloc] init] autorelease];
+		
+		// Load the url.
+		[webView loadViewWithURL: [[FUURLManager sharedManager] currentURL]];
+		
+		// Push it.
+		[self.navigationController pushViewController: webView animated: YES];
+		
+		//[[FUURLManager sharedManager] openURL: [FUURLManager sharedManager].currentURL];
 		
 	} else if ( IPSection == kTableSectionOlderURLs ) {
 		

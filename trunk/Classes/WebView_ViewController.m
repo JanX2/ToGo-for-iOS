@@ -45,6 +45,12 @@
 	// Set the title.
 	self.navigationItem.title = ( [urlObj objectForKey: @"title"] == nil ) ? @"Browser" : [urlObj objectForKey: @"title"];
 	
+#ifndef IPAD
+	// Add the button.
+	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAction 
+																							target: self action: @selector(safariAction:)] autorelease];
+#endif
+	
 	// Start off without navigation.
 	self.navigationController.navigationBar.alpha = 0.0;
 	controlBar.alpha = 0.0;
@@ -92,6 +98,7 @@
 -(void) viewWillAppear: (BOOL) animated
 {	
 	// Set up the navigation bar.
+	self.navigationController.navigationBar.tintColor = nil;
 	self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 	[UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleBlackTranslucent;
 	
@@ -144,7 +151,7 @@
 	//self.navigationController.navigationBar.alpha = 0.0;
 	//controlBar.alpha = 0.0;
 	
-	[[UIApplication sharedApplication] setStatusBarHidden: FALSE withAnimation: UIStatusBarAnimationFade];
+	[[UIApplication sharedApplication] setStatusBarHidden: FALSE withAnimation: UIStatusBarAnimationSlide];
 	
 	[UIView beginAnimations: nil context: nil];
 	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
@@ -161,7 +168,7 @@
 	//self.navigationController.navigationBar.alpha = 1.0;
 	//controlBar.alpha = 1.0;
 	
-	[[UIApplication sharedApplication] setStatusBarHidden: TRUE withAnimation: UIStatusBarAnimationFade];
+	[[UIApplication sharedApplication] setStatusBarHidden: TRUE withAnimation: UIStatusBarAnimationSlide];
 	
 	[UIView beginAnimations: nil context: nil];
 	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
@@ -219,6 +226,16 @@
 
 -(IBAction) safariAction: (id) sender
 {
+#ifndef IPAD
+	// Confirm.
+	UIActionSheet *safariConfirm = [[[UIActionSheet alloc] initWithTitle: nil delegate: self cancelButtonTitle: @"Cancel" 
+												  destructiveButtonTitle: nil otherButtonTitles: @"Open in Safari", nil] autorelease];
+	
+	[safariConfirm showInView: self.view];
+	
+	return;
+#endif
+	
 	[[FUURLManager sharedManager] openURL: urlObj];
 }
 
@@ -304,6 +321,25 @@
 		[urlView reload];
 		
 	}*/
+}
+
+#pragma mark -
+#pragma mark Action Sheet Delegation
+/* Action Sheet Delegation *\
+\***************************/
+
+-(void) actionSheet: (UIActionSheet *) actionSheet didDismissWithButtonIndex: (NSInteger) buttonIndex
+{
+	if ( buttonIndex == 0 ) {
+		
+		// Do. 
+		[[FUURLManager sharedManager] openURL: urlObj];
+		
+	} else {
+		
+		// Don't do.
+		
+	}
 }
 
 @end

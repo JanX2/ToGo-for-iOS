@@ -10,9 +10,7 @@
 @class PreviousURLs_ViewController;
 //@class PairingRemote_ViewController;
 @class SendURL_ViewController;
-#ifdef IPAD
 @class WebView_ViewController;
-#endif
 
 @interface MainView_ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate>
 {

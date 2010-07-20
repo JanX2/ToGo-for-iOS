@@ -36,6 +36,7 @@
 		3A5DDC1311F4F6380068F1E8 /* Background_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDC1111F4F6380068F1E8 /* Background_iPhone@2x.png */; };
 		3A5DDC1411F4F6380068F1E8 /* Background_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDC1011F4F6380068F1E8 /* Background_iPhone.png */; };
 		3A5DDC1511F4F6380068F1E8 /* Background_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDC1111F4F6380068F1E8 /* Background_iPhone@2x.png */; };
+		3A5DDC6B11F514E40068F1E8 /* WebView_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A920E4211948195008C83B7 /* WebView_ViewController.xib */; };
 		3A5F62F71177C6F4000F7EC4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5F62F61177C6F4000F7EC4 /* QuartzCore.framework */; };
 		3A5F632A1177CE0F000F7EC4 /* UIViewControllerSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F63271177CE0F000F7EC4 /* UIViewControllerSingleton.m */; };
 		3A5F632B1177CE0F000F7EC4 /* Foundation+.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F63291177CE0F000F7EC4 /* Foundation+.m */; };
@@ -544,6 +545,7 @@
 				3A5DDBDF11F4F14A0068F1E8 /* Icon@2x.png in Resources */,
 				3A5DDC1211F4F6380068F1E8 /* Background_iPhone.png in Resources */,
 				3A5DDC1311F4F6380068F1E8 /* Background_iPhone@2x.png in Resources */,
+				3A5DDC6B11F514E40068F1E8 /* WebView_ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

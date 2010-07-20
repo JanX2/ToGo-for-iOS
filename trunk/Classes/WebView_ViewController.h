@@ -8,7 +8,7 @@
 // Forward Declarations
 @class FUURLManager;
 
-@interface WebView_ViewController : UIViewController <UIWebViewDelegate>
+@interface WebView_ViewController : UIViewController <UIWebViewDelegate, UIActionSheetDelegate>
 {
 	// Data
 	NSDictionary *urlObj;
@@ -77,5 +77,12 @@
 -(BOOL) webView: (UIWebView *) webView shouldStartLoadWithRequest: (NSURLRequest *) request 
  navigationType: (UIWebViewNavigationType) navigationType;
 -(void) webView: (UIWebView *) webView didFailLoadWithError: (NSError *) error;
+
+#pragma mark -
+#pragma mark Action Sheet Delegation
+/* Action Sheet Delegation *\
+\***************************/
+
+-(void) actionSheet: (UIActionSheet *) actionSheet didDismissWithButtonIndex: (NSInteger) buttonIndex;
 
 @end
