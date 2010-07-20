@@ -121,7 +121,6 @@ enum _kTableSections {
 	[urlTable reloadData];
 	
 	self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
-	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed: 0.28627451 green: 0.58039216 blue: 0.79607843 alpha: 1.0];
 	
 	[self shouldAutorotateToInterfaceOrientation: self.interfaceOrientation];
 	
