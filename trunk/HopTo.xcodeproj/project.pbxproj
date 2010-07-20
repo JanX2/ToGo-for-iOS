@@ -37,6 +37,10 @@
 		3A5DDC1411F4F6380068F1E8 /* Background_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDC1011F4F6380068F1E8 /* Background_iPhone.png */; };
 		3A5DDC1511F4F6380068F1E8 /* Background_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDC1111F4F6380068F1E8 /* Background_iPhone@2x.png */; };
 		3A5DDC6B11F514E40068F1E8 /* WebView_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A920E4211948195008C83B7 /* WebView_ViewController.xib */; };
+		3A5DDD5B11F54D5B0068F1E8 /* URLInfo_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5DDD5911F54D5B0068F1E8 /* URLInfo_ViewController.m */; };
+		3A5DDD5C11F54D5B0068F1E8 /* URLInfo_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDD5A11F54D5B0068F1E8 /* URLInfo_ViewController.xib */; };
+		3A5DDD5D11F54D5B0068F1E8 /* URLInfo_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5DDD5911F54D5B0068F1E8 /* URLInfo_ViewController.m */; };
+		3A5DDD5E11F54D5B0068F1E8 /* URLInfo_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDD5A11F54D5B0068F1E8 /* URLInfo_ViewController.xib */; };
 		3A5F62F71177C6F4000F7EC4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5F62F61177C6F4000F7EC4 /* QuartzCore.framework */; };
 		3A5F632A1177CE0F000F7EC4 /* UIViewControllerSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F63271177CE0F000F7EC4 /* UIViewControllerSingleton.m */; };
 		3A5F632B1177CE0F000F7EC4 /* Foundation+.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F63291177CE0F000F7EC4 /* Foundation+.m */; };
@@ -124,6 +128,9 @@
 		3A5DDBDE11F4F14A0068F1E8 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Icon@2x.png"; sourceTree = DEVELOPER_DIR; };
 		3A5DDC1011F4F6380068F1E8 /* Background_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background_iPhone.png; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Background_iPhone.png"; sourceTree = DEVELOPER_DIR; };
 		3A5DDC1111F4F6380068F1E8 /* Background_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background_iPhone@2x.png"; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Background_iPhone@2x.png"; sourceTree = DEVELOPER_DIR; };
+		3A5DDD5811F54D5B0068F1E8 /* URLInfo_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLInfo_ViewController.h; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Classes/URLInfo_ViewController.h"; sourceTree = DEVELOPER_DIR; };
+		3A5DDD5911F54D5B0068F1E8 /* URLInfo_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLInfo_ViewController.m; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Classes/URLInfo_ViewController.m"; sourceTree = DEVELOPER_DIR; };
+		3A5DDD5A11F54D5B0068F1E8 /* URLInfo_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = URLInfo_ViewController.xib; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Classes/URLInfo_ViewController.xib"; sourceTree = DEVELOPER_DIR; };
 		3A5F62F61177C6F4000F7EC4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3A5F63261177CE0F000F7EC4 /* UIViewControllerSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerSingleton.h; sourceTree = SOURCE_ROOT; };
 		3A5F63271177CE0F000F7EC4 /* UIViewControllerSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerSingleton.m; sourceTree = SOURCE_ROOT; };
@@ -448,6 +455,9 @@
 				3A8838A711910C33004A7550 /* Web View */,
 				3A5F64011178276C000F7EC4 /* URL List */,
 				3A2047A51185935D00554744 /* Device Interaction */,
+				3A5DDD5811F54D5B0068F1E8 /* URLInfo_ViewController.h */,
+				3A5DDD5911F54D5B0068F1E8 /* URLInfo_ViewController.m */,
+				3A5DDD5A11F54D5B0068F1E8 /* URLInfo_ViewController.xib */,
 			);
 			name = "Main View";
 			path = Classes;
@@ -546,6 +556,7 @@
 				3A5DDC1211F4F6380068F1E8 /* Background_iPhone.png in Resources */,
 				3A5DDC1311F4F6380068F1E8 /* Background_iPhone@2x.png in Resources */,
 				3A5DDC6B11F514E40068F1E8 /* WebView_ViewController.xib in Resources */,
+				3A5DDD5C11F54D5B0068F1E8 /* URLInfo_ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +580,7 @@
 				3A5DDBE011F4F14A0068F1E8 /* Icon@2x.png in Resources */,
 				3A5DDC1411F4F6380068F1E8 /* Background_iPhone.png in Resources */,
 				3A5DDC1511F4F6380068F1E8 /* Background_iPhone@2x.png in Resources */,
+				3A5DDD5E11F54D5B0068F1E8 /* URLInfo_ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +606,7 @@
 				3A10512E11A7ED340009BFE4 /* Reachability.m in Sources */,
 				3AF1BCD411C58D3700A8B446 /* WebView_ViewController.m in Sources */,
 				3AF1BCFB11C5908500A8B446 /* HopToAppDelegate.m in Sources */,
+				3A5DDD5B11F54D5B0068F1E8 /* URLInfo_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +629,7 @@
 				3A707D3C118893870009A293 /* SendURL_ViewController.m in Sources */,
 				3A8838AD11910CED004A7550 /* WebView_ViewController.m in Sources */,
 				3A10512F11A7ED340009BFE4 /* Reachability.m in Sources */,
+				3A5DDD5D11F54D5B0068F1E8 /* URLInfo_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

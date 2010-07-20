@@ -389,6 +389,17 @@
 	else 
 		currentURL = [[FUURLManager sharedManager] URLAtIndex: IPRow];
 	
+#ifndef IPAD
+	// Set up a URL view.
+	URLInfo_ViewController *urlView = [[[URLInfo_ViewController alloc] init] autorelease];
+	urlView.urlObj = currentURL;
+	
+	// Push it.
+	[self.navigationController pushViewController: urlView animated: YES];
+	
+	return;
+#endif
+	
 	NSString *openTitle = nil;
 	
 	if ( OS_VERSION >= kFUiOSVersion3_2 )

@@ -7,8 +7,9 @@
 
 // Forward Declarations
 @class FUURLManager;
-#ifdef IPAD
 @class WebView_ViewController;
+#ifndef IPAD
+@class URLInfo_ViewController;
 #endif
 
 @interface PreviousURLs_ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate,

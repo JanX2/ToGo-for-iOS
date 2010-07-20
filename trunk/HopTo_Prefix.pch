@@ -61,6 +61,7 @@
 //#import "PairingPINEntry_ViewController.h"
 #import "PreviousURLs_ViewController.h"
 #import "SendURL_ViewController.h"
+#import "URLInfo_ViewController.h"
 
 /* Macros *\
 \**********/
