@@ -54,6 +54,7 @@
 	// Start off without navigation.
 	self.navigationController.navigationBar.alpha = 0.0;
 	controlBar.alpha = 0.0;
+	navUp = FALSE;
 	
 	// Set up the tap gesture.
 	self.tapGesture = [[[UITapGestureRecognizer alloc] initWithTarget: self action: @selector(touchAction:)] autorelease];
@@ -100,7 +101,12 @@
 	// Set up the navigation bar.
 	self.navigationController.navigationBar.tintColor = nil;
 	self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+#ifdef IPAD
+	[UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleBlackOpaque;
+#else
 	[UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleBlackTranslucent;
+#endif
+	//[UIApplication sharedApplication].statusBarHidden = TRUE;
 	
 	[super viewWillAppear: animated];
 }
@@ -117,8 +123,11 @@
 	self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
 	[UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
 	[[UIApplication sharedApplication] setStatusBarHidden: NO];
+	//[UIApplication sharedApplication].statusBarHidden = FALSE;
 	
 	[urlView stopLoading];
+	
+	HIDE_NETWORK_INDICATOR;
 	
 	[super viewWillDisappear: animated];
 }
@@ -126,6 +135,10 @@
 -(BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) toInterfaceOrientation
 {
 	instructionsLabel.center = urlView.center;
+	
+#ifndef IPAD
+	return ( toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown );
+#endif
 	
 	return YES;
 }
@@ -151,7 +164,9 @@
 	//self.navigationController.navigationBar.alpha = 0.0;
 	//controlBar.alpha = 0.0;
 	
-	[[UIApplication sharedApplication] setStatusBarHidden: FALSE withAnimation: UIStatusBarAnimationSlide];
+#ifdef IPAD
+	[[UIApplication sharedApplication] setStatusBarHidden: FALSE withAnimation: UIStatusBarAnimationFade];
+#endif
 	
 	[UIView beginAnimations: nil context: nil];
 	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
@@ -168,7 +183,9 @@
 	//self.navigationController.navigationBar.alpha = 1.0;
 	//controlBar.alpha = 1.0;
 	
-	[[UIApplication sharedApplication] setStatusBarHidden: TRUE withAnimation: UIStatusBarAnimationSlide];
+#ifdef IPAD
+	[[UIApplication sharedApplication] setStatusBarHidden: TRUE withAnimation: UIStatusBarAnimationFade];
+#endif
 	
 	[UIView beginAnimations: nil context: nil];
 	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
