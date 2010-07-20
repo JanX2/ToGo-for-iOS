@@ -174,7 +174,6 @@ static id kSharedDelegate;
 	self.backgroundMode = FALSE;
 }
 
-#ifdef OS4
 -(void) applicationDidEnterBackground: (UIApplication *) application
 {
 	NSLog(@"Entering background.");
@@ -182,6 +181,54 @@ static id kSharedDelegate;
 	[self stopURLServer];
 	
 	self.backgroundMode = TRUE;
+	
+	/*UIBackgroundTaskIdentifier bgTask;
+	
+	NSAssert(bgTask == UIBackgroundTaskInvalid, nil);
+	
+	bgTask = [application beginBackgroundTaskWithExpirationHandler: ^{
+	
+		NSLog(@"Entering background.");
+		
+		[urlServer stop];
+		self.urlServer = nil;
+		
+		self.backgroundMode = TRUE;
+		
+		dispatch_async(dispatch_get_main_queue(), ^{
+			
+			if ( bgTask != UIBackgroundTaskInvalid ) {
+				
+				[application endBackgroundTask: bgTask];
+				
+			}
+			
+		});
+		
+	}];
+	
+	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+		
+		[[NSRunLoop currentRunLoop] run];
+		
+		NSLog(@"Entering background.");
+		
+		[urlServer stop];
+		self.urlServer = nil;
+		
+		self.backgroundMode = TRUE;
+		
+		dispatch_async(dispatch_get_main_queue(), ^{
+			
+			if ( bgTask != UIBackgroundTaskInvalid ) {
+				
+				[application endBackgroundTask: bgTask];
+				
+			}
+			
+		});
+		
+	});*/
 }
 
 -(void) applicationWillEnterForeground: (UIApplication *) application
@@ -192,7 +239,6 @@ static id kSharedDelegate;
 	
 	self.backgroundMode = FALSE;
 }
-#endif
 
 -(void) applicationWillTerminate: (UIApplication *) application
 {

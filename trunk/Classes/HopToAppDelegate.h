@@ -82,10 +82,8 @@ typedef enum {
 -(void) application: (UIApplication *) application handleOpenURL: (NSURL *) url;
 -(void) applicationWillResignActive: (UIApplication *) application;
 -(void) applicationDidBecomeActive: (UIApplication *) application;
-#ifdef OS4
 -(void) applicationDidEnterBackground: (UIApplication *) application;
 -(void) applicationWillEnterForeground: (UIApplication *) application;
-#endif
 -(void) applicationWillTerminate: (UIApplication *) application;
 -(BOOL) determineFirstLaunchMode;
 

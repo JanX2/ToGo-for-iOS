@@ -49,7 +49,7 @@ typedef enum {
 -(void) viewDidLoad
 {
 	// Set the title.
-	self.navigationItem.title = ( [urlObj objectForKey: @"title"] == nil ) ? @"Site" : [urlObj objectForKey: @"title"];
+	self.navigationItem.title = @"Site Info";
 	
 #ifndef IPAD
 	self.view.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed: @"Background_iPhone.png"]];
@@ -192,7 +192,7 @@ typedef enum {
 			WebView_ViewController *webView = [[[WebView_ViewController alloc] init] autorelease];
 			
 			// Load the url.
-			[webView loadViewWithURL: [[FUURLManager sharedManager] currentURL]];
+			[webView loadViewWithURL: urlObj];
 			
 			// Push it.
 			[self.navigationController pushViewController: webView animated: YES];
