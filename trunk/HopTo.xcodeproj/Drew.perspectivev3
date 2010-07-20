@@ -294,13 +294,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>36</integer>
-									<integer>35</integer>
-									<integer>0</integer>
+									<integer>112</integer>
+									<integer>111</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 385}, {327, 936}}</string>
+							<string>{{0, 1119}, {327, 936}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -349,7 +348,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3A5DDD0F11F53DCF0068F1E8</string>
+										<string>3A5DDD3411F5454A0068F1E8</string>
 										<key>history</key>
 										<array>
 											<string>3AB4E68F1182F00700EEF685</string>
@@ -375,7 +374,7 @@
 											<string>3A5DDCEC11F536CB0068F1E8</string>
 											<string>3A5DDCEE11F536CB0068F1E8</string>
 											<string>3A5DDCF311F5380F0068F1E8</string>
-											<string>3A5DDCF411F5380F0068F1E8</string>
+											<string>3A5DDD2111F544210068F1E8</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -389,18 +388,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1331, 949}}</string>
+								<string>{{0, 0}, {1331, 664}}</string>
 								<key>RubberWindowFrame</key>
 								<string>-1680 55 1680 995 -1680 0 1680 1050 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>949pt</string>
+							<string>664pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>285pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -414,7 +413,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1331, -27}}</string>
+										<string>{{10, 27}, {1331, 258}}</string>
 										<key>RubberWindowFrame</key>
 										<string>-1680 55 1680 995 -1680 0 1680 1050 </string>
 									</dict>
@@ -498,11 +497,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>3A5DDCE711F534F50068F1E8</string>
+				<string>3A5DDD3511F5454A0068F1E8</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>3A5DDCE811F534F50068F1E8</string>
+				<string>3A5DDD3611F5454A0068F1E8</string>
 				<string>3AE1E6EC11638A2100981DF0</string>
-				<string>3A5DDCE911F534F50068F1E8</string>
+				<string>3A5DDD3711F5454A0068F1E8</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -651,14 +650,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>3A5DDCF611F5380F0068F1E8</string>
+				<string>3A5DDD3811F5454A0068F1E8</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>3A5DDCF711F5380F0068F1E8</string>
-				<string>3A5DDCF811F5380F0068F1E8</string>
-				<string>3A5DDCF911F5380F0068F1E8</string>
-				<string>3A5DDCFA11F5380F0068F1E8</string>
-				<string>3A5DDCFB11F5380F0068F1E8</string>
+				<string>3A5DDD3911F5454A0068F1E8</string>
+				<string>3A5DDD3A11F5454A0068F1E8</string>
+				<string>3A5DDD3B11F5454A0068F1E8</string>
+				<string>3A5DDD3C11F5454A0068F1E8</string>
+				<string>3AE1E6EC11638A2100981DF0</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -692,6 +691,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>3A5DDD3D11F5454A0068F1E8</string>
+		<string>3A5DDD3E11F5454A0068F1E8</string>
 		<string>/Developer/Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/HopTo.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
