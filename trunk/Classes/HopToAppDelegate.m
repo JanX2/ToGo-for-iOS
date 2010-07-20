@@ -547,9 +547,9 @@ receive websites via ToGo."
 	
 	// Create the alert view.
 	UIAlertView *urlAlert = [[[UIAlertView alloc] initWithTitle: @"New Site" 
-														message:  STRING_WITH_FORMAT(@"%@ has been sent to you by %@. Would you like to open it now?",
+														message:  STRING_WITH_FORMAT(@"%@ has been sent to you by %@. Would you like to view it now?",
 																					 [theURL objectForKey: @"title"], from)
-													   delegate: self cancelButtonTitle: @"Not Now" otherButtonTitles: @"Open", nil] autorelease];
+													   delegate: self cancelButtonTitle: @"Not Now" otherButtonTitles: @"View", nil] autorelease];
 	
 	if ( deviceType == kFUDeviceiPad ) {
 		
@@ -580,21 +580,23 @@ receive websites via ToGo."
 		
 	} else if ( buttonIndex == 1 ) {
 		
-#ifdef IPAD
-		// Open a web view.
-		WebView_ViewController *webView = [[[WebView_ViewController alloc] init] autorelease];
-		
-		// Load it in. 
-		[webView loadViewWithURL: [FUURLManager sharedManager].currentURL];
-		
-		// Push it.
-		[navigationController pushViewController: webView animated: YES];
-		
-		return;
-#endif
-		
-		// Open it.
-		[[FUURLManager sharedManager] openURL: [FUURLManager sharedManager].currentURL];
+		if ( osVersion >= kFUiOSVersion3_2 ) {
+			
+			// Open a web view.
+			WebView_ViewController *webView = [[[WebView_ViewController alloc] init] autorelease];
+			
+			// Load it in. 
+			[webView loadViewWithURL: [FUURLManager sharedManager].currentURL];
+			
+			// Push it.
+			[navigationController pushViewController: webView animated: YES];
+			
+		} else {
+			
+			// Open it.
+			[[FUURLManager sharedManager] openURL: [FUURLManager sharedManager].currentURL];
+			
+		}
 		
 	}
 }

@@ -391,10 +391,10 @@
 	
 	NSString *openTitle = nil;
 	
-	if ( DEVICE_TYPE == kFUDeviceiPad )
+	if ( OS_VERSION >= kFUiOSVersion3_2 )
 		openTitle = @"View Site";
 	else 
-		openTitle = @"View Site";
+		openTitle = @"Open in Safari";
 	
 	
 	// Open an action sheet.
@@ -505,18 +505,22 @@ forRowAtIndexPath: (NSIndexPath *) indexPath
 	
 	if ( buttonIndex == 0 ) {
 		
-		// Open the fullscreen browser.
-		WebView_ViewController *webView = [[[WebView_ViewController alloc] init] autorelease];
-		
-		[webView loadViewWithURL: selectedURL];
-		
-		// Push it.
-		[self.navigationController pushViewController: webView animated: YES];
-		
-		return;
-		
-		// Open.
-		//[urlManager openURL: selectedURL];
+		if ( OS_VERSION >= kFUiOSVersion3_2 ) {
+			
+			// Open the fullscreen browser.
+			WebView_ViewController *webView = [[[WebView_ViewController alloc] init] autorelease];
+			
+			[webView loadViewWithURL: selectedURL];
+			
+			// Push it.
+			[self.navigationController pushViewController: webView animated: YES];
+			
+		} else {
+			
+			// Open.
+			[urlManager openURL: selectedURL];
+			
+		}
 		
 	} else if ( buttonIndex == 1 ) {
 		

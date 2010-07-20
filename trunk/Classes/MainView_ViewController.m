@@ -332,11 +332,12 @@ makeTable: ;
 	NEW_SECTION(@"");
 	
 	// Determine what to say.
-#ifndef IPAD
-	NSString *safariTitle = @"View Site";
-#else
-	NSString *safariTitle = @"Open in Safari";
-#endif
+	NSString *safariTitle = nil;
+	
+	if ( OS_VERSION >= kFUiOSVersion3_2 )
+		safariTitle = @"View Site";
+	else 
+		safariTitle = @"Open in Safari";
 		
 	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, safariTitle, nil)];
 	
@@ -413,16 +414,22 @@ makeTable: ;
 	
 	if ( IPSection == kTableSectionOpenURL ) {
 		
-		// Set up a web view.
-		WebView_ViewController *webView = [[[WebView_ViewController alloc] init] autorelease];
-		
-		// Load the url.
-		[webView loadViewWithURL: [[FUURLManager sharedManager] currentURL]];
-		
-		// Push it.
-		[self.navigationController pushViewController: webView animated: YES];
-		
-		//[[FUURLManager sharedManager] openURL: [FUURLManager sharedManager].currentURL];
+		if ( OS_VERSION >= kFUiOSVersion3_2 ) {
+			
+			// Set up a web view.
+			WebView_ViewController *webView = [[[WebView_ViewController alloc] init] autorelease];
+			
+			// Load the url.
+			[webView loadViewWithURL: [[FUURLManager sharedManager] currentURL]];
+			
+			// Push it.
+			[self.navigationController pushViewController: webView animated: YES];
+			
+		} else {
+			
+			[[FUURLManager sharedManager] openURL: [FUURLManager sharedManager].currentURL];
+			
+		}
 		
 	} else if ( IPSection == kTableSectionOlderURLs ) {
 		
@@ -527,7 +534,22 @@ makeTable: ;
 	// Open it if wanted.
 	if ( buttonIndex == 1 ) {
 		
-		[[FUURLManager sharedManager] openURL: [FUURLManager sharedManager].currentURL];
+		if ( OS_VERSION >= kFUiOSVersion3_2 ) {
+			
+			// Set up a web view.
+			WebView_ViewController *webView = [[[WebView_ViewController alloc] init] autorelease];
+			
+			// Load the url.
+			[webView loadViewWithURL: [[FUURLManager sharedManager] currentURL]];
+			
+			// Push it.
+			[self.navigationController pushViewController: webView animated: YES];
+			
+		} else {
+			
+			[[FUURLManager sharedManager] openURL: [FUURLManager sharedManager].currentURL];
+			
+		}
 		
 	}
 }

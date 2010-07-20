@@ -72,6 +72,7 @@
 // Data Access
 #define BACKGROUND_MODE [APP_DELEGATE backgroundMode]
 #define FIRST_LAUNCH_MODE [APP_DELEGATE firstLaunchMode]
+#define OS_VERSION [APP_DELEGATE osVersion]
 #define DEVICE_TYPE [APP_DELEGATE deviceType]
 #define WIFI [APP_DELEGATE wifi]
 #define INTERNET_MONTITOR [APP_DELEGATE internetMonitor]
