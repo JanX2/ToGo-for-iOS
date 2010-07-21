@@ -116,7 +116,7 @@ static id kSharedDelegate;
 	[[NSUserDefaults standardUserDefaults] setBool: TRUE forKey: @"FU_Memory_Mode"];
 	[[NSUserDefaults standardUserDefaults] setBool: TRUE forKey: @"FU_Core_Data_Logging"];
 	
-	if ( launchOptions && [launchOptions objectForKey: UIApplicationLaunchOptionsRemoteNotificationKey] != nil ) {
+	/*if ( launchOptions && [launchOptions objectForKey: UIApplicationLaunchOptionsRemoteNotificationKey] != nil ) {
 		
 		NSDictionary *notification = [launchOptions objectForKey: UIApplicationLaunchOptionsRemoteNotificationKey];
 		
@@ -128,25 +128,31 @@ static id kSharedDelegate;
 		
 		return YES;
 		
-	}
+	}*/
 	
 	[window addSubview: [navigationController view]];
 	[window makeKeyAndVisible];
 	
-	// Handle a URL launch.
+	/*// Handle a URL launch.
 	if ( launchOptions != nil && [launchOptions objectForKey: UIApplicationLaunchOptionsURLKey] != nil ) {
 		
 		// Get the url.
 		NSString *urlStr = [[[launchOptions objectForKey: UIApplicationLaunchOptionsURLKey] absoluteString] 
 							stringByReplacingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
 		
-		NSURL *urlObj = [NSURL URLWithString: urlStr];
+		NSLog(@"urlStr = %@", urlStr);
 		
-		NSMutableDictionary *url = [[urlObj query] explodeToDictionaryInnerGlue: @"=" outterGlue: @"&"];
+		NSString *urlSource = [urlStr stringByReplacingOccurrencesOfString: @"togo://send/?url=" withString: @""];
 		
-		[[FUURLManager sharedManager] addURL: [url objectForKey: @"url"] from: DEVICE_NAME];
+		NSLog(@"URL source = %@", urlSource);
 		
-	}
+		//NSMutableDictionary *url = [[urlObj query] explodeToDictionaryInnerGlue: @"=" outterGlue: @"&"];
+		
+		//[[FUURLManager sharedManager] addURL: urlSource from: DEVICE_NAME];
+		
+	}*/
+	
+continueLaunch: ;
 	
 	return YES;
 }
@@ -263,6 +269,30 @@ static id kSharedDelegate;
 		return YES;
 	
 	return NO;
+}
+
+-(void) showNewURLAlert
+{
+	[[NSNotificationCenter defaultCenter] removeObserver: self name: FUURLManagerNewURLAddedNotification object: nil];
+	
+	// Grab the new URL.
+	NSDictionary *theURL = [FUURLManager sharedManager].currentURL;
+	
+	// Create the alert view.
+	UIAlertView *urlAlert = [[[UIAlertView alloc] initWithTitle: @"New Site" 
+														message:  STRING_WITH_FORMAT(@"%@ has been sent to you by %@. Would you like to view it now?",
+																					 [theURL objectForKey: @"title"], 
+																					 [theURL objectForKey: @"sendingDeviceName"])
+													   delegate: self cancelButtonTitle: @"Not Now" otherButtonTitles: @"View", nil] autorelease];
+	
+	if ( deviceType == kFUDeviceiPad ) {
+		
+		
+		if ( [navigationController visibleViewController] != [MainView_ViewController sharedController] ) 
+			[urlAlert show];
+		
+	} else 
+		[urlAlert show];
 }
 
 /*
@@ -575,7 +605,7 @@ receive websites via ToGo."
 	NSString *from = [message objectForKey: @"sendingDeviceName"];
 	
 	// Send it off to the URL manager.
-	NSDictionary *theURL = [[FUURLManager sharedManager] addURL: urlStr from: from];
+	[[FUURLManager sharedManager] addURL: urlStr from: from];
 	
 	if ( backgroundMode ) {
 		
@@ -591,20 +621,9 @@ receive websites via ToGo."
 		
 	}
 	
-	// Create the alert view.
-	UIAlertView *urlAlert = [[[UIAlertView alloc] initWithTitle: @"New Site" 
-														message:  STRING_WITH_FORMAT(@"%@ has been sent to you by %@. Would you like to view it now?",
-																					 [theURL objectForKey: @"title"], from)
-													   delegate: self cancelButtonTitle: @"Not Now" otherButtonTitles: @"View", nil] autorelease];
-	
-	if ( deviceType == kFUDeviceiPad ) {
-		
-		
-		if ( [navigationController visibleViewController] != [MainView_ViewController sharedController] ) 
-			[urlAlert show];
-		
-	} else 
-		[urlAlert show];
+	// Sign up for the notification when it's added.
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(showNewURLAlert) 
+												 name: FUURLManagerNewURLAddedNotification object: [FUURLManager sharedManager]];
 	
 	// Get rid of the incoming message now.
 	self.incomingMessage = nil;

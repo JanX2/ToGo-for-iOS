@@ -86,6 +86,7 @@ typedef enum {
 -(void) applicationWillEnterForeground: (UIApplication *) application;
 -(void) applicationWillTerminate: (UIApplication *) application;
 -(BOOL) determineFirstLaunchMode;
+-(void) showNewURLAlert;
 
 /*
 #pragma mark -

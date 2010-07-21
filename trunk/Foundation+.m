@@ -8,6 +8,15 @@
 
 #import "Foundation+.h"
 
+@implementation UIApplication (Extended)
+
+-(void) showNetworkIndicator: (NSNumber *) show
+{
+	self.networkActivityIndicatorVisible = [show boolValue];
+}
+
+@end
+
 @implementation NSDictionary (MoreStuff)
 
 // Functions

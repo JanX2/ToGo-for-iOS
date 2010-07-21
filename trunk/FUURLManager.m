@@ -7,9 +7,10 @@
 
 #pragma mark Constants
 // Constants
-NSString * const FUURLManagerCurrentURLDidChangeNotification = @"FUURLManagerCurrentURLDidChangeNotification";
-NSString * const FUURLManagerURLListDidChangeNotification = @"FUURLManagerURLListDidChangeNotification";
-NSString * const FUURLManagerWillOpenURLNotification = @"FUURLManagerWillOpenURLNotification";
+NSString * const FUURLManagerNewURLAddedNotification = @"_FUURLManagerNewURLAddedNotification";
+NSString * const FUURLManagerCurrentURLDidChangeNotification = @"_FUURLManagerCurrentURLDidChangeNotification";
+NSString * const FUURLManagerURLListDidChangeNotification = @"_FUURLManagerURLListDidChangeNotification";
+NSString * const FUURLManagerWillOpenURLNotification = @"_FUURLManagerWillOpenURLNotification";
 
 #pragma mark Globals
 // Globals
@@ -136,6 +137,13 @@ static FUURLManager *kSharedManager;
 // Data Control
 -(void) checkMetadataForAllURLs
 {
+	[NSThread detachNewThreadSelector: @selector(_checkMetadataForAllURLs) toTarget: self withObject: nil];
+}
+
+-(void) _checkMetadataForAllURLs
+{
+	NSAutoreleasePool *checkPool = [NSAutoreleasePool new];
+	
 	// Enumerate through.
 	for ( int i = 0; i < [urlList count]; ++i ) {
 		
@@ -169,10 +177,15 @@ static FUURLManager *kSharedManager;
 	[self saveDown];
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName: FUURLManagerURLListDidChangeNotification object: self];
+	
+	[checkPool drain];
 }
 
 -(NSMutableDictionary *) fetchMetadataForURL: (NSString *) theURL
 {
+	[[UIApplication sharedApplication] performSelectorOnMainThread: @selector(showNetworkIndicator:) 
+														withObject: BOOLOBJ(YES) waitUntilDone: YES];
+	
 	// Set up a URL request to the Fappulous app hub.
 	NSURL *url = [NSURL URLWithString: STRING_WITH_FORMAT(@"http://fappulo.us/apps_backend/HopTo/websiteMeta.php?url=%@", theURL)];
 	
@@ -263,6 +276,9 @@ makeDict: ;
 	
 	metaData = nil;
 	
+	[[UIApplication sharedApplication] performSelectorOnMainThread: @selector(showNetworkIndicator:) 
+														withObject: BOOLOBJ(NO) waitUntilDone: YES];
+	
 	return urlDict;
 }
 
@@ -285,8 +301,21 @@ makeDict: ;
 	}
 }
 
--(NSDictionary *) addURL: (NSString *) url from: (NSString *) nameOfDevice
+-(void) addURL: (NSString *) url from: (NSString *) nameOfDevice
+{	
+	[NSThread detachNewThreadSelector: @selector(_addURLInBackground:) toTarget: self 
+						   withObject: DICTIONARY(url, @"URL", nameOfDevice, @"deviceName")];
+}
+
+-(void) _addURLInBackground: (NSDictionary *) urlSourceDict
 {
+	// Set up a pool.
+	NSAutoreleasePool *addPool = [NSAutoreleasePool new];
+	
+	// Grab the info out of the dictionary.
+	NSString *url = [urlSourceDict objectForKey: @"URL"];
+	NSString *nameOfDevice = [urlSourceDict objectForKey: @"deviceName"];
+	
 	// Get the info set up in a dictionary.
 	NSMutableDictionary *urlDict = [self fetchMetadataForURL: url];
 	
@@ -306,11 +335,11 @@ makeDict: ;
 	[self saveDown];
 	
 	// Tell everyone what's just happened.
+	[[NSNotificationCenter defaultCenter] postNotificationName: FUURLManagerNewURLAddedNotification object: self];
 	[[NSNotificationCenter defaultCenter] postNotificationName: FUURLManagerCurrentURLDidChangeNotification object: self];
 	[[NSNotificationCenter defaultCenter] postNotificationName: FUURLManagerURLListDidChangeNotification object: self];
 	
-	// Return the new dictionary.
-	return self.currentURL;
+	[addPool drain];
 }
 
 -(void) removeURLAtIndex: (NSInteger) index

@@ -5,6 +5,12 @@
 //#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@interface UIApplication (Extended)
+
+-(void) showNetworkIndicator: (NSNumber *) show;
+
+@end
+
 @interface NSDictionary (MoreStuff)
 
 // Functions
