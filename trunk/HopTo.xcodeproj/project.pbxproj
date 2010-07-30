@@ -25,7 +25,6 @@
 		3A215933118BC81100E009B5 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A215930118BC80D00E009B5 /* Default-Portrait.png */; };
 		3A215934118BC81200E009B5 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A21592F118BC80D00E009B5 /* Default-Landscape.png */; };
 		3A2D5CEA118BF41100125C29 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A2D5CE8118BF40800125C29 /* Icon.png */; };
-		3A2D5D1C118C078000125C29 /* Background_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F65F9118AE1A400EE2EBB /* Background_1.png */; };
 		3A36BCF91173AB1B00FE4A6D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A36BCF81173AB1B00FE4A6D /* CFNetwork.framework */; };
 		3A36BCFD1173AB3500FE4A6D /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A36BCFC1173AB3500FE4A6D /* libz.1.2.3.dylib */; };
 		3A36BCFF1173AB3E00FE4A6D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A36BCFE1173AB3E00FE4A6D /* AudioToolbox.framework */; };
@@ -51,7 +50,6 @@
 		3A5F635E11780107000F7EC4 /* FUURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F635D11780107000F7EC4 /* FUURLManager.m */; };
 		3A5F6405117827E3000F7EC4 /* PreviousURLs_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F6403117827E3000F7EC4 /* PreviousURLs_ViewController.m */; };
 		3A5F6406117827E3000F7EC4 /* OlderURL_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F6404117827E3000F7EC4 /* OlderURL_ViewController.xib */; };
-		3A6F65FA118AE1A400EE2EBB /* Background_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F65F9118AE1A400EE2EBB /* Background_1.png */; };
 		3A707D2D118893870009A293 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		3A707D2E118893870009A293 /* HopToAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* HopToAppDelegate.m */; };
 		3A707D2F118893870009A293 /* MainView_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* MainView_ViewController.m */; };
@@ -74,6 +72,7 @@
 		3A707D48118893870009A293 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5F62F61177C6F4000F7EC4 /* QuartzCore.framework */; };
 		3A707D561188938E0009A293 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A707D4F1188938E0009A293 /* MainWindow.xib */; };
 		3A707D571188938E0009A293 /* MainView_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A707D501188938E0009A293 /* MainView_ViewController.xib */; };
+		3A7F946A12026D6400C74D3F /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A7F946912026D6400C74D3F /* Icon-Small@2x.png */; };
 		3A8838AD11910CED004A7550 /* WebView_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8838A911910CED004A7550 /* WebView_ViewController.m */; };
 		3A8838AE11910CED004A7550 /* WebView_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8838AA11910CED004A7550 /* WebView_ViewController.xib */; };
 		3A896B6C118EA9E7008DEF0C /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A896B6B118EA9E7008DEF0C /* Entitlements.plist */; };
@@ -147,7 +146,6 @@
 		3A5F6403117827E3000F7EC4 /* PreviousURLs_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreviousURLs_ViewController.m; path = Classes/PreviousURLs_ViewController.m; sourceTree = SOURCE_ROOT; };
 		3A5F6404117827E3000F7EC4 /* OlderURL_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = OlderURL_ViewController.xib; path = Classes/OlderURL_ViewController.xib; sourceTree = SOURCE_ROOT; };
 		3A692F6D119A626000ADAE2F /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = SOURCE_ROOT; };
-		3A6F65F9118AE1A400EE2EBB /* Background_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background_1.png; sourceTree = SOURCE_ROOT; };
 		3A707D4C118893870009A293 /* ToGoXL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToGoXL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A707D4F1188938E0009A293 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = "Resources-iPad/MainWindow.xib"; sourceTree = SOURCE_ROOT; };
 		3A707D501188938E0009A293 /* MainView_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainView_ViewController.xib; path = "Resources-iPad/MainView_ViewController.xib"; sourceTree = SOURCE_ROOT; };
@@ -156,6 +154,7 @@
 		3A707D531188938E0009A293 /* PairingRemote_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PairingRemote_ViewController.xib; path = "Resources-iPad/Classes/PairingRemote_ViewController.xib"; sourceTree = SOURCE_ROOT; };
 		3A707D541188938E0009A293 /* PairingPINEntry_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PairingPINEntry_ViewController.xib; path = "Resources-iPad/Classes/PairingPINEntry_ViewController.xib"; sourceTree = SOURCE_ROOT; };
 		3A707D551188938E0009A293 /* GenericWebView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GenericWebView.xib; path = "Resources-iPad/GenericWebView.xib"; sourceTree = SOURCE_ROOT; };
+		3A7F946912026D6400C74D3F /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Icon-Small@2x.png"; sourceTree = DEVELOPER_DIR; };
 		3A8838A811910CED004A7550 /* WebView_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebView_ViewController.h; path = Classes/WebView_ViewController.h; sourceTree = SOURCE_ROOT; };
 		3A8838A911910CED004A7550 /* WebView_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebView_ViewController.m; path = Classes/WebView_ViewController.m; sourceTree = SOURCE_ROOT; };
 		3A8838AA11910CED004A7550 /* WebView_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WebView_ViewController.xib; path = "Resources-iPad/WebView_ViewController.xib"; sourceTree = SOURCE_ROOT; };
@@ -442,10 +441,10 @@
 				3A215913118BC38E00E009B5 /* Default.png */,
 				3A5DDD8511F55CF30068F1E8 /* Default@2x.png */,
 				3A1050F011A7E5FF0009BFE4 /* Icon-Small.png */,
+				3A7F946912026D6400C74D3F /* Icon-Small@2x.png */,
 				3A1050E811A7E5F00009BFE4 /* Icon-Small.png */,
 				3A21592F118BC80D00E009B5 /* Default-Landscape.png */,
 				3A215930118BC80D00E009B5 /* Default-Portrait.png */,
-				3A6F65F9118AE1A400EE2EBB /* Background_1.png */,
 				3A5DDC1011F4F6380068F1E8 /* Background_iPhone.png */,
 				3A5DDC1111F4F6380068F1E8 /* Background_iPhone@2x.png */,
 				3A4F74A012025AF80052612E /* Background_iPad_Landscape.png */,
@@ -553,7 +552,6 @@
 				3A50F1CB1174636100EECD86 /* Icon.png in Resources */,
 				3A5F6406117827E3000F7EC4 /* OlderURL_ViewController.xib in Resources */,
 				3A2047AA1185938100554744 /* SendURL_ViewController.xib in Resources */,
-				3A6F65FA118AE1A400EE2EBB /* Background_1.png in Resources */,
 				3A215914118BC38E00E009B5 /* Default.png in Resources */,
 				3A896B6C118EA9E7008DEF0C /* Entitlements.plist in Resources */,
 				3AD3558B1198DFF500F56C32 /* swoosh.wav in Resources */,
@@ -566,6 +564,7 @@
 				3A5DDC6B11F514E40068F1E8 /* WebView_ViewController.xib in Resources */,
 				3A5DDD5C11F54D5B0068F1E8 /* URLInfo_ViewController.xib in Resources */,
 				3A5DDD8611F55CF30068F1E8 /* Default@2x.png in Resources */,
+				3A7F946A12026D6400C74D3F /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,7 +577,6 @@
 				3A215933118BC81100E009B5 /* Default-Portrait.png in Resources */,
 				3A215934118BC81200E009B5 /* Default-Landscape.png in Resources */,
 				3A2D5CEA118BF41100125C29 /* Icon.png in Resources */,
-				3A2D5D1C118C078000125C29 /* Background_1.png in Resources */,
 				3A896B6D118EA9E7008DEF0C /* Entitlements.plist in Resources */,
 				3A8838AE11910CED004A7550 /* WebView_ViewController.xib in Resources */,
 				3AD3558C1198DFF500F56C32 /* swoosh.wav in Resources */,
