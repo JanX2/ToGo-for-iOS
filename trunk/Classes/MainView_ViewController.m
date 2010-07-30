@@ -453,9 +453,8 @@ makeTable: ;
 		
 		[sendView loadViewWithURL: [FUURLManager sharedManager].currentURL];
 		
-		// Push it.
-/*#ifdef IPAD
-		
+#ifdef IPAD
+		// Put it in a popover for iPad.
 		UINavigationController *sendNav = [[[UINavigationController alloc] initWithRootViewController: sendView] autorelease];
 		
 		UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController: sendNav];
@@ -465,8 +464,12 @@ makeTable: ;
 		
 		[popover presentPopoverFromRect: cellRect inView: tableView permittedArrowDirections: UIPopoverArrowDirectionAny animated: YES];
 		
-#else*/
+		sendView.popoverController = popover;
 		
+		return;
+#endif
+		
+		// Otherwise, push it.
 		[self.navigationController pushViewController: sendView animated: YES];
 		
 //#endif

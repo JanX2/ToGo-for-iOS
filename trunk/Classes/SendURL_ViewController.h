@@ -26,6 +26,7 @@
 	UITableView *serverList;
 	UIToolbar *toolbar;
 	UIBarButtonItem *sendButton;
+	UIPopoverController *popoverController;
 }
 
 #pragma mark Properties
@@ -37,6 +38,7 @@
 @property (nonatomic, retain) IBOutlet UITableView *serverList;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *sendButton;
+@property (nonatomic, assign) UIPopoverController *popoverController;
 
 #pragma mark Instance Management
 // Instance Management

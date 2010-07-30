@@ -26,6 +26,7 @@ enum _kTableSections {
 @synthesize serverList;
 @synthesize toolbar;
 @synthesize sendButton;
+@synthesize popoverController;
 
 #pragma mark Instance Management
 // Instance Management
@@ -57,9 +58,10 @@ enum _kTableSections {
 	if ( DEVICE_TYPE == kFUDeviceiPad )
 		serverList.backgroundView = nil;
 	
-#ifndef IPAD
 	self.view.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed: @"Background_iPhone.png"]];
 	serverList.backgroundColor = [UIColor clearColor];
+#ifdef IPAD
+	serverList.backgroundView = nil;
 #endif
 	toolbar.tintColor = self.navigationController.navigationBar.tintColor;
 	
@@ -248,6 +250,11 @@ enum _kTableSections {
 	
 	// Everything went well, so pop the view.
 	[self.navigationController popViewControllerAnimated: YES];
+	
+#ifdef IPAD
+	// Or dismiss the popover.
+	[popoverController dismissPopoverAnimated: YES];
+#endif
 }
 
 #pragma mark Data Flow

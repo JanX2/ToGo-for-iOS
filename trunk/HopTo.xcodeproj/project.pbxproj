@@ -19,6 +19,7 @@
 		3A10512F11A7ED340009BFE4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A10512D11A7ED340009BFE4 /* Reachability.m */; };
 		3A10514C11A7F2C10009BFE4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A10514B11A7F2C10009BFE4 /* SystemConfiguration.framework */; };
 		3A10516811A7F7050009BFE4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A10514B11A7F2C10009BFE4 /* SystemConfiguration.framework */; };
+		3A1708721202C1BF00115253 /* Background_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDC1011F4F6380068F1E8 /* Background_iPhone.png */; };
 		3A2047A91185938100554744 /* SendURL_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2047A71185938100554744 /* SendURL_ViewController.m */; };
 		3A2047AA1185938100554744 /* SendURL_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2047A81185938100554744 /* SendURL_ViewController.xib */; };
 		3A215914118BC38E00E009B5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A215913118BC38E00E009B5 /* Default.png */; };
@@ -589,6 +590,7 @@
 				3A4F7464120253D40052612E /* SendURL_ViewController.xib in Resources */,
 				3A4F74A412025AF80052612E /* Background_iPad_Landscape.png in Resources */,
 				3A4F74A512025AF80052612E /* Background_iPad_Portrait.png in Resources */,
+				3A1708721202C1BF00115253 /* Background_iPhone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
