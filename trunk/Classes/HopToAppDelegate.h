@@ -18,8 +18,12 @@
 typedef enum {
 	kFUiOSVersion3 = 300,
 	kFUiOSVersion3_1 = 310,
+	kFUiOSVersion3_1_2 = 312,
+	kFUiOSVersion3_1_3 = 313,
 	kFUiOSVersion3_2 = 320,
-	kFUiOSVersion4 = 400
+	kFUiOSVersion4 = 400,
+	kFUiOSVersion4_0_1 = 401,
+	kFUiOSVersion4_1 = 410
 } FUiOSVersion;
 
 typedef enum {

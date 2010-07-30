@@ -70,7 +70,7 @@ static id kSharedDelegate;
 	application.statusBarStyle = UIStatusBarStyleDefault;
 	
 	// Set the OS Version.
-	osVersion = [[[UIDevice currentDevice] systemVersion] doubleValue] * 100;
+	osVersion = [[[[UIDevice currentDevice] systemVersion] stringByReplacingOccurrencesOfString: @"." withString: @""] doubleValue] * 100;
 	
 	// Determine the device.
 	if ( osVersion >= kFUiOSVersion3_2 )
