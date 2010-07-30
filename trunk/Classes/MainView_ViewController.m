@@ -91,17 +91,15 @@ enum _kTableSections {
 	webContainerLayer.masksToBounds = YES;
 	webContainerLayer.cornerRadius = 10.0;
 	
-	if ( DEVICE_TYPE == kFUDeviceiPad ) {
-		
-		// Set up the table view right.
-		urlTable.backgroundView = nil;
-		urlTable.opaque = NO;
-		
-		// Sign up for reachability notifications.
-		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(loadInfo) 
-													 name: kReachabilityChangedNotification object: nil];
-		
-	}
+#ifdef IPAD
+	// Set up the table view right.
+	urlTable.backgroundView = nil;
+	urlTable.opaque = NO;
+	
+	// Sign up for reachability notifications.
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(loadInfo) 
+												 name: kReachabilityChangedNotification object: nil];
+#endif
 	
 	// Now the corner radius for the text view.
 	CALayer *textViewLayer = [urlText layer];
@@ -157,11 +155,12 @@ saved sites for later. Thank you and enjoy ToGo!"
 
 -(BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) toInterfaceOrientation
 {
-	if ( DEVICE_TYPE == kFUDeviceiPhone )
-		return ( toInterfaceOrientation == UIInterfaceOrientationPortrait 
-				|| toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown );
+#ifndef IPAD
+	return ( toInterfaceOrientation == UIInterfaceOrientationPortrait 
+			|| toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown );
+#endif
 	
-	if ( [[[UIDevice currentDevice] model] isEqualToString: @"iPhone"] 
+	/*if ( [[[UIDevice currentDevice] model] isEqualToString: @"iPhone"] 
 		|| [[[UIDevice currentDevice] model] isEqualToString: @"iPhone Simulator"] ) 
 	{
 		
@@ -173,8 +172,9 @@ saved sites for later. Thank you and enjoy ToGo!"
 		
 		return YES;
 		
-	}
+	}*/
 	
+#ifdef IPAD
 	if ( toInterfaceOrientation == UIInterfaceOrientationPortrait || toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown ) {
 		
 		// Set the proper frames.
@@ -182,6 +182,9 @@ saved sites for later. Thank you and enjoy ToGo!"
 		detailsLabel.frame = CGRectMake(20, 740, 280, 21);
 		urlText.frame = CGRectMake(20, 769, 383, 181);
 		urlTable.frame = CGRectMake(421, 740, 327, 210);
+		
+		// Set the background image.
+		self.view.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed: @"Background_iPad_Portrait.png"]];
 		
 		/*if ( self.interfaceOrientation == UIInterfaceOrientationPortrait 
 			|| self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown )
@@ -195,6 +198,9 @@ saved sites for later. Thank you and enjoy ToGo!"
 		urlText.frame = CGRectMake(729, 78, 275, 384);
 		urlTable.frame = CGRectMake(729, 470, 275, 210);
 		
+		// Set the background image.
+		self.view.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed: @"Background_iPad_Landscape.png"]];
+		
 		/*if ( self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft 
 			|| self.interfaceOrientation == UIInterfaceOrientationLandscapeRight )
 			[[UIApplication sharedApplication] setStatusBarHidden: YES withAnimation: UIStatusBarAnimationSlide];*/
@@ -206,6 +212,7 @@ saved sites for later. Thank you and enjoy ToGo!"
 	[urlText loadHTMLString: urlTextStr baseURL: nil];
 	
 	return YES;
+#endif
 }
 
 -(void) willAnimateSecondHalfOfRotationFromInterfaceOrientation: (UIInterfaceOrientation) fromInterfaceOrientation 

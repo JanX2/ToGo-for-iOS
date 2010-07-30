@@ -29,13 +29,15 @@
 		3A36BCF91173AB1B00FE4A6D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A36BCF81173AB1B00FE4A6D /* CFNetwork.framework */; };
 		3A36BCFD1173AB3500FE4A6D /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A36BCFC1173AB3500FE4A6D /* libz.1.2.3.dylib */; };
 		3A36BCFF1173AB3E00FE4A6D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A36BCFE1173AB3E00FE4A6D /* AudioToolbox.framework */; };
+		3A4F7463120253BD0052612E /* OlderURL_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A707D511188938E0009A293 /* OlderURL_ViewController.xib */; };
+		3A4F7464120253D40052612E /* SendURL_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2047A81185938100554744 /* SendURL_ViewController.xib */; };
+		3A4F74A412025AF80052612E /* Background_iPad_Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4F74A012025AF80052612E /* Background_iPad_Landscape.png */; };
+		3A4F74A512025AF80052612E /* Background_iPad_Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4F74A112025AF80052612E /* Background_iPad_Portrait.png */; };
 		3A50F1CB1174636100EECD86 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A50F1CA1174636000EECD86 /* Icon.png */; };
 		3A5DDBDF11F4F14A0068F1E8 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDBDE11F4F14A0068F1E8 /* Icon@2x.png */; };
 		3A5DDBE011F4F14A0068F1E8 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDBDE11F4F14A0068F1E8 /* Icon@2x.png */; };
 		3A5DDC1211F4F6380068F1E8 /* Background_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDC1011F4F6380068F1E8 /* Background_iPhone.png */; };
 		3A5DDC1311F4F6380068F1E8 /* Background_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDC1111F4F6380068F1E8 /* Background_iPhone@2x.png */; };
-		3A5DDC1411F4F6380068F1E8 /* Background_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDC1011F4F6380068F1E8 /* Background_iPhone.png */; };
-		3A5DDC1511F4F6380068F1E8 /* Background_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDC1111F4F6380068F1E8 /* Background_iPhone@2x.png */; };
 		3A5DDC6B11F514E40068F1E8 /* WebView_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A920E4211948195008C83B7 /* WebView_ViewController.xib */; };
 		3A5DDD5B11F54D5B0068F1E8 /* URLInfo_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5DDD5911F54D5B0068F1E8 /* URLInfo_ViewController.m */; };
 		3A5DDD5C11F54D5B0068F1E8 /* URLInfo_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDD5A11F54D5B0068F1E8 /* URLInfo_ViewController.xib */; };
@@ -72,8 +74,6 @@
 		3A707D48118893870009A293 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5F62F61177C6F4000F7EC4 /* QuartzCore.framework */; };
 		3A707D561188938E0009A293 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A707D4F1188938E0009A293 /* MainWindow.xib */; };
 		3A707D571188938E0009A293 /* MainView_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A707D501188938E0009A293 /* MainView_ViewController.xib */; };
-		3A707D581188938E0009A293 /* OlderURL_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A707D511188938E0009A293 /* OlderURL_ViewController.xib */; };
-		3A707D591188938E0009A293 /* SendURL_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A707D521188938E0009A293 /* SendURL_ViewController.xib */; };
 		3A8838AD11910CED004A7550 /* WebView_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8838A911910CED004A7550 /* WebView_ViewController.m */; };
 		3A8838AE11910CED004A7550 /* WebView_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8838AA11910CED004A7550 /* WebView_ViewController.xib */; };
 		3A896B6C118EA9E7008DEF0C /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A896B6B118EA9E7008DEF0C /* Entitlements.plist */; };
@@ -126,6 +126,8 @@
 		3A36BCF81173AB1B00FE4A6D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3A36BCFC1173AB3500FE4A6D /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		3A36BCFE1173AB3E00FE4A6D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3A4F74A012025AF80052612E /* Background_iPad_Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background_iPad_Landscape.png; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Background_iPad_Landscape.png"; sourceTree = DEVELOPER_DIR; };
+		3A4F74A112025AF80052612E /* Background_iPad_Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background_iPad_Portrait.png; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Background_iPad_Portrait.png"; sourceTree = DEVELOPER_DIR; };
 		3A50F1CA1174636000EECD86 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = SOURCE_ROOT; };
 		3A5DDBDE11F4F14A0068F1E8 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Icon@2x.png"; sourceTree = DEVELOPER_DIR; };
 		3A5DDC1011F4F6380068F1E8 /* Background_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background_iPhone.png; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Background_iPhone.png"; sourceTree = DEVELOPER_DIR; };
@@ -446,6 +448,8 @@
 				3A6F65F9118AE1A400EE2EBB /* Background_1.png */,
 				3A5DDC1011F4F6380068F1E8 /* Background_iPhone.png */,
 				3A5DDC1111F4F6380068F1E8 /* Background_iPhone@2x.png */,
+				3A4F74A012025AF80052612E /* Background_iPad_Landscape.png */,
+				3A4F74A112025AF80052612E /* Background_iPad_Portrait.png */,
 			);
 			name = Images;
 			sourceTree = SOURCE_ROOT;
@@ -571,8 +575,6 @@
 			files = (
 				3A707D561188938E0009A293 /* MainWindow.xib in Resources */,
 				3A707D571188938E0009A293 /* MainView_ViewController.xib in Resources */,
-				3A707D581188938E0009A293 /* OlderURL_ViewController.xib in Resources */,
-				3A707D591188938E0009A293 /* SendURL_ViewController.xib in Resources */,
 				3A215933118BC81100E009B5 /* Default-Portrait.png in Resources */,
 				3A215934118BC81200E009B5 /* Default-Landscape.png in Resources */,
 				3A2D5CEA118BF41100125C29 /* Icon.png in Resources */,
@@ -583,10 +585,12 @@
 				3A1050EA11A7E5F00009BFE4 /* Icon-Small.png in Resources */,
 				3AF1BD0911C593F800A8B446 /* GoogleFavicon.png in Resources */,
 				3A5DDBE011F4F14A0068F1E8 /* Icon@2x.png in Resources */,
-				3A5DDC1411F4F6380068F1E8 /* Background_iPhone.png in Resources */,
-				3A5DDC1511F4F6380068F1E8 /* Background_iPhone@2x.png in Resources */,
 				3A5DDD5E11F54D5B0068F1E8 /* URLInfo_ViewController.xib in Resources */,
 				3A5DDD8711F55CF30068F1E8 /* Default@2x.png in Resources */,
+				3A4F7463120253BD0052612E /* OlderURL_ViewController.xib in Resources */,
+				3A4F7464120253D40052612E /* SendURL_ViewController.xib in Resources */,
+				3A4F74A412025AF80052612E /* Background_iPad_Landscape.png in Resources */,
+				3A4F74A512025AF80052612E /* Background_iPad_Portrait.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
