@@ -291,15 +291,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>24</integer>
-									<integer>22</integer>
-									<integer>14</integer>
-									<integer>12</integer>
+									<integer>93</integer>
+									<integer>91</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 267}, {336, 667}}</string>
+							<string>{{0, 1186}, {336, 667}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -336,7 +334,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>3AE1E6EC11638A2100981DF0</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>PreviousURLs_ViewController.m</string>
+								<string>MainView_ViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -344,11 +342,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>3AE1E6ED11638A2100981DF0</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>PreviousURLs_ViewController.m</string>
+										<string>MainView_ViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3A3E0FC6120405A70015E14D</string>
+										<string>3AEB30F41204D94D0025AC82</string>
 										<key>history</key>
 										<array>
 											<string>3AB4E68F1182F00700EEF685</string>
@@ -362,7 +360,6 @@
 											<string>3A5DDCE211F534F50068F1E8</string>
 											<string>3A5DDCE411F534F50068F1E8</string>
 											<string>3A5DDD8E11F55DCF0068F1E8</string>
-											<string>3A5DDD8F11F55DCF0068F1E8</string>
 											<string>3A5DDD9011F55DCF0068F1E8</string>
 											<string>3A5DDDA711F55F3E0068F1E8</string>
 											<string>3A60D02211F7A98D00839AD0</string>
@@ -374,12 +371,13 @@
 											<string>3A17085F1202C0C900115253</string>
 											<string>3A1708601202C0C900115253</string>
 											<string>3A17087B1202C7AB00115253</string>
-											<string>3A3E0FA91203FEC20015E14D</string>
-											<string>3A3E0FC1120405A70015E14D</string>
 											<string>3A3E0FC2120405A70015E14D</string>
 											<string>3A3E0FC3120405A70015E14D</string>
 											<string>3A3E0FC4120405A70015E14D</string>
-											<string>3A3E0FC5120405A70015E14D</string>
+											<string>3AEB30F01204D94D0025AC82</string>
+											<string>3AEB30F11204D94D0025AC82</string>
+											<string>3AEB30F21204D94D0025AC82</string>
+											<string>3AEB30F31204D94D0025AC82</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -393,18 +391,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1082, 476}}</string>
+								<string>{{0, 0}, {1082, 470}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 152 1440 726 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>476pt</string>
+							<string>470pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>204pt</string>
+							<string>210pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -418,7 +416,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1082, -27}}</string>
+										<string>{{10, 27}, {1082, 183}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 152 1440 726 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -473,8 +473,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1082, 177}}</string>
-										<key>RubberWindowFrame</key>
-										<string>0 152 1440 726 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -502,11 +500,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>3A3E0F731203F5030015E14D</string>
+				<string>3AEB30F51204D94D0025AC82</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>3A3E0F741203F5030015E14D</string>
+				<string>3AEB30F61204D94D0025AC82</string>
 				<string>3AE1E6EC11638A2100981DF0</string>
-				<string>3A3E0F751203F5030015E14D</string>
+				<string>3AEB30F71204D94D0025AC82</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -696,9 +694,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>3A3E0FC7120405A70015E14D</string>
-		<string>3A3E0F821203F54F0015E14D</string>
-		<string>3A3E0F7C1203F5030015E14D</string>
 		<string>/Developer/Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/HopTo.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

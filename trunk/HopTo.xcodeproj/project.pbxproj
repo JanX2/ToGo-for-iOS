@@ -669,6 +669,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos4.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VERSION_NUMBER = 1.1.1;
 			};
 			name = Debug;
 		};
@@ -692,6 +693,7 @@
 				SDKROOT = iphoneos4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
+				VERSION_NUMBER = 1.1.1;
 			};
 			name = Release;
 		};
@@ -720,6 +722,7 @@
 				PRODUCT_NAME = ToGoXL;
 				SDKROOT = iphoneos4.0;
 				TARGETED_DEVICE_FAMILY = 2;
+				VERSION_NUMBER = 1.1;
 			};
 			name = Debug;
 		};
@@ -746,6 +749,7 @@
 				SDKROOT = iphoneos4.0;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
+				VERSION_NUMBER = 1.1;
 			};
 			name = Release;
 		};
@@ -788,6 +792,7 @@
 				SDKROOT = iphoneos4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
+				VERSION_NUMBER = 1.1.1;
 			};
 			name = Distribution;
 		};
@@ -814,6 +819,7 @@
 				SDKROOT = iphoneos4.0;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
+				VERSION_NUMBER = 1.1;
 			};
 			name = Distribution;
 		};
