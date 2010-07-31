@@ -20,6 +20,7 @@ typedef enum {
 
 #pragma mark Properties
 // Properties
+@synthesize delegate;
 @synthesize urlObj;
 @synthesize tableData;
 @synthesize urlTextStr;
@@ -51,9 +52,10 @@ typedef enum {
 	// Set the title.
 	self.navigationItem.title = @"Site Info";
 	
-#ifndef IPAD
 	self.view.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed: @"Background_iPhone.png"]];
 	urlTable.backgroundColor = [UIColor clearColor];
+#ifdef IPAD
+	urlTable.backgroundView = nil;
 #endif
 	
 	// Now the corner radius for the text view.

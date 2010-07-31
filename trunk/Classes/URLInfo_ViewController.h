@@ -9,9 +9,39 @@
 @class FUURLManager;
 @class SendURL_ViewController;
 @class WebView_ViewController;
+@class URLInfo_ViewController;
+
+// Typedefs
+typedef enum _kURLInfoActions {
+	kURLInfoActionView,
+	kURLInfoActionSend,
+	kURLInfoActionDelete
+} URLInfoAction;
+
+#pragma mark -
+#pragma mark Delegate Protocol
+#pragma mark -
+/* Delegate Protocol *\
+\*********************/
+
+@protocol URLInfoDelegate
+
+@required
+-(void) urlInfoView: (URLInfo_ViewController *) infoView didCompleteAction: (URLInfoAction) action;
+
+@end
+
+#pragma mark -
+#pragma mark Header Declaration
+#pragma mark -
+/* Header Declaration *\
+\**********************/
 
 @interface URLInfo_ViewController : UIViewController <UIActionSheetDelegate, UITableViewDelegate, UITableViewDataSource>
 {
+	// Backend
+	id <URLInfoDelegate> delegate;
+	
 	// Data
 	NSMutableDictionary *urlObj;
 	NSMutableArray *tableData;
@@ -24,6 +54,7 @@
 
 #pragma mark Properties
 // Properties
+@property (nonatomic, assign) id <URLInfoDelegate> delegate;
 @property (nonatomic, retain) NSMutableDictionary *urlObj;
 @property (nonatomic, retain) NSMutableArray *tableData;
 @property (nonatomic, retain) NSString *urlTextStr;

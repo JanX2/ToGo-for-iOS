@@ -122,9 +122,9 @@ enum _kTableSections {
 
 -(BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) toInterfaceOrientation
 {
-	if ( DEVICE_TYPE != kFUDeviceiPad )
-		return ( toInterfaceOrientation == UIInterfaceOrientationPortrait 
-				|| toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown );
+#ifndef IPAD
+	return ( toInterfaceOrientation == UIInterfaceOrientationPortrait || toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown );
+#endif
 	
 	return YES;
 }

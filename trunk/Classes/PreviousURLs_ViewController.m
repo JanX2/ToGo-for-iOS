@@ -389,18 +389,30 @@
 	else 
 		currentURL = [[FUURLManager sharedManager] URLAtIndex: IPRow];
 	
-#ifndef IPAD
 	// Set up a URL view.
 	URLInfo_ViewController *urlView = [[[URLInfo_ViewController alloc] init] autorelease];
 	urlView.urlObj = currentURL;
 	
-	// Push it.
-	[self.navigationController pushViewController: urlView animated: YES];
+#ifdef IPAD
+	// Put it in a popover for iPad.
+	UINavigationController *urlNav = [[[UINavigationController alloc] initWithRootViewController: urlView] autorelease];
+	
+	UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController: urlNav];
+	popover.delegate = self;
+	//popover.popoverContentSize = urlView.view.frame.size;
+	
+	CGRect cellRect = [tableView rectForRowAtIndexPath: indexPath];
+	
+	[popover presentPopoverFromRect: cellRect inView: tableView permittedArrowDirections: UIPopoverArrowDirectionAny animated: YES];
 	
 	return;
 #endif
 	
-	NSString *openTitle = nil;
+	// Push it.
+	[self.navigationController pushViewController: urlView animated: YES];
+	
+	// Deprecated.
+	/*NSString *openTitle = nil;
 	
 	if ( OS_VERSION >= kFUiOSVersion3_2 )
 		openTitle = @"View Site";
@@ -447,7 +459,7 @@
 		[urlSheet addSubview: urlInfo];
 	
 	// Show the action sheet.
-	[urlSheet showInView: self.view];
+	[urlSheet showInView: self.view];*/
 }
 
 -(void) tableView: (UITableView *) tableView commitEditingStyle: (UITableViewCellEditingStyle) editingStyle 
@@ -553,3 +565,19 @@ forRowAtIndexPath: (NSIndexPath *) indexPath
 }
 
 @end
+
+#pragma mark -
+#pragma mark Popover Delegation
+/* Popover Delegation *\
+\**********************/
+
+#ifdef IPAD
+@implementation PreviousURLs_ViewController (PopoverDelegation)
+
+-(void) popoverControllerDidDismissPopover: (UIPopoverController *) popover
+{
+	[urlTable deselectRowAtIndexPath: [urlTable indexPathForSelectedRow] animated: YES];
+}
+
+@end
+#endif

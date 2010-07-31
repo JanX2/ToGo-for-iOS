@@ -108,3 +108,16 @@ forRowAtIndexPath: (NSIndexPath *) indexPath;
 -(void) actionSheet: (UIActionSheet *) actionSheet didDismissWithButtonIndex: (NSInteger) buttonIndex;
 
 @end
+
+#pragma mark -
+#pragma mark Popover Delegation
+/* Popover Delegation *\
+\**********************/
+
+#ifdef IPAD
+@interface PreviousURLs_ViewController (PopoverDelegation) <UIPopoverControllerDelegate>
+
+-(void) popoverControllerDidDismissPopover: (UIPopoverController *) popover;
+
+@end
+#endif
