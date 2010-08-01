@@ -145,10 +145,10 @@
 						 [DOCUMENTS_DIRECTORY stringByAppendingPathComponent: 
 						  [url objectForKey: @"iconFileName"]]];
 		
-		[sectionData addObject: dictionaryForTableViewCellWithImage(UITableViewCellReuseIDSubtitle, 1, ( searchMode ) ? 0 : 1, 2, 
+		[sectionData addObject: dictionaryForTableViewCellWithImageAndData(UITableViewCellReuseIDSubtitle, 1, /*( searchMode ) ? 0 : */1, 2, 
 																   [url objectForKey: @"title"], 
 																   [url objectForKey: @"url"], 
-																	icon)];
+																	icon, url)];
 		
 	}
 	
@@ -494,8 +494,11 @@ forRowAtIndexPath: (NSIndexPath *) indexPath
 	// Remove the cell.
 	if ( searchMode )
 		[tableView reloadData];
-	else 
+	else {
+		
 		TABLE_UPDATE(tableView, [tableView deleteRowsAtIndexPaths: ARRAY(indexPath) withRowAnimation: UITableViewRowAnimationRight]);
+		
+	}
 }
 
 #pragma mark -
@@ -644,8 +647,11 @@ forRowAtIndexPath: (NSIndexPath *) indexPath
 		// Remove the cell.
 		if ( searchMode )
 			[urlTable reloadData];
-		else 
+		else {
+			
 			TABLE_UPDATE(urlTable, [urlTable deleteRowsAtIndexPaths: ARRAY(indexPath) withRowAnimation: UITableViewRowAnimationRight]);
+			
+		}
 		
 		[activePopover dismissPopoverAnimated: YES];
 		self.activePopover = nil;
