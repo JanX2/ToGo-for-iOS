@@ -18,6 +18,9 @@
 @synthesize urlTable;
 @synthesize urlInfo;
 @synthesize urlSearch;
+#ifdef IPAD
+@synthesize activePopover;
+#endif
 
 #pragma mark Instance Management
 // Instance Management
@@ -38,6 +41,9 @@
 	[editButton release];
 	[doneButton release];
 	[urlSearch release];
+#ifdef IPAD
+	[activePopover release];
+#endif
 	
 	[super dealloc];
 }
@@ -394,16 +400,24 @@
 	urlView.urlObj = currentURL;
 	
 #ifdef IPAD
+	// Set the delegate.
+	urlView.delegate = self;
+	
 	// Put it in a popover for iPad.
 	UINavigationController *urlNav = [[[UINavigationController alloc] initWithRootViewController: urlView] autorelease];
 	
-	UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController: urlNav];
-	popover.delegate = self;
-	//popover.popoverContentSize = urlView.view.frame.size;
+	self.activePopover = [[UIPopoverController alloc] initWithContentViewController: urlNav];
+	activePopover.delegate = self;
+	activePopover.popoverContentSize = CGSizeMake(320, 450);
 	
-	CGRect cellRect = [tableView rectForRowAtIndexPath: indexPath];
+	// Grab the cell location.
+	CGRect cellRect = [urlTable rectForRowAtIndexPath: [urlTable indexPathForSelectedRow]];
 	
-	[popover presentPopoverFromRect: cellRect inView: tableView permittedArrowDirections: UIPopoverArrowDirectionAny animated: YES];
+	// Convert it into something usable. There's a distortion mid-table if we don't.
+	CGRect displayRect = CGRectMake(cellRect.origin.x, cellRect.origin.y, 
+									cellRect.size.width / 2, cellRect.size.height);
+	
+	[activePopover presentPopoverFromRect: displayRect inView: urlTable permittedArrowDirections: UIPopoverArrowDirectionAny animated: YES];
 	
 	return;
 #endif
@@ -564,6 +578,95 @@ forRowAtIndexPath: (NSIndexPath *) indexPath
 	[urlTable deselectRowAtIndexPath: [urlTable indexPathForSelectedRow] animated: YES];
 }
 
+#ifdef IPAD
+#pragma mark -
+#pragma mark URL Info Delegation
+/* URL Info Delegation *\
+\***********************/
+
+-(void) urlInfoView: (URLInfo_ViewController *) infoView didRequestAction: (URLInfoAction) action
+{
+	if ( action == kURLInfoActionView ) {
+		
+		// Set up a web view.
+		WebView_ViewController *urlView = [[[WebView_ViewController alloc] init] autorelease];
+		urlView.urlObj = infoView.urlObj;
+		
+		// Dismiss the popover.
+		[activePopover dismissPopoverAnimated: YES];
+		self.activePopover = nil;
+		
+		// Push it.
+		[self.navigationController pushViewController: urlView animated: YES];
+		
+	} else if ( action == kURLInfoActionSend ) {
+		
+		// Set up a send view.
+		SendURL_ViewController *sendView = [[[SendURL_ViewController alloc] init] autorelease];
+		sendView.preloadedURL = infoView.urlObj;
+		sendView.delegate = self;
+		
+		// Put it in a popover for iPad.
+		UINavigationController *sendNav = [[[UINavigationController alloc] initWithRootViewController: sendView] autorelease];
+		
+		[activePopover dismissPopoverAnimated: YES];
+		self.activePopover = nil;
+		
+		self.activePopover = [[UIPopoverController alloc] initWithContentViewController: sendNav];
+		activePopover.delegate = self;
+		activePopover.popoverContentSize = CGSizeMake(320, 450);
+		
+		// Grab the cell location.
+		CGRect cellRect = [urlTable rectForRowAtIndexPath: [urlTable indexPathForSelectedRow]];
+		
+		// Convert it into something usable. There's a distortion mid-table if we don't.
+		CGRect displayRect = CGRectMake(cellRect.origin.x, cellRect.origin.y, 
+										cellRect.size.width / 2, cellRect.size.height);
+		
+		[activePopover presentPopoverFromRect: displayRect inView: urlTable permittedArrowDirections: UIPopoverArrowDirectionAny animated: YES];
+		
+		//sendView.popoverController = popover;
+		
+	} else if ( action == kURLInfoActionDelete ) {
+		
+		// Delete the URL.
+		[[FUURLManager sharedManager] removeURL: infoView.urlObj];
+		
+		// Reload the data.
+		if ( searchMode ) 
+			[self searchTable];
+		
+		[self loadInfo];
+		
+		// Get the IP of the selected row.
+		NSIndexPath *indexPath = [urlTable indexPathForSelectedRow];
+		
+		// Remove the cell.
+		if ( searchMode )
+			[urlTable reloadData];
+		else 
+			TABLE_UPDATE(urlTable, [urlTable deleteRowsAtIndexPaths: ARRAY(indexPath) withRowAnimation: UITableViewRowAnimationRight]);
+		
+		[activePopover dismissPopoverAnimated: YES];
+		self.activePopover = nil;
+		
+	}
+}
+
+#pragma mark -
+#pragma mark Send View Delegation
+/* Send View Delegation *\
+\************************/
+
+-(void) sendView: (SendURL_ViewController *) sendView didSendURL: (NSDictionary *) sentURL
+{
+	[activePopover dismissPopoverAnimated: YES];
+	self.activePopover = nil;
+	
+	[urlTable deselectRowAtIndexPath: [urlTable indexPathForSelectedRow] animated: YES];
+}
+#endif
+
 @end
 
 #pragma mark -
@@ -577,6 +680,8 @@ forRowAtIndexPath: (NSIndexPath *) indexPath
 -(void) popoverControllerDidDismissPopover: (UIPopoverController *) popover
 {
 	[urlTable deselectRowAtIndexPath: [urlTable indexPathForSelectedRow] animated: YES];
+	
+	self.activePopover = nil;
 }
 
 @end

@@ -27,7 +27,7 @@ typedef enum _kURLInfoActions {
 @protocol URLInfoDelegate
 
 @required
--(void) urlInfoView: (URLInfo_ViewController *) infoView didCompleteAction: (URLInfoAction) action;
+-(void) urlInfoView: (URLInfo_ViewController *) infoView didRequestAction: (URLInfoAction) action;
 
 @end
 
@@ -40,7 +40,7 @@ typedef enum _kURLInfoActions {
 @interface URLInfo_ViewController : UIViewController <UIActionSheetDelegate, UITableViewDelegate, UITableViewDataSource>
 {
 	// Backend
-	id <URLInfoDelegate> delegate;
+	id <URLInfoDelegate, NSObject> delegate;
 	
 	// Data
 	NSMutableDictionary *urlObj;
@@ -54,7 +54,7 @@ typedef enum _kURLInfoActions {
 
 #pragma mark Properties
 // Properties
-@property (nonatomic, assign) id <URLInfoDelegate> delegate;
+@property (nonatomic, assign) id <URLInfoDelegate, NSObject> delegate;
 @property (nonatomic, retain) NSMutableDictionary *urlObj;
 @property (nonatomic, retain) NSMutableArray *tableData;
 @property (nonatomic, retain) NSString *urlTextStr;

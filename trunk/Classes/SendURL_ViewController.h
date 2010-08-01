@@ -12,9 +12,31 @@
 @protocol ServerBrowserDelegate;
 @protocol ConnectionDelegate;
 
+#pragma mark -
+#pragma mark Delegate Protocol
+#pragma mark -
+/* Delegate Protocol *\
+\*********************/
+
+@class SendURL_ViewController;
+
+@protocol SendURL_ViewControllerDelegate
+
+@optional
+-(void) sendView: (SendURL_ViewController *) sendView didSendURL: (NSDictionary *) sentURL;
+
+@end
+
+#pragma mark -
+#pragma mark Main Interface Declaration
+#pragma mark -
+/* Main Interface Declaration *\
+\******************************/
+
 @interface SendURL_ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, ServerBrowserDelegate, ConnectionDelegate>
 {
 	// Backend
+	id <SendURL_ViewControllerDelegate, NSObject> delegate;
 	ServerBrowser *finder;
 	Connection *deviceConnection;
 	
@@ -31,6 +53,7 @@
 
 #pragma mark Properties
 // Properties
+@property (nonatomic, assign) id <SendURL_ViewControllerDelegate, NSObject> delegate;
 @property (nonatomic, retain) ServerBrowser *finder;
 @property (nonatomic, retain) Connection *deviceConnection;
 @property (nonatomic, copy) NSDictionary *preloadedURL;

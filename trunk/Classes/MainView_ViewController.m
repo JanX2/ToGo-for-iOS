@@ -341,10 +341,14 @@ makeTable: ;
 	// Determine what to say.
 	NSString *safariTitle = nil;
 	
+#ifdef IPAD
+	safariTitle = @"Open in Safari";
+#else
 	if ( OS_VERSION >= kFUiOSVersion3_2 )
 		safariTitle = @"View Site";
 	else 
 		safariTitle = @"Open in Safari";
+#endif
 		
 	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, safariTitle, nil)];
 	
@@ -362,15 +366,13 @@ makeTable: ;
 	
 	[tableData addObject: eachSection];
 	
-	/*if ( DEVICE_TYPE == kFUDeviceiPad ) {
-			
-		NEW_SECTION(@"");
-		
-		[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, @"Open in Safari", nil)];
-		
-		[tableData addObject: eachSection];
-		
-	}*/
+/*#ifdef IPAD
+	NEW_SECTION(@"");
+	
+	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, @"Open in Safari", nil)];
+	
+	[tableData addObject: eachSection];
+#endif*/
 	
 	END_STANDARD_TABLE_DATA_ARRAY
 }
@@ -421,6 +423,7 @@ makeTable: ;
 	
 	if ( IPSection == kTableSectionOpenURL ) {
 		
+#ifndef IPAD
 		if ( OS_VERSION >= kFUiOSVersion3_2 ) {
 			
 			// Set up a web view.
@@ -437,6 +440,9 @@ makeTable: ;
 			[[FUURLManager sharedManager] openURL: [FUURLManager sharedManager].currentURL];
 			
 		}
+#else
+		[[FUURLManager sharedManager] openURL: [FUURLManager sharedManager].currentURL];
+#endif
 		
 	} else if ( IPSection == kTableSectionOlderURLs ) {
 		
@@ -450,6 +456,7 @@ makeTable: ;
 		
 		// Set up a send view.
 		SendURL_ViewController *sendView = [[[SendURL_ViewController alloc] init] autorelease];
+		sendView.delegate = self;
 		
 		[sendView loadViewWithURL: [FUURLManager sharedManager].currentURL];
 		
@@ -458,7 +465,7 @@ makeTable: ;
 		UINavigationController *sendNav = [[[UINavigationController alloc] initWithRootViewController: sendView] autorelease];
 		
 		UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController: sendNav];
-		popover.popoverContentSize = CGSizeMake(320, 400);
+		popover.popoverContentSize = CGSizeMake(320, 450);
 		
 		CGRect cellRect = [tableView rectForRowAtIndexPath: indexPath];
 		
@@ -562,6 +569,16 @@ makeTable: ;
 		}
 		
 	}
+}
+
+#pragma mark -
+#pragma mark Send View Delegation
+/* Send View Delegation *\
+\************************/
+
+-(void) sendView: (SendURL_ViewController *) sendView didSendURL: (NSDictionary *) sentURL
+{
+	[sendView.popoverController dismissPopoverAnimated: YES];
 }
 
 @end

@@ -11,6 +11,10 @@ enum _kTableSections {
 	kTableSectionServers
 } kTableSection;
 
+#pragma mark Constants
+// Constants
+NSString * const FUSendURL_ViewControllerDidSendURLNotification = @"_FUSendURL_ViewControllerDidSendURLNotification";
+
 #pragma mark Macros
 // Macros
 #define TABLE_DATA(a, b) [[[tableData objectAtIndex: a] objectForKey: @"data"] objectAtIndex: b]
@@ -19,6 +23,7 @@ enum _kTableSections {
 
 #pragma mark Properties
 // Properties
+@synthesize delegate;
 @synthesize finder;
 @synthesize deviceConnection;
 @synthesize preloadedURL;
@@ -248,13 +253,16 @@ enum _kTableSections {
 	
 	self.deviceConnection = nil;
 	
+	// Notify the delegate if there is one.
+	if ( delegate != nil ) {
+		
+		if ( [delegate respondsToSelector: @selector(sendView:didSendURL:)] ) 
+			[delegate sendView: self didSendURL: preloadedURL];
+		
+	}
+	
 	// Everything went well, so pop the view.
 	[self.navigationController popViewControllerAnimated: YES];
-	
-#ifdef IPAD
-	// Or dismiss the popover.
-	[popoverController dismissPopoverAnimated: YES];
-#endif
 }
 
 #pragma mark Data Flow

@@ -53,6 +53,8 @@
 
 // Auxillary Views
 #import "GenericWebView.h"
+#import "URLInfo_ViewController.h"
+#import "SendURL_ViewController.h"
 
 // View Controllers
 #import "MainView_ViewController.h"
@@ -60,8 +62,6 @@
 //#import "PairingRemote_ViewController.h"
 //#import "PairingPINEntry_ViewController.h"
 #import "PreviousURLs_ViewController.h"
-#import "SendURL_ViewController.h"
-#import "URLInfo_ViewController.h"
 
 /* Macros *\
 \**********/

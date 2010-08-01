@@ -12,7 +12,8 @@
 @class SendURL_ViewController;
 @class WebView_ViewController;
 
-@interface MainView_ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate>
+@interface MainView_ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate,
+														SendURL_ViewControllerDelegate>
 {
 	// Data
 	NSMutableDictionary *currentURL;
@@ -99,5 +100,12 @@
 \*************************/
 
 -(void) alertView: (UIAlertView *) alertView didDismissWithButtonIndex: (NSInteger) buttonIndex;
+
+#pragma mark -
+#pragma mark Send View Delegation
+/* Send View Delegation *\
+\************************/
+
+-(void) sendView: (SendURL_ViewController *) sendView didSendURL: (NSDictionary *) sentURL;
 
 @end

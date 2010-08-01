@@ -60,6 +60,7 @@
 	self.tapGesture = [[[UITapGestureRecognizer alloc] initWithTarget: self action: @selector(touchAction:)] autorelease];
 	tapGesture.numberOfTouchesRequired = 2;
 	tapGesture.numberOfTapsRequired = 1;
+	tapGesture.cancelsTouchesInView = YES;
 	[urlView addGestureRecognizer: tapGesture];
 	
 	// The swipes.

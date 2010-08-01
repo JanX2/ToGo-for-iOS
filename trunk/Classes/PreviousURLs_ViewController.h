@@ -8,12 +8,10 @@
 // Forward Declarations
 @class FUURLManager;
 @class WebView_ViewController;
-#ifndef IPAD
 @class URLInfo_ViewController;
-#endif
 
 @interface PreviousURLs_ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate,
-																	UISearchBarDelegate>
+																	UISearchBarDelegate, URLInfoDelegate>
 {
 	// Data
 	NSMutableArray *tableData, *searchData;
@@ -26,6 +24,9 @@
 	UIBarButtonItem *editButton, *doneButton;
 	UITextView *urlInfo;
 	UISearchBar *urlSearch;
+#ifdef IPAD
+	UIPopoverController *activePopover;
+#endif
 }
 
 #pragma mark Properties
@@ -35,6 +36,9 @@
 @property (nonatomic, retain) IBOutlet UITableView *urlTable;
 @property (nonatomic, assign) UITextView *urlInfo;
 @property (nonatomic, retain) IBOutlet UISearchBar *urlSearch;
+#ifdef IPAD
+@property (nonatomic, retain) UIPopoverController *activePopover;
+#endif
 
 #pragma mark Instance Management
 // Instance Management
@@ -106,6 +110,22 @@ forRowAtIndexPath: (NSIndexPath *) indexPath;
 \***************************/
 
 -(void) actionSheet: (UIActionSheet *) actionSheet didDismissWithButtonIndex: (NSInteger) buttonIndex;
+
+#ifdef IPAD
+#pragma mark -
+#pragma mark URL Info Delegation
+/* URL Info Delegation *\
+\***********************/
+
+-(void) urlInfoView: (URLInfo_ViewController *) infoView didRequestAction: (URLInfoAction) action;
+
+#pragma mark -
+#pragma mark Send View Delegation
+/* Send View Delegation *\
+\************************/
+
+-(void) sendView: (SendURL_ViewController *) sendView didSendURL: (NSDictionary *) sentURL;
+#endif
 
 @end
 

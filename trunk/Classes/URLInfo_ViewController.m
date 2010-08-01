@@ -186,6 +186,27 @@ typedef enum {
 {
 	[tableView deselectRowAtIndexPath: indexPath animated: YES];
 	
+#ifdef IPAD
+	if ( delegate != nil ) {
+			
+		if ( IPSection == 2 ) {
+			
+			UIActionSheet *deleteConfirm = [[[UIActionSheet alloc] initWithTitle: nil delegate: self cancelButtonTitle: @"Cancel" 
+														  destructiveButtonTitle: @"Delete" otherButtonTitles: nil] autorelease];
+			
+			[deleteConfirm showInView: self.view];
+			
+			return;
+			
+		}
+		
+		[delegate urlInfoView: self didRequestAction: IPSection];
+		
+		return;
+		
+	}
+#endif
+	
 	if ( IPSection == kTableSectionOpenURL ) {
 		
 		if ( OS_VERSION >= kFUiOSVersion3_2 ) {
@@ -238,6 +259,21 @@ typedef enum {
 		
 		// Get out.
 		[self.navigationController popViewControllerAnimated: YES];
+		
+#ifdef IPAD
+		// If we're on an iPad, notify the delegate.
+		if ( delegate != nil ) {
+			
+			if ( [delegate respondsToSelector: @selector(urlInfoView:didRequestAction:)] ) {
+				
+				[delegate urlInfoView: self didRequestAction: kURLInfoActionDelete];
+				
+				return;
+				
+			}
+			
+		}
+#endif
 		
 	}
 }
