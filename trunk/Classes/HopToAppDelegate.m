@@ -130,6 +130,8 @@ static id kSharedDelegate;
 		
 	}*/
 	
+	navigationController.navigationBar.tintColor = [UIColor colorWithRed: 0.28627451 green: 0.58039216 blue: 0.79607843 alpha: 1.0];
+	
 	[window addSubview: [navigationController view]];
 	[window makeKeyAndVisible];
 	
