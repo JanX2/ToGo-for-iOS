@@ -44,7 +44,8 @@ id dictionaryForTableViewCellWithData(NSString *reuseID, int accessoryType,
 											   editingStyle, selectionStyle, 
 											   textLabel, detailTextLabel);
 	
-	[returnDict setObject: data forKey: @"data"];
+	if ( data != nil )
+		[returnDict setObject: data forKey: @"data"];
 	
 	return returnDict;
 }
@@ -58,7 +59,8 @@ id dictionaryForTableViewCellWithImage(NSString *reuseID, int accessoryType,
 											   editingStyle, selectionStyle, 
 											   textLabel, detailTextLabel);
 	
-	[returnDict setObject: image forKey: @"image"];
+	if ( image != nil )
+		[returnDict setObject: image forKey: @"image"];
 	
 	return returnDict;
 }
@@ -72,7 +74,8 @@ id dictionaryForTableViewCellWithImageAndData(NSString *reuseID, int accessoryTy
 											   editingStyle, selectionStyle, 
 											   textLabel, detailTextLabel, data);
 	
-	[returnDict setObject: image forKey: @"image"];
+	if ( image != nil )
+		[returnDict setObject: image forKey: @"image"];
 	
 	return returnDict;
 }
