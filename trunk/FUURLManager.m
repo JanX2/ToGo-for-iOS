@@ -333,6 +333,9 @@ makeDict: ;
 			if ( hasDupe )
 				continue;
 			
+			// Set the flag.
+			hasDupe = TRUE;
+			
 			// Remove it.
 			[urlList removeObjectAtIndex: i];
 			
