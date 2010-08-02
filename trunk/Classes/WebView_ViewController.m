@@ -167,7 +167,7 @@
 	//controlBar.alpha = 0.0;
 	
 #ifdef IPAD
-	[[UIApplication sharedApplication] setStatusBarHidden: FALSE withAnimation: UIStatusBarAnimationFade];
+	//[[UIApplication sharedApplication] setStatusBarHidden: FALSE withAnimation: UIStatusBarAnimationFade];
 #endif
 	
 	[UIView beginAnimations: nil context: nil];
@@ -186,7 +186,7 @@
 	//controlBar.alpha = 1.0;
 	
 #ifdef IPAD
-	[[UIApplication sharedApplication] setStatusBarHidden: TRUE withAnimation: UIStatusBarAnimationFade];
+	//[[UIApplication sharedApplication] setStatusBarHidden: TRUE withAnimation: UIStatusBarAnimationFade];
 #endif
 	
 	[UIView beginAnimations: nil context: nil];
