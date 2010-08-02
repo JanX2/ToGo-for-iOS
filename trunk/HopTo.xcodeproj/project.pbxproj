@@ -35,7 +35,6 @@
 		3A4F74A512025AF80052612E /* Background_iPad_Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4F74A112025AF80052612E /* Background_iPad_Portrait.png */; };
 		3A50F1CB1174636100EECD86 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A50F1CA1174636000EECD86 /* Icon.png */; };
 		3A5DDBDF11F4F14A0068F1E8 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDBDE11F4F14A0068F1E8 /* Icon@2x.png */; };
-		3A5DDBE011F4F14A0068F1E8 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDBDE11F4F14A0068F1E8 /* Icon@2x.png */; };
 		3A5DDC1211F4F6380068F1E8 /* Background_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDC1011F4F6380068F1E8 /* Background_iPhone.png */; };
 		3A5DDC1311F4F6380068F1E8 /* Background_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDC1111F4F6380068F1E8 /* Background_iPhone@2x.png */; };
 		3A5DDC6B11F514E40068F1E8 /* WebView_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A920E4211948195008C83B7 /* WebView_ViewController.xib */; };
@@ -583,7 +582,6 @@
 				3AD3558C1198DFF500F56C32 /* swoosh.wav in Resources */,
 				3A1050EA11A7E5F00009BFE4 /* Icon-Small.png in Resources */,
 				3AF1BD0911C593F800A8B446 /* GoogleFavicon.png in Resources */,
-				3A5DDBE011F4F14A0068F1E8 /* Icon@2x.png in Resources */,
 				3A5DDD5E11F54D5B0068F1E8 /* URLInfo_ViewController.xib in Resources */,
 				3A5DDD8711F55CF30068F1E8 /* Default@2x.png in Resources */,
 				3A4F7463120253BD0052612E /* OlderURL_ViewController.xib in Resources */,

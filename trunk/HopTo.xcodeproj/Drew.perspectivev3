@@ -230,6 +230,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -292,12 +294,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
+									<integer>71</integer>
+									<integer>66</integer>
+									<integer>64</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {336, 667}}</string>
+							<string>{{0, 999}, {336, 667}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -327,14 +331,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>3AE1E6EC11638A2100981DF0</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>HopToAppDelegate.m</string>
+								<string>Icon@2x.png</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -342,19 +344,16 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>3AE1E6ED11638A2100981DF0</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>HopToAppDelegate.m</string>
+										<string>Icon@2x.png</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3A615A8F12067DB0005EA021</string>
+										<string>3A615A9912067E89005EA021</string>
 										<key>history</key>
 										<array>
 											<string>3AB4E68F1182F00700EEF685</string>
 											<string>3AFE780411AE91B9004D5DFE</string>
 											<string>3A1751E911C5B4C200B5D91A</string>
-											<string>3A5DDBE511F4F1730068F1E8</string>
-											<string>3A5DDBF811F4F21F0068F1E8</string>
-											<string>3A5DDBFB11F4F2840068F1E8</string>
 											<string>3A5DDCE011F534F50068F1E8</string>
 											<string>3A4F746B120255340052612E</string>
 											<string>3A4F747C120256010052612E</string>
@@ -385,7 +384,10 @@
 											<string>3A615A7012067A53005EA021</string>
 											<string>3A615A7112067A53005EA021</string>
 											<string>3A615A8312067A8F005EA021</string>
-											<string>3A615A8E12067DAE005EA021</string>
+											<string>3A615A9512067E89005EA021</string>
+											<string>3A615A9612067E89005EA021</string>
+											<string>3A615A9712067E89005EA021</string>
+											<string>3A615A9812067E89005EA021</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -702,6 +704,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>3A615A9A12067E89005EA021</string>
 		<string>3A615A8712067A8F005EA021</string>
 		<string>3A615A7E12067A53005EA021</string>
 		<string>/Developer/Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/HopTo.xcodeproj</string>
