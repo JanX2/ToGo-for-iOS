@@ -292,14 +292,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>15</integer>
-									<integer>11</integer>
-									<integer>3</integer>
+									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 207}, {336, 667}}</string>
+							<string>{{0, 0}, {336, 667}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -336,7 +334,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>3AE1E6EC11638A2100981DF0</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FUURLManager.m</string>
+								<string>HopToAppDelegate.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -344,11 +342,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>3AE1E6ED11638A2100981DF0</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FUURLManager.m</string>
+										<string>HopToAppDelegate.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3A58AC1E12064C8F00DED65E</string>
+										<string>3A615A8F12067DB0005EA021</string>
 										<key>history</key>
 										<array>
 											<string>3AB4E68F1182F00700EEF685</string>
@@ -358,12 +356,9 @@
 											<string>3A5DDBF811F4F21F0068F1E8</string>
 											<string>3A5DDBFB11F4F2840068F1E8</string>
 											<string>3A5DDCE011F534F50068F1E8</string>
-											<string>3A5DDD9011F55DCF0068F1E8</string>
-											<string>3A5DDDA711F55F3E0068F1E8</string>
 											<string>3A4F746B120255340052612E</string>
 											<string>3A4F747C120256010052612E</string>
 											<string>3A7F946B12026D7200C74D3F</string>
-											<string>3A17085E1202C0C900115253</string>
 											<string>3A17085F1202C0C900115253</string>
 											<string>3AEB30F21204D94D0025AC82</string>
 											<string>3AEB3205120548110025AC82</string>
@@ -379,12 +374,18 @@
 											<string>3AEB32C3120574210025AC82</string>
 											<string>3AEB32DC120578130025AC82</string>
 											<string>3AEB32E3120578B00025AC82</string>
-											<string>3AEB32E4120578B00025AC82</string>
 											<string>3A58AC041206452400DED65E</string>
 											<string>3A58AC051206452400DED65E</string>
 											<string>3A58AC1012064A8600DED65E</string>
 											<string>3A58AC1112064A8600DED65E</string>
-											<string>3A58AC1D12064B7000DED65E</string>
+											<string>3A615A6C12067A53005EA021</string>
+											<string>3A615A6D12067A53005EA021</string>
+											<string>3A615A6E12067A53005EA021</string>
+											<string>3A615A6F12067A53005EA021</string>
+											<string>3A615A7012067A53005EA021</string>
+											<string>3A615A7112067A53005EA021</string>
+											<string>3A615A8312067A8F005EA021</string>
+											<string>3A615A8E12067DAE005EA021</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -507,11 +508,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>3A58AC071206452400DED65E</string>
+				<string>3A615A7412067A53005EA021</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>3A58AC081206452400DED65E</string>
+				<string>3A615A7512067A53005EA021</string>
 				<string>3AE1E6EC11638A2100981DF0</string>
-				<string>3A58AC091206452400DED65E</string>
+				<string>3A615A7612067A53005EA021</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -660,14 +661,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>3A58AC1412064A8600DED65E</string>
+				<string>3A615A7712067A53005EA021</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>3A58AC1512064A8600DED65E</string>
-				<string>3A58AC1612064A8600DED65E</string>
-				<string>3A58AC1712064A8600DED65E</string>
-				<string>3A58AC1812064A8600DED65E</string>
-				<string>3A58AC1912064A8600DED65E</string>
+				<string>3A615A7812067A53005EA021</string>
+				<string>3A615A7912067A53005EA021</string>
+				<string>3A615A7A12067A53005EA021</string>
+				<string>3A615A7B12067A53005EA021</string>
+				<string>3A615A7C12067A53005EA021</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -701,8 +702,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>3A58AC1A12064A8700DED65E</string>
-		<string>3A58AC1B12064A8700DED65E</string>
+		<string>3A615A8712067A8F005EA021</string>
+		<string>3A615A7E12067A53005EA021</string>
 		<string>/Developer/Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/HopTo.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
