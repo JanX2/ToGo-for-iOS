@@ -316,6 +316,44 @@ makeDict: ;
 	NSString *url = [urlSourceDict objectForKey: @"URL"];
 	NSString *nameOfDevice = [urlSourceDict objectForKey: @"deviceName"];
 	
+	// Enumerate through to check for dupes.
+	NSAutoreleasePool *dupePool = [NSAutoreleasePool new];
+	
+	BOOL hasDupe = FALSE;
+	
+	for ( int i = 0; i < [urlList count]; ++i ) {
+		
+		// Grab the URL.
+		NSMutableDictionary *thisURL = [[urlList objectAtIndex: i] retain];
+		
+		// Check the address for equality.
+		if ( [url isEqualToString: [thisURL objectForKey: @"url"]] ) {
+			
+			// Check for previous dupes.
+			if ( hasDupe )
+				continue;
+			
+			// Remove it.
+			[urlList removeObjectAtIndex: i];
+			
+			// Add it back to the beginning.
+			[urlList insertObject: thisURL atIndex: 0];
+			
+			// Change the sending device.
+			[thisURL setObject: nameOfDevice forKey: @"deviceName"];
+			
+			// Wrap up.
+			[thisURL release];
+			goto wrapUp;
+			
+		}
+		
+		[thisURL release];
+		
+	}
+	
+	[dupePool drain];
+	
 	// Get the info set up in a dictionary.
 	NSMutableDictionary *urlDict = [self fetchMetadataForURL: url];
 	
@@ -327,6 +365,8 @@ makeDict: ;
 		[urlList insertObject: urlDict atIndex: 0];
 	else 
 		[urlList addObject: urlDict];
+	
+wrapUp: ;
 	
 	// We'll only hang on to the last 100.
 	if ( [urlList count] > 100 ) 

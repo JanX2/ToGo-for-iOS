@@ -270,7 +270,6 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>3A36BCF11173A98500FE4A6D</string>
 								<string>3A5F63171177CDEC000F7EC4</string>
-								<string>3A5F62AE1177BF4E000F7EC4</string>
 								<string>3A5F635B117800EE000F7EC4</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>3AFB320C116392E60033E972</string>
@@ -293,8 +292,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
-									<integer>4</integer>
+									<integer>15</integer>
+									<integer>11</integer>
 									<integer>3</integer>
 									<integer>0</integer>
 								</array>
@@ -337,7 +336,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>3AE1E6EC11638A2100981DF0</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Foundation+.m</string>
+								<string>FUURLManager.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -345,11 +344,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>3AE1E6ED11638A2100981DF0</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Foundation+.m</string>
+										<string>FUURLManager.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3AEB32E9120579160025AC82</string>
+										<string>3A58AC1312064A8600DED65E</string>
 										<key>history</key>
 										<array>
 											<string>3AB4E68F1182F00700EEF685</string>
@@ -363,7 +362,6 @@
 											<string>3A5DDDA711F55F3E0068F1E8</string>
 											<string>3A4F746B120255340052612E</string>
 											<string>3A4F747C120256010052612E</string>
-											<string>3A4F7496120258780052612E</string>
 											<string>3A7F946B12026D7200C74D3F</string>
 											<string>3A17085E1202C0C900115253</string>
 											<string>3A17085F1202C0C900115253</string>
@@ -374,18 +372,19 @@
 											<string>3AEB32701205597F0025AC82</string>
 											<string>3AEB32711205597F0025AC82</string>
 											<string>3AEB32731205597F0025AC82</string>
-											<string>3AEB327A12055E4F0025AC82</string>
 											<string>3AEB327D12055E4F0025AC82</string>
 											<string>3AEB327E12055E4F0025AC82</string>
 											<string>3AEB327F12055E4F0025AC82</string>
 											<string>3AEB329C120562060025AC82</string>
-											<string>3AEB32A9120562830025AC82</string>
-											<string>3AEB32C2120574210025AC82</string>
 											<string>3AEB32C3120574210025AC82</string>
 											<string>3AEB32DC120578130025AC82</string>
 											<string>3AEB32E3120578B00025AC82</string>
 											<string>3AEB32E4120578B00025AC82</string>
-											<string>3AEB32E8120579150025AC82</string>
+											<string>3A58AC041206452400DED65E</string>
+											<string>3A58AC051206452400DED65E</string>
+											<string>3A58AC1012064A8600DED65E</string>
+											<string>3A58AC1112064A8600DED65E</string>
+											<string>3A58AC1212064A8600DED65E</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -425,6 +424,8 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1082, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 152 1440 726 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -478,9 +479,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1082, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>0 152 1440 726 0 0 1440 878 </string>
+										<string>{{0, 0}, {568, 405}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -508,11 +507,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>3AEB31B91204F4300025AC82</string>
+				<string>3A58AC071206452400DED65E</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>3AEB31BA1204F4300025AC82</string>
+				<string>3A58AC081206452400DED65E</string>
 				<string>3AE1E6EC11638A2100981DF0</string>
-				<string>3AEB31BB1204F4300025AC82</string>
+				<string>3A58AC091206452400DED65E</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -661,14 +660,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>3AEB31BC1204F4300025AC82</string>
+				<string>3A58AC1412064A8600DED65E</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>3AEB31BD1204F4300025AC82</string>
-				<string>3AEB31BE1204F4300025AC82</string>
-				<string>3AEB31BF1204F4300025AC82</string>
-				<string>3AEB31C01204F4300025AC82</string>
-				<string>3AEB31C11204F4300025AC82</string>
+				<string>3A58AC1512064A8600DED65E</string>
+				<string>3A58AC1612064A8600DED65E</string>
+				<string>3A58AC1712064A8600DED65E</string>
+				<string>3A58AC1812064A8600DED65E</string>
+				<string>3A58AC1912064A8600DED65E</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -702,8 +701,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>3AEB31C81204F87B0025AC82</string>
-		<string>3AEB31C31204F4300025AC82</string>
+		<string>3A58AC1A12064A8700DED65E</string>
+		<string>3A58AC1B12064A8700DED65E</string>
 		<string>/Developer/Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/HopTo.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
