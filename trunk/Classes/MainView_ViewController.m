@@ -90,6 +90,8 @@ enum _kTableSections {
 	CALayer *webContainerLayer = [webViewContainer layer];
 	webContainerLayer.masksToBounds = YES;
 	webContainerLayer.cornerRadius = 10.0;
+	webContainerLayer.borderColor = [[[UIColor blackColor] colorWithAlphaComponent: 1.0] CGColor];
+	webContainerLayer.borderWidth = 1;
 	
 #ifdef IPAD
 	// Set up the table view right.
