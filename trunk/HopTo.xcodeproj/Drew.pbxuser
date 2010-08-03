@@ -46,9 +46,9 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecturePreference = armv6;
 		activeBuildConfigurationName = Distribution;
-		activeExecutable = 3AE1E6DC11637CA200981DF0 /* HopTo */;
+		activeExecutable = 3A707D4D118893870009A293 /* HopTo-iPad */;
 		activeSDKPreference = iphoneos4.0;
-		activeTarget = 1D6058900D05DD3D006BFB54 /* HopTo */;
+		activeTarget = 3A707D22118893870009A293 /* HopTo-iPad */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* HopTo */,
 		);
@@ -142,16 +142,13 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 302490696;
-			PBXWorkspaceStateSaveDate = 302490696;
+			PBXPerProjectTemplateStateSaveDate = 302568750;
+			PBXWorkspaceStateSaveDate = 302568750;
 		};
 		perUserProjectItems = {
 			3A0A16011207B226002486B4 /* PBXBookmark */ = 3A0A16011207B226002486B4 /* PBXBookmark */;
-			3A0A16021207B226002486B4 /* PBXTextBookmark */ = 3A0A16021207B226002486B4 /* PBXTextBookmark */;
-			3A0A16031207B226002486B4 /* PBXTextBookmark */ = 3A0A16031207B226002486B4 /* PBXTextBookmark */;
 			3A17085F1202C0C900115253 /* PBXTextBookmark */ = 3A17085F1202C0C900115253 /* PBXTextBookmark */;
 			3A1751E911C5B4C200B5D91A /* PBXBookmark */ = 3A1751E911C5B4C200B5D91A /* PBXBookmark */;
-			3A4F746B120255340052612E /* PlistBookmark */ = 3A4F746B120255340052612E /* PlistBookmark */;
 			3A4F747C120256010052612E /* PBXBookmark */ = 3A4F747C120256010052612E /* PBXBookmark */;
 			3A58AC041206452400DED65E /* PBXTextBookmark */ = 3A58AC041206452400DED65E /* PBXTextBookmark */;
 			3A58AC051206452400DED65E /* PBXTextBookmark */ = 3A58AC051206452400DED65E /* PBXTextBookmark */;
@@ -170,6 +167,9 @@
 			3A615A9712067E89005EA021 /* PBXBookmark */ = 3A615A9712067E89005EA021 /* PBXBookmark */;
 			3A7F946B12026D7200C74D3F /* PBXBookmark */ = 3A7F946B12026D7200C74D3F /* PBXBookmark */;
 			3AB4E68F1182F00700EEF685 /* PBXTextBookmark */ = 3AB4E68F1182F00700EEF685 /* PBXTextBookmark */;
+			3AD65E0C1208D69F009AD08D /* PBXTextBookmark */ = 3AD65E0C1208D69F009AD08D /* PBXTextBookmark */;
+			3AD65E0D1208D69F009AD08D /* PlistBookmark */ = 3AD65E0D1208D69F009AD08D /* PlistBookmark */;
+			3AD65E1B1208E1ED009AD08D /* PlistBookmark */ = 3AD65E1B1208E1ED009AD08D /* PlistBookmark */;
 			3AEB30F21204D94D0025AC82 /* PlistBookmark */ = 3AEB30F21204D94D0025AC82 /* PlistBookmark */;
 			3AEB3205120548110025AC82 /* PBXTextBookmark */ = 3AEB3205120548110025AC82 /* PBXTextBookmark */;
 			3AEB326E1205597F0025AC82 /* PBXTextBookmark */ = 3AEB326E1205597F0025AC82 /* PBXTextBookmark */;
@@ -200,26 +200,6 @@
 	3A0A16011207B226002486B4 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = 3A5DDBDE11F4F14A0068F1E8 /* Icon@2x.png */;
-	};
-	3A0A16021207B226002486B4 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 3A5F6403117827E3000F7EC4 /* PreviousURLs_ViewController.m */;
-		name = "PreviousURLs_ViewController.m: 151";
-		rLen = 0;
-		rLoc = 3923;
-		rType = 0;
-		vrLen = 1103;
-		vrLoc = 3142;
-	};
-	3A0A16031207B226002486B4 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 3A5F6403117827E3000F7EC4 /* PreviousURLs_ViewController.m */;
-		name = "PreviousURLs_ViewController.m: 162";
-		rLen = 0;
-		rLoc = 4054;
-		rType = 0;
-		vrLen = 1031;
-		vrLoc = 2998;
 	};
 	3A10512C11A7ED340009BFE4 /* Reachability.h */ = {
 		uiCtxt = {
@@ -283,18 +263,6 @@
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 1066}";
 		};
-	};
-	3A4F746B120255340052612E /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 3A896B6B118EA9E7008DEF0C /* Entitlements.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			"get-task-allow",
-		);
-		name = "/Developer/Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Entitlements.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
 	};
 	3A4F747C120256010052612E /* PBXBookmark */ = {
 		isa = PBXBookmark;
@@ -402,7 +370,7 @@
 	3A5F6403117827E3000F7EC4 /* PreviousURLs_ViewController.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{11205, 1690}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 18741}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1021, 9031}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 8939}}";
 			sepNavSelRange = "{4054, 0}";
 			sepNavVisRange = "{2998, 1031}";
 		};
@@ -573,6 +541,40 @@
 		rType = 0;
 		vrLen = 633;
 		vrLoc = 0;
+	};
+	3AD65E0C1208D69F009AD08D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3A5F6403117827E3000F7EC4 /* PreviousURLs_ViewController.m */;
+		name = "PreviousURLs_ViewController.m: 162";
+		rLen = 0;
+		rLoc = 4054;
+		rType = 0;
+		vrLen = 1031;
+		vrLoc = 2998;
+	};
+	3AD65E0D1208D69F009AD08D /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 3A896B6B118EA9E7008DEF0C /* Entitlements.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			"get-task-allow",
+		);
+		name = "/Developer/Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Entitlements.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	3AD65E1B1208E1ED009AD08D /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 3A896B6B118EA9E7008DEF0C /* Entitlements.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			"get-task-allow",
+		);
+		name = "/Developer/Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Entitlements.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
 	};
 	3AE1E6DC11637CA200981DF0 /* HopTo */ = {
 		isa = PBXExecutable;
