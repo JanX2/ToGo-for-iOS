@@ -50,6 +50,7 @@
 		3A5F635E11780107000F7EC4 /* FUURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F635D11780107000F7EC4 /* FUURLManager.m */; };
 		3A5F6405117827E3000F7EC4 /* PreviousURLs_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F6403117827E3000F7EC4 /* PreviousURLs_ViewController.m */; };
 		3A5F6406117827E3000F7EC4 /* OlderURL_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F6404117827E3000F7EC4 /* OlderURL_ViewController.xib */; };
+		3A6E948812098623006B5310 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDBDE11F4F14A0068F1E8 /* Icon@2x.png */; };
 		3A707D2D118893870009A293 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		3A707D2E118893870009A293 /* HopToAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* HopToAppDelegate.m */; };
 		3A707D2F118893870009A293 /* MainView_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* MainView_ViewController.m */; };
@@ -589,6 +590,7 @@
 				3A4F74A412025AF80052612E /* Background_iPad_Landscape.png in Resources */,
 				3A4F74A512025AF80052612E /* Background_iPad_Portrait.png in Resources */,
 				3A1708721202C1BF00115253 /* Background_iPhone.png in Resources */,
+				3A6E948812098623006B5310 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
