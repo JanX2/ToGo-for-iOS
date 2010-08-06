@@ -16,16 +16,20 @@
 "View Site" = "View Site";
 "View" = "View";
 "Send this Website" = "Send this Website";
+"Send" = "Send";
 "Past Websites" = "Past Websites";
 "Delete this Website" = "Delete this Website";
 "Cancel" = "Cancel";
 "Not Now" = "Not Now";
 "Save for Later" = "Save for Later";
 "Check it Out!" = "Check it Out!";
+"OK" = "OK";
+"Search" = "Search";
+"Back to Saved Site" = "Back to Saved Site";
+"View in Fullscreen" = "View in Full-screen";
 
 // Message Fragments
 "Sent from" = "Sent from";
-"No description found" = "No description found";
 "No title" = "No title";
 "Start ToGo on another device" = "Start ToGo on another device";
 "Choose a device" = "Choose a device";
@@ -33,12 +37,14 @@
 "Establishing a connection" = "Establishing a connection";
 "Sending site" = "Sending site";
 "New URL Part 1" = "has been sent to you by";
-"New URL Part 2" = "Would you like to view it now?"
+"New URL Part 2" = "Would you like to view it now?";
 
 // Complete Alerts
 "Success!" = "Success!";
 "Could not connect." = "Could not connect.";
-"Wifi Alert key" = "You must connect to a WiFi network in order to send or \
+"No URLs" = "No sites yet!";
+"No description found." = "No description found.";
+"Wifi Alert" = "You must connect to a WiFi network in order to send or \
 receive websites via ToGo.";
 "Bookmarklet Alert" = "Welcome to ToGo! Before you get started, maybe you'd like to \
 check out the Get It ToGo bookmarklet for your browser! It makes things much easier, and is required \
