@@ -34,6 +34,8 @@
 		3A4F74A412025AF80052612E /* Background_iPad_Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4F74A012025AF80052612E /* Background_iPad_Landscape.png */; };
 		3A4F74A512025AF80052612E /* Background_iPad_Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4F74A112025AF80052612E /* Background_iPad_Portrait.png */; };
 		3A50F1CB1174636100EECD86 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A50F1CA1174636000EECD86 /* Icon.png */; };
+		3A5B6BB9120BDB8D00C37794 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A5B6BB7120BDB8D00C37794 /* Localizable.strings */; };
+		3A5B6BBA120BDB8D00C37794 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A5B6BB7120BDB8D00C37794 /* Localizable.strings */; };
 		3A5DDBDF11F4F14A0068F1E8 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDBDE11F4F14A0068F1E8 /* Icon@2x.png */; };
 		3A5DDC1211F4F6380068F1E8 /* Background_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDC1011F4F6380068F1E8 /* Background_iPhone.png */; };
 		3A5DDC1311F4F6380068F1E8 /* Background_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DDC1111F4F6380068F1E8 /* Background_iPhone@2x.png */; };
@@ -129,6 +131,8 @@
 		3A4F74A012025AF80052612E /* Background_iPad_Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background_iPad_Landscape.png; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Background_iPad_Landscape.png"; sourceTree = DEVELOPER_DIR; };
 		3A4F74A112025AF80052612E /* Background_iPad_Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background_iPad_Portrait.png; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Background_iPad_Portrait.png"; sourceTree = DEVELOPER_DIR; };
 		3A50F1CA1174636000EECD86 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = SOURCE_ROOT; };
+		3A5B6BB8120BDB8D00C37794 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/en.lproj/Localizable.strings"; sourceTree = DEVELOPER_DIR; };
+		3A5B6BBB120BDBB800C37794 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/fr.lproj/Localizable.strings"; sourceTree = DEVELOPER_DIR; };
 		3A5DDBDE11F4F14A0068F1E8 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Icon@2x.png"; sourceTree = DEVELOPER_DIR; };
 		3A5DDC1011F4F6380068F1E8 /* Background_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background_iPhone.png; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Background_iPhone.png"; sourceTree = DEVELOPER_DIR; };
 		3A5DDC1111F4F6380068F1E8 /* Background_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background_iPhone@2x.png"; path = "Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/Background_iPhone@2x.png"; sourceTree = DEVELOPER_DIR; };
@@ -286,6 +290,7 @@
 				3AFB31EC1163900A0033E972 /* Images */,
 				8D1107310486CEB800E47090 /* HopTo-Info.plist */,
 				3A896B6B118EA9E7008DEF0C /* Entitlements.plist */,
+				3A5B6BB7120BDB8D00C37794 /* Localizable.strings */,
 			);
 			name = Resources;
 			sourceTree = SOURCE_ROOT;
@@ -533,6 +538,7 @@
 				French,
 				German,
 				en,
+				fr,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
@@ -566,6 +572,7 @@
 				3A5DDD5C11F54D5B0068F1E8 /* URLInfo_ViewController.xib in Resources */,
 				3A5DDD8611F55CF30068F1E8 /* Default@2x.png in Resources */,
 				3A7F946A12026D6400C74D3F /* Icon-Small@2x.png in Resources */,
+				3A5B6BB9120BDB8D00C37794 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +598,7 @@
 				3A4F74A512025AF80052612E /* Background_iPad_Portrait.png in Resources */,
 				3A1708721202C1BF00115253 /* Background_iPhone.png in Resources */,
 				3A6E948812098623006B5310 /* Icon@2x.png in Resources */,
+				3A5B6BBA120BDB8D00C37794 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,6 +652,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3A5B6BB7120BDB8D00C37794 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A5B6BB8120BDB8D00C37794 /* en */,
+				3A5B6BBB120BDBB800C37794 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {

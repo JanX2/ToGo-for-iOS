@@ -241,7 +241,7 @@ NSString * const FUSendURL_ViewControllerDidSendURLNotification = @"_FUSendURL_V
 {
 	if ( connection == deviceConnection ) {
 		
-		self.navigationItem.prompt = @"Could not connect. :(";
+		self.navigationItem.prompt = @"Could not connect.";
 		
 	}
 }

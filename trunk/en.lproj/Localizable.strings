@@ -1,0 +1,46 @@
+/***********************\
+	Main Localization
+\***********************/
+
+// Headers
+"Current Site" = "Current Site";
+"Details" = "Details";
+"Preview" = "Preview";
+"No WiFi" = "No WiFi";
+"New Site" = "New Site";
+"Get it ToGo" = "Get it ToGo";
+
+// Actions
+"Open in Safari" = "Open in Safari";
+"Open" = "Open";
+"View Site" = "View Site";
+"View" = "View";
+"Send this Website" = "Send this Website";
+"Past Websites" = "Past Websites";
+"Delete this Website" = "Delete this Website";
+"Cancel" = "Cancel";
+"Not Now" = "Not Now";
+"Save for Later" = "Save for Later";
+"Check it Out!" = "Check it Out!";
+
+// Message Fragments
+"Sent from" = "Sent from";
+"No description found" = "No description found";
+"No title" = "No title";
+"Start ToGo on another device" = "Start ToGo on another device";
+"Choose a device" = "Choose a device";
+"Now hit Send" = "Now hit Send";
+"Establishing a connection" = "Establishing a connection";
+"Sending site" = "Sending site";
+"New URL Part 1" = "has been sent to you by";
+"New URL Part 2" = "Would you like to view it now?"
+
+// Complete Alerts
+"Success!" = "Success!";
+"Could not connect." = "Could not connect.";
+"Wifi Alert key" = "You must connect to a WiFi network in order to send or \
+receive websites via ToGo.";
+"Bookmarklet Alert" = "Welcome to ToGo! Before you get started, maybe you'd like to \
+check out the Get It ToGo bookmarklet for your browser! It makes things much easier, and is required \
+for sending from your iPhone OS device. You can choose to check it out now, or add it to your list of \
+saved sites for later. Thank you and enjoy ToGo!";

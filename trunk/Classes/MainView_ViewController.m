@@ -66,6 +66,9 @@ enum _kTableSections {
 {
 	kSharedController = self;
 	
+	// Set the title.
+	self.navigationItem.title = LOCAL(@"Current Site");
+	
 	// The settings button.
 	/*self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed: @"20-gear2.png"] 
 																			   style: UIBarButtonItemStyleBordered target: self 
@@ -76,9 +79,6 @@ enum _kTableSections {
 	self.view.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed: @"Background_iPhone.png"]];
 	urlTable.backgroundColor = [UIColor clearColor];
 #endif
-	
-	// Set the title.
-	self.navigationItem.title = @"Current Site";
 	
 	// The buttons.
 	/*self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemEdit 
