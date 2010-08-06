@@ -276,6 +276,14 @@
 					</object>
 					<int key="connectionID">31</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">homeButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="392520414"/>
+					</object>
+					<int key="connectionID">32</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -439,7 +447,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">31</int>
+			<int key="maxID">32</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -493,8 +501,10 @@
 							<string>backButton</string>
 							<string>controlBar</string>
 							<string>forwardButton</string>
+							<string>homeButton</string>
 							<string>instructionsLabel</string>
 							<string>pinWheel</string>
+							<string>safariButton</string>
 							<string>stopButton</string>
 							<string>urlView</string>
 						</object>
@@ -503,8 +513,10 @@
 							<string>UIBarButtonItem</string>
 							<string>UIToolbar</string>
 							<string>UIBarButtonItem</string>
+							<string>UIBarButtonItem</string>
 							<string>UILabel</string>
 							<string>UIActivityIndicatorView</string>
+							<string>UIBarButtonItem</string>
 							<string>UIBarButtonItem</string>
 							<string>UIWebView</string>
 						</object>
@@ -516,8 +528,10 @@
 							<string>backButton</string>
 							<string>controlBar</string>
 							<string>forwardButton</string>
+							<string>homeButton</string>
 							<string>instructionsLabel</string>
 							<string>pinWheel</string>
+							<string>safariButton</string>
 							<string>stopButton</string>
 							<string>urlView</string>
 						</object>
@@ -536,12 +550,20 @@
 								<string key="candidateClassName">UIBarButtonItem</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">homeButton</string>
+								<string key="candidateClassName">UIBarButtonItem</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">instructionsLabel</string>
 								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">pinWheel</string>
 								<string key="candidateClassName">UIActivityIndicatorView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">safariButton</string>
+								<string key="candidateClassName">UIBarButtonItem</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">stopButton</string>

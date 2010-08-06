@@ -24,7 +24,7 @@
 	UIActivityIndicatorView *pinWheel;
 	UIWebView *urlView;
 	UIToolbar *controlBar;
-	UIBarButtonItem *backButton, *forwardButton, *stopButton;
+	UIBarButtonItem *backButton, *forwardButton, *stopButton, *homeButton, *safariButton;
 }
 
 #pragma mark Properties
@@ -35,7 +35,7 @@
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *pinWheel;
 @property (nonatomic, retain) IBOutlet UIWebView *urlView;
 @property (nonatomic, retain) IBOutlet UIToolbar *controlBar;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *backButton, *forwardButton, *stopButton;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *backButton, *forwardButton, *stopButton, *homeButton, *safariButton;
 
 #pragma mark Instance Management
 // Instance Management

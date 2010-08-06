@@ -58,7 +58,10 @@ NSString * const FUSendURL_ViewControllerDidSendURLNotification = @"_FUSendURL_V
 -(void) viewDidLoad
 {
 	// Set the title.
-	self.navigationItem.title = @"Send a Website";
+	self.navigationItem.title = LOCAL(@"Send a Site");
+	
+	// Set local text.
+	sendButton.title = LOCAL(@"Send");
 	
 	if ( DEVICE_TYPE == kFUDeviceiPad )
 		serverList.backgroundView = nil;
@@ -87,8 +90,8 @@ NSString * const FUSendURL_ViewControllerDidSendURLNotification = @"_FUSendURL_V
 	// Make sure we have a URL.
 	if ( self.preloadedURL == nil ) {
 		
-		UIAlertView *failAlert = [[[UIAlertView alloc] initWithTitle: @"No Site" message: @"No website selected!" 
-															delegate: self cancelButtonTitle: @"OK" otherButtonTitles: nil] autorelease];
+		UIAlertView *failAlert = [[[UIAlertView alloc] initWithTitle: LOCAL(@"No Site") message: LOCAL(@"No website selected!")
+															delegate: self cancelButtonTitle: LOCAL(@"OK") otherButtonTitles: nil] autorelease];
 		
 		[failAlert show];
 		
@@ -139,7 +142,7 @@ NSString * const FUSendURL_ViewControllerDidSendURLNotification = @"_FUSendURL_V
 -(IBAction) sendAction: (id) sender
 {
 	// Set the prompt.
-	self.navigationItem.prompt = @"Checking things out...";
+	self.navigationItem.prompt = LOCAL(@"Checking things out...");
 	
 	// First, figure out which row is selected.
 	NSInteger selectedIndex = [serverList indexPathForSelectedRow].row;
@@ -152,7 +155,7 @@ NSString * const FUSendURL_ViewControllerDidSendURLNotification = @"_FUSendURL_V
 	deviceConnection.delegate = self;
 	
 	// Progress report.
-	self.navigationItem.prompt = @"Establishing a connection...";
+	self.navigationItem.prompt = LOCAL(@"Establishing a connection...");
 	
 	// Connect.
 	[deviceConnection connect];
@@ -178,9 +181,9 @@ NSString * const FUSendURL_ViewControllerDidSendURLNotification = @"_FUSendURL_V
 	}
 	
 	if ( [finder.servers count] == 0 ) 
-		self.navigationItem.prompt = @"Start ToGo on another device...";
+		self.navigationItem.prompt = LOCAL(@"Start ToGo on another device...");
 	else 
-		self.navigationItem.prompt = @"Choose a device...";
+		self.navigationItem.prompt = LOCAL(@"Choose a device...");
 	
 	[tableData addObject: eachSection];
 	
@@ -228,7 +231,7 @@ NSString * const FUSendURL_ViewControllerDidSendURLNotification = @"_FUSendURL_V
 	if ( connection == deviceConnection ) {
 		
 		// Report progress.
-		self.navigationItem.prompt = @"Sending site...";
+		self.navigationItem.prompt = LOCAL(@"Sending site...");
 		
 		NSDictionary *packet = DICTIONARY([preloadedURL objectForKey: @"url"], @"url", DEVICE_NAME, @"sendingDeviceName");
 		
@@ -241,7 +244,7 @@ NSString * const FUSendURL_ViewControllerDidSendURLNotification = @"_FUSendURL_V
 {
 	if ( connection == deviceConnection ) {
 		
-		self.navigationItem.prompt = @"Could not connect.";
+		self.navigationItem.prompt = LOCAL(@"Could not connect.");
 		
 	}
 }
@@ -249,7 +252,7 @@ NSString * const FUSendURL_ViewControllerDidSendURLNotification = @"_FUSendURL_V
 -(void) connectionTerminated: (Connection *) connection
 {
 	// This is a successful connection, we'll assume.
-	self.navigationItem.prompt = @"Success!";
+	self.navigationItem.prompt = LOCAL(@"Success!");
 	
 	self.deviceConnection = nil;
 	
@@ -326,7 +329,7 @@ NSString * const FUSendURL_ViewControllerDidSendURLNotification = @"_FUSendURL_V
 -(void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath
 {
 	sendButton.enabled = YES;
-	self.navigationItem.prompt = @"Now hit Send...";
+	self.navigationItem.prompt = LOCAL(@"Now hit Send...");
 }
 
 -(void) tableView: (UITableView *) tableView didDeselectRowAtIndexPath: (NSIndexPath *) indexPath
@@ -334,7 +337,7 @@ NSString * const FUSendURL_ViewControllerDidSendURLNotification = @"_FUSendURL_V
 	if ( [tableView indexPathForSelectedRow] == nil ) {
 		
 		sendButton.enabled = NO;
-		self.navigationItem.prompt = @"Choose a device...";
+		self.navigationItem.prompt = LOCAL(@"Choose a device...");
 		
 	}
 }

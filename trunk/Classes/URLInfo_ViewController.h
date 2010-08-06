@@ -48,6 +48,7 @@ typedef enum _kURLInfoActions {
 	NSString *urlTextStr;
 	
 	// View
+	UILabel *detailsLabel;
 	UIWebView *urlText;
 	UITableView *urlTable;
 }
@@ -58,6 +59,7 @@ typedef enum _kURLInfoActions {
 @property (nonatomic, retain) NSMutableDictionary *urlObj;
 @property (nonatomic, retain) NSMutableArray *tableData;
 @property (nonatomic, retain) NSString *urlTextStr;
+@property (nonatomic, retain) IBOutlet UILabel *detailsLabel;
 @property (nonatomic, retain) IBOutlet UIWebView *urlText;
 @property (nonatomic, retain) IBOutlet UITableView *urlTable;
 

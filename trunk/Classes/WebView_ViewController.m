@@ -15,7 +15,7 @@
 @synthesize pinWheel;
 @synthesize urlView;
 @synthesize controlBar;
-@synthesize backButton, forwardButton, stopButton;
+@synthesize backButton, forwardButton, stopButton, homeButton, safariButton;
 
 #pragma mark Instance Management
 // Instance Management
@@ -34,6 +34,8 @@
 	[backButton release];
 	[forwardButton release];
 	[stopButton release];
+	[homeButton release];
+	[safariButton release];
 	
 	[super dealloc];
 }
@@ -43,7 +45,12 @@
 -(void) viewDidLoad
 {
 	// Set the title.
-	self.navigationItem.title = ( [urlObj objectForKey: @"title"] == nil ) ? @"Browser" : [urlObj objectForKey: @"title"];
+	self.navigationItem.title = ( [urlObj objectForKey: @"title"] == nil ) ? LOCAL(@"Browser") : LOCAL([urlObj objectForKey: @"title"]);
+	
+	// Set local text.
+	homeButton.title = LOCAL(@"Saved Page");
+	safariButton.title = LOCAL(@"Open in Safari");
+	instructionsLabel.text = LOCAL(@"Tap with 2 fingers to navigate...");
 	
 #ifndef IPAD
 	// Add the button.
@@ -247,8 +254,8 @@
 {
 #ifndef IPAD
 	// Confirm.
-	UIActionSheet *safariConfirm = [[[UIActionSheet alloc] initWithTitle: nil delegate: self cancelButtonTitle: @"Cancel" 
-												  destructiveButtonTitle: nil otherButtonTitles: @"Open in Safari", nil] autorelease];
+	UIActionSheet *safariConfirm = [[[UIActionSheet alloc] initWithTitle: nil delegate: self cancelButtonTitle: LOCAL(@"Cancel")
+												  destructiveButtonTitle: nil otherButtonTitles: LOCAL(@"Open in Safari"), nil] autorelease];
 	
 	[safariConfirm showInView: self.view];
 	

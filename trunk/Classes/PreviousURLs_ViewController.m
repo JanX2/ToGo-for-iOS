@@ -53,7 +53,10 @@
 -(void) viewDidLoad
 {
 	// Set the title.
-	self.navigationItem.title = @"Past Websites";
+	self.navigationItem.title = LOCAL(@"Past Websites");
+	
+	// Set local text.
+	urlSearch.placeholder = LOCAL(@"Search");
 	
 //#ifndef IPAD
 	// Set up the colors.
@@ -237,7 +240,7 @@
 	urlSearch.text = nil;
 	
 	if ( urlSearch.placeholder == nil ) 
-		urlSearch.placeholder = @"Search";
+		urlSearch.placeholder = LOCAL(@"Search");
 	
 	// Get rid of the button.
 	[self.navigationItem setLeftBarButtonItem: nil animated: YES];
@@ -282,7 +285,7 @@
 	[self.navigationItem setRightBarButtonItem: nil animated: NO];
 	
 	// Set up the bar.
-	if ( [urlSearch.placeholder isEqualToString: @"Search"] )
+	if ( [urlSearch.placeholder isEqualToString: LOCAL(@"Search")] )
 		urlSearch.placeholder = nil;
 	
 	urlSearch.text = urlSearch.placeholder;

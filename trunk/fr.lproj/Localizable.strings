@@ -9,6 +9,9 @@
 "Preview" = "Prévision";
 "No WiFi" = "Aucun Réseau WiFi";
 "New Site" = "Nouveau Site";
+"Browser" = "Navigateur";
+"Send a Site" = "Envoyer un Site";
+"Past Websites" = "Sites du passé";
 "Get it ToGo" = "Prendre à porter";
 
 // Actions
@@ -18,33 +21,34 @@
 "View" = "Voir";
 "Send this Website" = "Envoyer ce site";
 "Send" = "Envoyer";
-"Past Websites" = "Sites du passé";
 "Delete this Website" = "Supprimer ce site";
+"Delete" = "Supprimer";
 "Cancel" = "Annuler";
 "Not Now" = "Plus Tard";
 "Save for Later" = "Plus Tard";
 "Check it Out!" = "Voir Maintenant";
 "OK" = "OK";
 "Search" = "Réchercher";
-"Back to Saved Site" = "Retourner au Site Initial";
+"Saved Page" = "Page Initiale";
 "View in Fullscreen" = "Voir en plein écran";
 
 // Message Fragments
 "Sent from" = "Envoyé depuis";
-"No title" = "Aucun Titre";
-"Start ToGo on another device" = "Lancez ToGo sur un autre appareil";
-"Choose a device" = "Choisissez un appareil";
-"Now hit Send" = "Appuyez sur Envoyer";
-"Establishing a connection" = "Établissement de connexion";
-"Sending site" = "Envoi du site";
+"No Title" = "Aucun Titre";
 "New URL Part 1" = "a été envoyé à vous depuis";
 "New URL Part 2" = "Voulez-vous le voir maintenant?";
 
 // Complete Alerts
+"Start ToGo on another device..." = "Lancez ToGo sur un autre appareil...";
+"Choose a device..." = "Choisissez un appareil...";
+"Now hit Send..." = "Appuyez sur Envoyer...";
+"Establishing a connection..." = "Établissement de connexion...";
+"Sending site..." = "Envoi du site...";
 "Success!" = "Succès!";
-"Could not connect." = "ToGo n'a pas pu se connecter.";
+"Could not connect." = "N'a pas pu se connecter.";
 "No URLs" = "Vous n'avez aucun site!";
 "No description found." = "Aucune description montrer.";
+"Tap with 2 fingers to navigate..." = "Tapez avec 2 doigts pour naviguer...";
 "Wifi Alert" = "Il faut que vous vous connecter à un réseau WiFi pour envoyer ou \
 recevoir des sites webs avec ToGo.";
 "Bookmarklet Alert" = "Bienvenue chez ToGo! Avant commencer, veuillez \

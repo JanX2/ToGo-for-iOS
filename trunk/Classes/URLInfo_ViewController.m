@@ -24,6 +24,7 @@ typedef enum {
 @synthesize urlObj;
 @synthesize tableData;
 @synthesize urlTextStr;
+@synthesize detailsLabel;
 @synthesize urlText;
 @synthesize urlTable;
 
@@ -39,6 +40,7 @@ typedef enum {
 	[urlObj release];
 	[tableData release];
 	[urlTextStr release];
+	[detailsLabel release];
 	[urlText release];
 	[urlTable release];
 	
@@ -50,7 +52,10 @@ typedef enum {
 -(void) viewDidLoad
 {
 	// Set the title.
-	self.navigationItem.title = @"Site Info";
+	self.navigationItem.title = LOCAL(@"Site Info");
+	
+	// Set local text.
+	detailsLabel.text = LOCAL(@"Details");
 	
 	self.view.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed: @"Background_iPhone.png"]];
 	urlTable.backgroundColor = [UIColor clearColor];
@@ -102,9 +107,9 @@ typedef enum {
 					   src=\"file://%@\" alt=\"\" \
 					   width=\"16\" height=\"16\" />%@</h2> \
 					   <p>%@</p> \
-					   <p>Sent from %@.</p></body></html>", urlStyleStr, 
+					   <p>%@ %@.</p></body></html>", urlStyleStr, 
 					   [DOCUMENTS_DIRECTORY stringByAppendingPathComponent: [urlObj objectForKey: @"iconFileName"]], 
-					   title, description, senderName];
+					   LOCAL(title), LOCAL(description), LOCAL(@"Sent from"), senderName];
 	
 	[urlText loadHTMLString: urlTextStr baseURL: nil];
 	
@@ -119,9 +124,9 @@ typedef enum {
 	NSString *safariTitle = nil;
 	
 	if ( OS_VERSION >= kFUiOSVersion3_2 )
-		safariTitle = @"View Site";
+		safariTitle = LOCAL(@"View Site");
 	else 
-		safariTitle = @"Open in Safari";
+		safariTitle = LOCAL(@"Open in Safari");
 	
 	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, safariTitle, nil)];
 	
@@ -129,13 +134,13 @@ typedef enum {
 	
 	NEW_SECTION(@"");
 	
-	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, @"Send this Website", nil)];
+	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, LOCAL(@"Send this Website"), nil)];
 	
 	[tableData addObject: eachSection];
 	
 	NEW_SECTION(@"");
 	
-	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, @"Delete this Website", nil)];
+	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, LOCAL(@"Delete this Website"), nil)];
 	
 	[tableData addObject: eachSection];
 	
@@ -191,8 +196,8 @@ typedef enum {
 			
 		if ( IPSection == 2 ) {
 			
-			UIActionSheet *deleteConfirm = [[[UIActionSheet alloc] initWithTitle: nil delegate: self cancelButtonTitle: @"Cancel" 
-														  destructiveButtonTitle: @"Delete" otherButtonTitles: nil] autorelease];
+			UIActionSheet *deleteConfirm = [[[UIActionSheet alloc] initWithTitle: nil delegate: self cancelButtonTitle: LOCAL(@"Cancel") 
+														  destructiveButtonTitle: LOCAL(@"Delete") otherButtonTitles: nil] autorelease];
 			
 			[deleteConfirm showInView: self.view];
 			
@@ -228,8 +233,8 @@ typedef enum {
 		
 	} else if ( IPSection == kTableSectionDelete ) {
 		
-		UIActionSheet *deleteConfirm = [[[UIActionSheet alloc] initWithTitle: nil delegate: self cancelButtonTitle: @"Cancel" 
-													  destructiveButtonTitle: @"Delete" otherButtonTitles: nil] autorelease];
+		UIActionSheet *deleteConfirm = [[[UIActionSheet alloc] initWithTitle: nil delegate: self cancelButtonTitle: LOCAL(@"Cancel") 
+													  destructiveButtonTitle: LOCAL(@"Delete") otherButtonTitles: nil] autorelease];
 		
 		[deleteConfirm showInView: self.view];
 		
