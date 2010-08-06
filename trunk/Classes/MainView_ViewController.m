@@ -27,10 +27,10 @@ enum _kTableSections {
 @synthesize tableData;
 @synthesize urlTextStr;
 @synthesize urlText;
-@synthesize noURLsLabel, detailsLabel;
+@synthesize noURLsLabel, detailsLabel, previewLabel;
 @synthesize urlTable;
 @synthesize urlView;
-@synthesize openInSafariButton;
+@synthesize fullscreenButton;
 @synthesize webViewContainer;
 @synthesize activityIndicator;
 
@@ -51,9 +51,10 @@ enum _kTableSections {
 	[urlText release];
 	[noURLsLabel release];
 	[detailsLabel release];
+	[previewLabel release];
 	[urlTable release];
 	[urlView release];
-	[openInSafariButton release];
+	[fullscreenButton release];
 	[webViewContainer release];
 	[activityIndicator release];
 	
@@ -68,6 +69,12 @@ enum _kTableSections {
 	
 	// Set the title.
 	self.navigationItem.title = LOCAL(@"Current Site");
+	
+	// Set the labels.
+	detailsLabel.text = LOCAL(@"Details");
+	previewLabel.text = LOCAL(@"Preview");
+	noURLsLabel.text = LOCAL(@"No URLs");
+	fullscreenButton.title = LOCAL(@"View in Fullscreen");
 	
 	// The settings button.
 	/*self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed: @"20-gear2.png"] 
@@ -306,9 +313,9 @@ saved sites for later. Thank you and enjoy ToGo!"
 							src=\"file://%@\" alt=\"\" \
 							width=\"16\" height=\"16\" />%@</h2> \
 							<p>%@</p> \
-							<p>Sent from %@.</p></body></html>", urlStyleStr, 
+							<p>%@ %@.</p></body></html>", urlStyleStr, 
 							[DOCUMENTS_DIRECTORY stringByAppendingPathComponent: [currentURL objectForKey: @"iconFileName"]], 
-							title, description, senderName];
+							LOCAL(title), LOCAL(description), LOCAL(@"Sent from"), senderName];
 	
 	[urlText loadHTMLString: urlTextStr baseURL: nil];
 	noURLsLabel.hidden = TRUE;
@@ -344,12 +351,12 @@ makeTable: ;
 	NSString *safariTitle = nil;
 	
 #ifdef IPAD
-	safariTitle = @"Open in Safari";
+	safariTitle = LOCAL(@"Open in Safari");
 #else
 	if ( OS_VERSION >= kFUiOSVersion3_2 )
-		safariTitle = @"View Site";
+		safariTitle = LOCAL(@"View Site");
 	else 
-		safariTitle = @"Open in Safari";
+		safariTitle = LOCAL(@"Open in Safari");
 #endif
 		
 	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, safariTitle, nil)];
@@ -358,13 +365,13 @@ makeTable: ;
 	
 	NEW_SECTION(@"");
 	
-	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, @"Send this Website", nil)];
+	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, LOCAL(@"Send this Website"), nil)];
 	
 	[tableData addObject: eachSection];
 	
 	NEW_SECTION(@"");
 	
-	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, @"Past Websites", nil)];
+	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, LOCAL(@"Past Websites"), nil)];
 	
 	[tableData addObject: eachSection];
 	

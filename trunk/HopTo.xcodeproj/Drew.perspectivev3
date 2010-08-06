@@ -230,8 +230,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -273,6 +271,7 @@
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>3AFB320C116392E60033E972</string>
 								<string>3A2047A51185935D00554744</string>
+								<string>3A707D4E118893870009A293</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>3A5B6BB7120BDB8D00C37794</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
@@ -285,12 +284,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
+									<integer>37</integer>
+									<integer>36</integer>
+									<integer>31</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {336, 667}}</string>
+							<string>{{0, 66}, {336, 667}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -320,12 +321,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>3AE1E6EC11638A2100981DF0</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>HopToAppDelegate.m</string>
+								<string>Localizable.strings</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -333,11 +336,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>3AE1E6ED11638A2100981DF0</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>HopToAppDelegate.m</string>
+										<string>Localizable.strings</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3A5B6BE3120BF66300C37794</string>
+										<string>3A5B6C1B120C044D00C37794</string>
 										<key>history</key>
 										<array>
 											<string>3AB4E68F1182F00700EEF685</string>
@@ -374,13 +377,13 @@
 											<string>3A5B6BC1120BDD9A00C37794</string>
 											<string>3A5B6BC4120BDD9A00C37794</string>
 											<string>3A5B6BC5120BDD9A00C37794</string>
-											<string>3A5B6BD5120BDE9500C37794</string>
 											<string>3A5B6BDA120BE81400C37794</string>
 											<string>3A5B6BDB120BE81400C37794</string>
-											<string>3A5B6BDD120BE81400C37794</string>
-											<string>3A5B6BE0120BF66300C37794</string>
-											<string>3A5B6BE1120BF66300C37794</string>
-											<string>3A5B6BE2120BF66300C37794</string>
+											<string>3A5B6BFA120BFF3F00C37794</string>
+											<string>3A5B6C0D120C016600C37794</string>
+											<string>3A5B6C14120C019200C37794</string>
+											<string>3A5B6C19120C044D00C37794</string>
+											<string>3A5B6C1A120C044D00C37794</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -394,18 +397,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1082, 464}}</string>
+								<string>{{0, 0}, {1082, 680}}</string>
 								<key>RubberWindowFrame</key>
 								<string>-1 152 1440 726 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>464pt</string>
+							<string>680pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>216pt</string>
+							<string>0pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -419,9 +422,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1082, 189}}</string>
-										<key>RubberWindowFrame</key>
-										<string>-1 152 1440 726 0 0 1440 878 </string>
+										<string>{{10, 27}, {1082, -27}}</string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -475,7 +476,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{0, 0}, {568, 405}}</string>
+										<string>{{10, 27}, {1082, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>-1 152 1440 726 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -697,6 +700,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>3AFB31D511638CD10033E972</string>
 		<string>3A5B6BCD120BDD9E00C37794</string>
 		<string>3A5B6BCF120BDD9E00C37794</string>
 		<string>/Developer/Projects/iPhone Apps/ToGo/ToGo-for-iOS/trunk/HopTo.xcodeproj</string>
@@ -1534,7 +1538,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>3AFB31D511638CD10033E972</string>
-				<string>3A6F64EB118A536800EE2EBB</string>
+				<string>3A5B6C11120C016600C37794</string>
 				<string>3AFB31D411638CD10033E972</string>
 			</array>
 			<key>WindowString</key>

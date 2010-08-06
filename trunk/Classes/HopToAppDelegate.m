@@ -281,11 +281,14 @@ continueLaunch: ;
 	NSDictionary *theURL = [FUURLManager sharedManager].currentURL;
 	
 	// Create the alert view.
-	UIAlertView *urlAlert = [[[UIAlertView alloc] initWithTitle: @"New Site" 
-														message:  STRING_WITH_FORMAT(@"%@ has been sent to you by %@. Would you like to view it now?",
+	UIAlertView *urlAlert = [[[UIAlertView alloc] initWithTitle: LOCAL(@"New Site") 
+														message:  STRING_WITH_FORMAT(@"%@ %@ %@. %@",
 																					 [theURL objectForKey: @"title"], 
-																					 [theURL objectForKey: @"sendingDeviceName"])
-													   delegate: self cancelButtonTitle: @"Not Now" otherButtonTitles: @"View", nil] autorelease];
+																					 LOCAL(@"New URL Part 1"),
+																					 [theURL objectForKey: @"sendingDeviceName"],
+																					 LOCAL(@"New URL Part 2"))
+													   delegate: self cancelButtonTitle: LOCAL(@"Not Now") 
+											  otherButtonTitles: LOCAL(@"View"), nil] autorelease];
 	
 	if ( deviceType == kFUDeviceiPad ) {
 		
@@ -523,10 +526,9 @@ continueLaunch: ;
 
 -(void) showWifiWarning
 {
-	UIAlertView *wifiAlert = [[[UIAlertView alloc] initWithTitle: @"No WiFi" 
-														 message: @"You must connect to a WiFi network in order to send or \
-receive websites via ToGo." 
-														delegate: self cancelButtonTitle: @"OK" otherButtonTitles: nil] autorelease];
+	UIAlertView *wifiAlert = [[[UIAlertView alloc] initWithTitle: LOCAL(@"No WiFi") 
+														 message: LOCAL(@"Wifi Alert")
+														delegate: self cancelButtonTitle: LOCAL(@"OK") otherButtonTitles: nil] autorelease];
 	
 	wifiAlert.tag = 1;
 	

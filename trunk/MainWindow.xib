@@ -12,8 +12,6 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="9"/>
-			<integer value="2"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -42,11 +40,10 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 			<object class="IBUIWindow" id="380026005">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">1316</int>
 				<object class="NSPSMatrix" key="NSFrameMatrix"/>
 				<string key="NSFrameSize">{320, 480}</string>
-				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MCAwIDAAA</bytes>
@@ -80,7 +77,6 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="IBUIViewController" id="619226028">
 						<object class="IBUINavigationItem" key="IBUINavigationItem" id="394667715">
-							<reference key="IBUINavigationBar"/>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
 						<reference key="IBUIParentViewController" ref="701001926"/>
@@ -328,8 +324,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>activityIndicator</string>
 							<string>detailsLabel</string>
+							<string>fullscreenButton</string>
 							<string>noURLsLabel</string>
-							<string>openInSafariButton</string>
 							<string>urlTable</string>
 							<string>urlText</string>
 							<string>urlView</string>
@@ -339,8 +335,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIActivityIndicatorView</string>
 							<string>UILabel</string>
-							<string>UILabel</string>
 							<string>UIBarButtonItem</string>
+							<string>UILabel</string>
 							<string>UITableView</string>
 							<string>UIWebView</string>
 							<string>UIWebView</string>
@@ -353,8 +349,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>activityIndicator</string>
 							<string>detailsLabel</string>
+							<string>fullscreenButton</string>
 							<string>noURLsLabel</string>
-							<string>openInSafariButton</string>
 							<string>urlTable</string>
 							<string>urlText</string>
 							<string>urlView</string>
@@ -371,12 +367,12 @@
 								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
-								<string key="name">noURLsLabel</string>
-								<string key="candidateClassName">UILabel</string>
+								<string key="name">fullscreenButton</string>
+								<string key="candidateClassName">UIBarButtonItem</string>
 							</object>
 							<object class="IBToOneOutletInfo">
-								<string key="name">openInSafariButton</string>
-								<string key="candidateClassName">UIBarButtonItem</string>
+								<string key="name">noURLsLabel</string>
+								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">urlTable</string>

@@ -22,10 +22,10 @@
 	
 	// View
 	UIWebView *urlText;
-	UILabel *noURLsLabel, *detailsLabel;
+	UILabel *noURLsLabel, *detailsLabel, *previewLabel;
 	UITableView *urlTable;
 	UIWebView *urlView;
-	UIBarButtonItem *openInSafariButton;
+	UIBarButtonItem *fullscreenButton;
 	UIView *webViewContainer;
 	UIActivityIndicatorView *activityIndicator;
 }
@@ -36,10 +36,10 @@
 @property (nonatomic, retain) NSMutableArray *tableData;
 @property (nonatomic, retain) NSString *urlTextStr;
 @property (nonatomic, retain) IBOutlet UIWebView *urlText;
-@property (nonatomic, retain) IBOutlet UILabel *noURLsLabel, *detailsLabel;
+@property (nonatomic, retain) IBOutlet UILabel *noURLsLabel, *detailsLabel, *previewLabel;
 @property (nonatomic, retain) IBOutlet UITableView *urlTable;
 @property (nonatomic, retain) IBOutlet UIWebView *urlView;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *openInSafariButton;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *fullscreenButton;
 @property (nonatomic, retain) IBOutlet UIView *webViewContainer;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activityIndicator;
 
