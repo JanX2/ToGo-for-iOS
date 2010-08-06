@@ -230,6 +230,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -283,9 +285,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>29</integer>
-									<integer>28</integer>
-									<integer>23</integer>
+									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -320,14 +320,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>3AE1E6EC11638A2100981DF0</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Localizable.strings</string>
+								<string>HopToAppDelegate.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -335,11 +333,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>3AE1E6ED11638A2100981DF0</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Localizable.strings</string>
+										<string>HopToAppDelegate.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3A5B6BDF120BE81400C37794</string>
+										<string>3A5B6BE3120BF66300C37794</string>
 										<key>history</key>
 										<array>
 											<string>3AB4E68F1182F00700EEF685</string>
@@ -377,12 +375,12 @@
 											<string>3A5B6BC4120BDD9A00C37794</string>
 											<string>3A5B6BC5120BDD9A00C37794</string>
 											<string>3A5B6BD5120BDE9500C37794</string>
-											<string>3A5B6BD9120BE81400C37794</string>
 											<string>3A5B6BDA120BE81400C37794</string>
 											<string>3A5B6BDB120BE81400C37794</string>
-											<string>3A5B6BDC120BE81400C37794</string>
 											<string>3A5B6BDD120BE81400C37794</string>
-											<string>3A5B6BDE120BE81400C37794</string>
+											<string>3A5B6BE0120BF66300C37794</string>
+											<string>3A5B6BE1120BF66300C37794</string>
+											<string>3A5B6BE2120BF66300C37794</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

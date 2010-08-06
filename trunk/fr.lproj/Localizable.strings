@@ -2,5 +2,46 @@
 	Main Localization
 \***********************/
 
-// Core Text
+// Headers
 "Current Site" = "Site Actuel";
+"Site Info" = "Détails du Site";
+"Details" = "Infos";
+"Preview" = "Prévision";
+"No WiFi" = "Aucun Réseau WiFi";
+"New Site" = "Nouveau Site";
+"Get it ToGo" = "Prendre à porter";
+
+// Actions
+"Open in Safari" = "Ouvrir dans Safari";
+"Open" = "Ouvrir";
+"View Site" = "Voir ce site";
+"View" = "Voir";
+"Send this Website" = "Envoyer ce site";
+"Past Websites" = "Sites du passé";
+"Delete this Website" = "Supprimer ce site";
+"Cancel" = "Annuler";
+"Not Now" = "Plus Tard";
+"Save for Later" = "Plus Tard";
+"Check it Out!" = "Voir Maintenant";
+
+// Message Fragments
+"Sent from" = "Envoyé depuis";
+"No description found" = "Aucune description montrer";
+"No title" = "Aucun Titre";
+"Start ToGo on another device" = "Lancez ToGo sur un autre appareil";
+"Choose a device" = "Choisissez un appareil";
+"Now hit Send" = "Appuyez sur Envoyer";
+"Establishing a connection" = "Établissement de connexion";
+"Sending site" = "Envoi du site";
+"New URL Part 1" = "a été envoyé à vous depuis";
+"New URL Part 2" = "Voulez-vous le voir maintenant?"
+
+// Complete Alerts
+"Success!" = "Succès!";
+"Could not connect." = "ToGo n'a pas pu se connecter.";
+"Wifi Alert key" = "Il faut que vous vous connecter à un réseau WiFi pour envoyer ou \
+recevoir des sites webs avec ToGo.";
+"Bookmarklet Alert" = "Bienvenue chez ToGo! Avant commencer, veuillez \
+obtenir le bookmarklet Prendre à Porter! C'est nécessaire \
+pour envoyer des sites webs depuis votre appareil iOS. Vous pouvez le voir maintenant, mais le lien sera sauvegardé dans la \
+liste des sites pour voir plus tard. Merci, et bienvenue!";
