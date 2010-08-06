@@ -63,7 +63,8 @@ static id kSharedDelegate;
 // Application Lifecycle Management
 -(BOOL) application: (UIApplication *) application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions
 {
-	NSLog(@"Welcome to HopTo! Launch options = %@ %@", launchOptions, [[UIDevice currentDevice] model]);
+	NSLog(@"Welcome to HopTo! Launch options = %@ // Device: %@, %@", launchOptions, [[UIDevice currentDevice] model],
+		  [[UIDevice currentDevice] machine]);
 	
 	kSharedDelegate = self;
 	

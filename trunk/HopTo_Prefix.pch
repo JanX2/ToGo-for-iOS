@@ -26,6 +26,7 @@
 
 // Global Dependencies
 #import "Foundation+.h"
+#import "UIDevice+.h"
 #import "Constants.h"
 #import "HopToAppDelegate.h"
 

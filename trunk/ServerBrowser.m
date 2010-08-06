@@ -128,6 +128,16 @@
   if ( moreServicesComing ) {
     return;
   }
+	
+	NSLog(@"_______________Services Found___________________");
+	
+	for ( NSNetService *eachService in servers ) {
+		
+		NSLog(@"%@ -- %@, %@", [eachService name], eachService, [eachService TXTRecordData]);
+		
+	}
+	
+	NSLog(@"________________________________________________");
   
   // Sort alphabetically and let our delegate know
   [self sortServers];
