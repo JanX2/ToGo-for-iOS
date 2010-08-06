@@ -253,6 +253,14 @@ static void serverAcceptCallback(CFSocketRef socket, CFSocketCallBackType type, 
 
   // NetService will let us know about what's happening via delegate methods
 	[self.netService setDelegate:self];
+	
+	// Create the extra info.
+	NSDictionary *txtRecord = [NSDictionary dictionaryWithObjectsAndKeys: 
+							   [[UIDevice currentDevice] machine], @"modelID", 
+							   BOOLOBJ(NO), @"serviceIsInvalid", nil];
+	
+	// Set it.
+	NSLog(@"Txt Data set? %i", (int) [netService setTXTRecordData: [NSNetService dataFromTXTRecordDictionary: txtRecord]]);
   
   // Publish the service
 	[self.netService publish];

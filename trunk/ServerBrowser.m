@@ -133,7 +133,7 @@
 	
 	for ( NSNetService *eachService in servers ) {
 		
-		NSLog(@"%@ -- %@, %@", [eachService name], eachService, [eachService TXTRecordData]);
+		NSLog(@"%@ -- %@, %@", [eachService name], eachService, [NSNetService dictionaryFromTXTRecordData: [eachService TXTRecordData]]);
 		
 	}
 	
