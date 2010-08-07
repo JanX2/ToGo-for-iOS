@@ -10,7 +10,11 @@
 @class WebView_ViewController;
 @class URLInfo_ViewController;
 
-@interface PreviousURLs_ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, UISearchBarDelegate, SendURL_ViewControllerDelegate>
+@interface PreviousURLs_ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, UISearchBarDelegate, SendURL_ViewControllerDelegate
+#ifdef IPAD
+, URLInfoDelegate
+#endif
+>
 {
 	// Data
 	NSMutableArray *tableData, *searchData;
