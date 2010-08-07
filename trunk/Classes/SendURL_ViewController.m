@@ -189,8 +189,6 @@ NSString * const FUSendURL_ViewControllerDidSendURLNotification = @"_FUSendURL_V
 	
 	[tableData addObject: eachSection];
 	END_SECTION;
-	
-	END_STANDARD_TABLE_DATA_ARRAY
 }
 
 #pragma mark Reachability Management
