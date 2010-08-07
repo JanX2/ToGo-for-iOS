@@ -34,7 +34,7 @@ id dictionaryForTableViewCell(NSString *reuseID, int accessoryType,
 							   detailTextLabel, @"detailTextLabel"
 							   );
 	
-	return returnDict;
+	return [returnDict autorelease];
 }
 
 id dictionaryForTableViewCellWithData(NSString *reuseID, int accessoryType, 
