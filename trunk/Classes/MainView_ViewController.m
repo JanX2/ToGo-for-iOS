@@ -341,9 +341,8 @@ saved sites for later. Thank you and enjoy ToGo!"
 makeTable: ;
 	
 	// And now the table.
-	self.tableData = nil;
 	
-	tableData = [[NSMutableArray alloc] init];
+	NSMutableArray *newTableData = [[NSMutableArray alloc] init];
 	
 	STANDARD_TABLE_DATA_ARRAY
 	
@@ -363,28 +362,31 @@ makeTable: ;
 		
 	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, safariTitle, nil)];
 	
-	[tableData addObject: eachSection];
+	[newTableData addObject: eachSection];
 	
 	NEW_SECTION(@"");
 	
 	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, LOCAL(@"Send this Website"), nil)];
 	
-	[tableData addObject: eachSection];
+	[newTableData addObject: eachSection];
 	
 	NEW_SECTION(@"");
 	
 	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, LOCAL(@"Past Websites"), nil)];
 	
-	[tableData addObject: eachSection];
+	[newTableData addObject: eachSection];
 	
 /*#ifdef IPAD
 	NEW_SECTION(@"");
 	
 	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, @"Open in Safari", nil)];
 	
-	[tableData addObject: eachSection];
+	[newTableData addObject: eachSection];
 #endif*/
 	
+	self.tableData = newTableData;
+	[newTableData release];
+
 	END_STANDARD_TABLE_DATA_ARRAY
 }
 
