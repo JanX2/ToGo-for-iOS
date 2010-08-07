@@ -680,10 +680,7 @@
 				GCC_PREFIX_HEADER = HopTo_Prefix.pch;
 				INFOPLIST_FILE = "HopTo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_DIR)/Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = ToGo;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -704,10 +701,7 @@
 				GCC_PREFIX_HEADER = HopTo_Prefix.pch;
 				INFOPLIST_FILE = "HopTo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_DIR)/Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = ToGo;
 				SDKROOT = iphoneos4.0;
@@ -796,10 +790,7 @@
 				GCC_PREFIX_HEADER = HopTo_Prefix.pch;
 				INFOPLIST_FILE = "HopTo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_DIR)/Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = ToGo;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "454E7456-5C98-4DD6-AEAA-774F3EF27BCC";

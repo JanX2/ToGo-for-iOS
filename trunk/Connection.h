@@ -77,4 +77,9 @@
 // Send network message
 - (void)sendNetworkPacket:(NSDictionary*)packet;
 
+#if TARGET_OS_MAC
+- (void)netService:(NSNetService *)sender didNotResolve:(NSDictionary *)errorDict;
+- (void)netServiceDidResolveAddress:(NSNetService *)sender;
+#endif
+
 @end

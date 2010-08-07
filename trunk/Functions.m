@@ -43,6 +43,7 @@ NSDate * convertDateToMidnight(NSDate *date)
 	return midnight;
 }
 
+#if TARGET_OS_IPHONE
 // Table View Shortcuts
 id generateTableViewCell(UITableView *tableView, NSDictionary *cellData, NSString *reuseID)
 {
@@ -95,6 +96,7 @@ id generateTableViewCell(UITableView *tableView, NSDictionary *cellData, NSStrin
 	[cellData release];
 	return cell;
 }
+#endif
 
 // Math
 CGFloat radians(CGFloat degrees)
@@ -102,6 +104,7 @@ CGFloat radians(CGFloat degrees)
 	return (degrees * M_PI) / 180.0;
 }
 
+#if TARGET_OS_IPHONE
 NSString * FUStringSha1(NSString *input)
 {
 	const char *cstr = [input cStringUsingEncoding:NSUTF8StringEncoding];
@@ -119,6 +122,7 @@ NSString * FUStringSha1(NSString *input)
 	return output; 
 	
 }
+#endif
 
 // Localization
 NSString * FULocalizedString(NSString *source, NSString *flags)

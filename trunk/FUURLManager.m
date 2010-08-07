@@ -9,10 +9,10 @@
 
 #pragma mark Constants
 // Constants
-NSString * const FUURLManagerNewURLAddedNotification = @"_FUURLManagerNewURLAddedNotification";
-NSString * const FUURLManagerCurrentURLDidChangeNotification = @"_FUURLManagerCurrentURLDidChangeNotification";
-NSString * const FUURLManagerURLListDidChangeNotification = @"_FUURLManagerURLListDidChangeNotification";
-NSString * const FUURLManagerWillOpenURLNotification = @"_FUURLManagerWillOpenURLNotification";
+NSString * const FUURLManagerNewURLAddedNotification = @"FUURLManagerNewURLAddedNotification";
+NSString * const FUURLManagerCurrentURLDidChangeNotification = @"FUURLManagerCurrentURLDidChangeNotification";
+NSString * const FUURLManagerURLListDidChangeNotification = @"FUURLManagerURLListDidChangeNotification";
+NSString * const FUURLManagerWillOpenURLNotification = @"FUURLManagerWillOpenURLNotification";
 
 #pragma mark Globals
 // Globals
@@ -122,7 +122,11 @@ static FUURLManager *kSharedManager;
 		return;
 
 	// Do it.
+#if TARGET_OS_IPHONE
 	[[UIApplication sharedApplication] openURL: urlObj];
+#else if TARGET_OS_MAC
+	[[NSWorkspace sharedWorkspace] openURL: urlObj];
+#endif
 }
 
 #pragma mark URL Queries
@@ -185,16 +189,20 @@ static FUURLManager *kSharedManager;
 
 -(NSMutableDictionary *) fetchMetadataForURL: (NSString *) theURL
 {
+#if TARGET_OS_IPHONE
 	[[UIApplication sharedApplication] performSelectorOnMainThread: @selector(showNetworkIndicator:) 
 														withObject: BOOLOBJ(YES) waitUntilDone: YES];
+#endif
 	
 	// Set up a URL request to the Fappulous app hub.
 	NSURL *url = [NSURL URLWithString: STRING_WITH_FORMAT(@"http://fappulo.us/apps_backend/HopTo/websiteMeta.php?url=%@", theURL)];
 	
-	BOOL noInternet = FALSE;
+	BOOL noInternet = NO;
 	
+#if TARGET_OS_IPHONE
 	// First, test the internet connection.
 	noInternet = ( [INTERNET_MONTITOR currentReachabilityStatus] == NotReachable );
+#endif
 	
 	// Now get the metadata.
 	NSMutableDictionary *metaData = nil;
@@ -207,12 +215,13 @@ static FUURLManager *kSharedManager;
 	// Set up the base dictionary.
 	NSMutableDictionary *urlDict = [NSMutableDictionary dictionary];
 	
+#if TARGET_OS_IPHONE
 	// Let's try getting the favicon.
 	NSURL *favURL;
 	NSURL *favURLSrc = [NSURL URLWithString: theURL];
 	NSData *iconData = nil;
 	
-	BOOL useGoogle = FALSE;
+	BOOL useGoogle = NO;
 	
 getIcon: ;
 	
@@ -230,9 +239,9 @@ getIcon: ;
 	
 makeDict: ;
 	
-	UIImage *favIconSrc = [UIImage imageWithData: iconData];
+	NSorUIImage *favIconSrc = [NSorUIImage imageWithData: iconData];
 	NSData *favIconData = UIImagePNGRepresentation(favIconSrc);
-	UIImage *favIcon = [UIImage imageWithData: favIconData];
+	NSorUIImage *favIcon = [NSorUIImage imageWithData: favIconData];
 	
 	if ( favIcon == nil ) {
 		
@@ -255,6 +264,7 @@ makeDict: ;
 		[urlDict setObject: NSNULL forKey: @"iconFileName"];
 		
 	}
+#endif
 	
 	if ( [metaData objectForKey: @"title"] == nil ) 
 		[urlDict setObject: @"No Title" forKey: @"title"];
@@ -278,8 +288,10 @@ makeDict: ;
 	
 	metaData = nil;
 	
+#if TARGET_OS_IPHONE
 	[[UIApplication sharedApplication] performSelectorOnMainThread: @selector(showNetworkIndicator:) 
 														withObject: BOOLOBJ(NO) waitUntilDone: YES];
+#endif
 	
 	return urlDict;
 }
@@ -306,7 +318,7 @@ makeDict: ;
 -(void) addURL: (NSString *) url from: (NSString *) nameOfDevice
 {	
 	[NSThread detachNewThreadSelector: @selector(_addURLInBackground:) toTarget: self 
-						   withObject: DICTIONARY(url, @"URL", nameOfDevice, @"deviceName")];
+						   withObject: DICTIONARY(url, @"url", nameOfDevice, @"deviceName")];
 }
 
 -(void) _addURLInBackground: (NSDictionary *) urlSourceDict
@@ -315,7 +327,7 @@ makeDict: ;
 	NSAutoreleasePool *addPool = [NSAutoreleasePool new];
 	
 	// Grab the info out of the dictionary.
-	NSString *url = [urlSourceDict objectForKey: @"URL"];
+	NSString *url = [urlSourceDict objectForKey: @"url"];
 	NSString *nameOfDevice = [urlSourceDict objectForKey: @"deviceName"];
 	
 	// Enumerate through to check for dupes.

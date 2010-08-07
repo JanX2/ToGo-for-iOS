@@ -119,7 +119,7 @@
 - (void)netServiceBrowser:(NSNetServiceBrowser *)netServiceBrowser didFindService:(NSNetService *)netService moreComing:(BOOL)moreServicesComing {
   
   // Make sure that we don't have such service already (why would this happen? not sure)
-  if ( ![servers containsObject:netService] && ![[netService name] isEqualToString: [[UIDevice currentDevice] name]] ) {
+  if ( ![servers containsObject:netService] && ![[netService name] isEqualToString: DEVICE_NAME] ) {
     // Add it to our list
     [servers addObject:netService];
   }

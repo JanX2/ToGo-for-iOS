@@ -8,6 +8,7 @@
 
 #import "Foundation+.h"
 
+#if TARGET_OS_IPHONE
 @implementation UIApplication (Extended)
 
 -(void) showNetworkIndicator: (NSNumber *) show
@@ -16,6 +17,7 @@
 }
 
 @end
+#endif
 
 @implementation NSDictionary (MoreStuff)
 
@@ -53,7 +55,7 @@ id dictionaryForTableViewCellWithData(NSString *reuseID, int accessoryType,
 id dictionaryForTableViewCellWithImage(NSString *reuseID, int accessoryType, 
 									   int editingStyle, int selectionStyle, 
 									   NSString *textLabel, NSString *detailTextLabel, 
-									   UIImage *image)
+									   id image)
 {
 	id returnDict = dictionaryForTableViewCell(reuseID, accessoryType, 
 											   editingStyle, selectionStyle, 
@@ -68,7 +70,7 @@ id dictionaryForTableViewCellWithImage(NSString *reuseID, int accessoryType,
 id dictionaryForTableViewCellWithImageAndData(NSString *reuseID, int accessoryType, 
 											  int editingStyle, int selectionStyle, 
 											  NSString *textLabel, NSString *detailTextLabel, 
-											  UIImage *image, id data)
+											  id image, id data)
 {
 	id returnDict = dictionaryForTableViewCellWithData(reuseID, accessoryType, 
 											   editingStyle, selectionStyle, 
@@ -102,6 +104,7 @@ id dictionaryForTableViewCellWithImageAndData(NSString *reuseID, int accessoryTy
 
 @end
 
+#if TARGET_OS_IPHONE
 @implementation UIColor (FUE)
 
 +(id) flatBlueColor
@@ -110,6 +113,16 @@ id dictionaryForTableViewCellWithImageAndData(NSString *reuseID, int accessoryTy
 }
 
 @end
+#else if TARGET_OS_MAC
+@implementation NSColor (FUE)
+
++(id) flatBlueColor
+{
+	return [NSColor colorWithDeviceRed: 0.525490196078431 green: 0.572549019607843 blue: 0.8 alpha: 1.0];
+}
+
+@end
+#endif
 
 @implementation NSString (ParseCategory)
 
