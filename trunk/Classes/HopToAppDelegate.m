@@ -56,7 +56,7 @@ static id kSharedDelegate;
 {
 	return wifi;
 	
-	return [self checkReachablility];
+	return [self checkReachablility: nil];
 }
 
 #pragma mark Application Lifecycle Management

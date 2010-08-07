@@ -5,6 +5,8 @@
 // Dependencies
 #import "URLInfo_ViewController.h"
 
+#import "Functions.h"
+
 // Typedefs
 typedef enum {
 	kTableSectionOpenURL,

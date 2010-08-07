@@ -5,6 +5,8 @@
 // Dependencies
 #import "SendURL_ViewController.h"
 
+#import "Functions.h"
+
 #pragma mark Globals
 // Globals
 enum _kTableSections {

@@ -5,6 +5,8 @@
 // Dependencies
 #import "FUURLManager.h"
 
+#import "Functions.h"
+
 #pragma mark Constants
 // Constants
 NSString * const FUURLManagerNewURLAddedNotification = @"_FUURLManagerNewURLAddedNotification";

@@ -734,10 +734,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INFOPLIST_FILE = "HopTo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_DIR)/Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ToGoXL;
 				SDKROOT = iphoneos4.0;
@@ -761,10 +758,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INFOPLIST_FILE = "HopTo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_DIR)/Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = ToGoXL;
 				SDKROOT = iphoneos4.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -831,10 +825,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INFOPLIST_FILE = "HopTo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_DIR)/Projects/iPhone Apps/Libraries/libisimulate-3.x-1.5-20100218\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = ToGoXL;
 				SDKROOT = iphoneos4.0;
 				TARGETED_DEVICE_FAMILY = 2;

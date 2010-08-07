@@ -10,8 +10,7 @@
 @class WebView_ViewController;
 @class URLInfo_ViewController;
 
-@interface PreviousURLs_ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate,
-																	UISearchBarDelegate, URLInfoDelegate>
+@interface PreviousURLs_ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, UISearchBarDelegate, URLInfoDelegate, SendURL_ViewControllerDelegate>
 {
 	// Data
 	NSMutableArray *tableData, *searchData;

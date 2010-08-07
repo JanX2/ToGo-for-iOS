@@ -28,8 +28,10 @@
 #import <Foundation/Foundation.h>
 #import "ConnectionDelegate.h"
 
-@interface Connection : NSObject {
-  id<ConnectionDelegate> delegate;
+
+@interface Connection : NSObject <NSNetServiceDelegate> 
+{
+  id <ConnectionDelegate> delegate;
   
   // Connection info: host address and port
   NSString* host;

@@ -5,6 +5,8 @@
 // Dependencies
 #import "MainView_ViewController.h"
 
+#import "Functions.h"
+
 #pragma mark Globals
 // Globals
 static MainView_ViewController *kSharedController;

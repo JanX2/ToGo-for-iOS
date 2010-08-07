@@ -5,6 +5,8 @@
 // Dependencies
 #import "PreviousURLs_ViewController.h"
 
+#import "Functions.h"
+
 #pragma mark Macros
 // Macros
 #define TABLE_DATA(a, b) [[[tableData objectAtIndex: a] objectForKey: @"data"] objectAtIndex: b]
@@ -196,7 +198,7 @@
 	NSMutableArray *urlList = [[FUURLManager sharedManager] urlList];
 	
 	// Enumerate through and search.
-	for ( NSDictionary *eachURL in [[FUURLManager sharedManager] urlList] ) {
+	for ( NSDictionary *eachURL in urlList ) {
 		
 		// Go through each piece of the url data.
 		for ( NSString *eachKey in eachURL ) {
@@ -400,7 +402,7 @@
 	
 	// Set up a URL view.
 	URLInfo_ViewController *urlView = [[[URLInfo_ViewController alloc] init] autorelease];
-	urlView.urlObj = currentURL;
+	urlView.urlObj = [[currentURL mutableCopy] autorelease];
 	
 #ifdef IPAD
 	// Set the delegate.
