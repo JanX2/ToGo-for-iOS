@@ -133,18 +133,21 @@ typedef enum {
 	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, safariTitle, nil)];
 	
 	[tableData addObject: eachSection];
+	END_SECTION;
 	
 	NEW_SECTION(@"");
 	
 	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, LOCAL(@"Send this Website"), nil)];
 	
 	[tableData addObject: eachSection];
+	END_SECTION;
 	
 	NEW_SECTION(@"");
 	
 	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, LOCAL(@"Delete this Website"), nil)];
 	
 	[tableData addObject: eachSection];
+	END_SECTION;
 	
 	END_STANDARD_TABLE_DATA_ARRAY
 }

@@ -159,6 +159,7 @@
 	
 	[tableData addObject: eachSection];
 	
+	END_SECTION;
 	END_STANDARD_TABLE_DATA_ARRAY
 }
 
@@ -501,7 +502,7 @@ forRowAtIndexPath: (NSIndexPath *) indexPath
 		[tableView reloadData];
 	else {
 		
-		TABLE_UPDATE(tableView, [tableView deleteRowsAtIndexPaths: ARRAY(indexPath) withRowAnimation: UITableViewRowAnimationRight]);
+		TABLE_UPDATE(tableView, [tableView deleteRowsAtIndexPaths: [ARRAY(indexPath) autorelease] withRowAnimation: UITableViewRowAnimationRight]);
 		
 	}
 }
@@ -654,7 +655,7 @@ forRowAtIndexPath: (NSIndexPath *) indexPath
 			[urlTable reloadData];
 		else {
 			
-			TABLE_UPDATE(urlTable, [urlTable deleteRowsAtIndexPaths: ARRAY(indexPath) withRowAnimation: UITableViewRowAnimationRight]);
+			TABLE_UPDATE(urlTable, [urlTable deleteRowsAtIndexPaths: [ARRAY(indexPath) autorelease] withRowAnimation: UITableViewRowAnimationRight]);
 			
 		}
 		

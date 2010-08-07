@@ -363,18 +363,21 @@ makeTable: ;
 	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, safariTitle, nil)];
 	
 	[newTableData addObject: eachSection];
+	END_SECTION;
 	
 	NEW_SECTION(@"");
 	
 	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, LOCAL(@"Send this Website"), nil)];
 	
 	[newTableData addObject: eachSection];
+	END_SECTION;
 	
 	NEW_SECTION(@"");
 	
 	[sectionData addObject: dictionaryForTableViewCell(UITableViewCellReuseIDDefault, 1, 0, 2, LOCAL(@"Past Websites"), nil)];
 	
 	[newTableData addObject: eachSection];
+	END_SECTION;
 	
 /*#ifdef IPAD
 	NEW_SECTION(@"");

@@ -159,11 +159,6 @@ static FUURLManager *kSharedManager;
 		// Check it.
 		if ( [[aDict objectForKey: @"needsRefresh"] boolValue] ) {
 			
-			[aDict retain];
-			
-			// Remove it.
-			[urlList removeObjectAtIndex: i];
-			
 			// Create a new dictionary.
 			NSMutableDictionary *newDict = [self fetchMetadataForURL: [aDict objectForKey: @"url"]];
 			
@@ -171,8 +166,8 @@ static FUURLManager *kSharedManager;
 			[newDict setObject: [aDict objectForKey: @"url"] forKey: @"url"];
 			[newDict setObject: [aDict objectForKey: @"sendingDeviceName"] forKey: @"sendingDeviceName"];
 			
-			// Now add it back into the list.
-			[urlList insertObject: newDict atIndex: i];
+			// Replace it in the list.
+			[urlList replaceObjectAtIndex:i withObject:newDict];
 			
 		}
 		
@@ -370,6 +365,7 @@ makeDict: ;
 	}
 	
 	[dupePool drain];
+	dupePool = nil;
 	
 	// Get the info set up in a dictionary.
 	NSMutableDictionary *urlDict = [self fetchMetadataForURL: url];
@@ -396,6 +392,7 @@ wrapUp: ;
 	[[NSNotificationCenter defaultCenter] postNotificationName: FUURLManagerCurrentURLDidChangeNotification object: self];
 	[[NSNotificationCenter defaultCenter] postNotificationName: FUURLManagerURLListDidChangeNotification object: self];
 	
+	[dupePool drain];
 	[addPool drain];
 }
 

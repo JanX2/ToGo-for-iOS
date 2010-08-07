@@ -188,6 +188,7 @@ NSString * const FUSendURL_ViewControllerDidSendURLNotification = @"_FUSendURL_V
 		self.navigationItem.prompt = LOCAL(@"Choose a device...");
 	
 	[tableData addObject: eachSection];
+	END_SECTION;
 	
 	END_STANDARD_TABLE_DATA_ARRAY
 }
