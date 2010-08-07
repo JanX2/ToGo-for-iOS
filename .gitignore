@@ -7,3 +7,5 @@ build
 
 ## Ignore incredibly annoying .DS_Store files
 .DS_Store
+
+HopTo-Test.xcodeproj
