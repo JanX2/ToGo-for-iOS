@@ -390,7 +390,6 @@ makeTable: ;
 	self.tableData = newTableData;
 	[newTableData release];
 
-	END_STANDARD_TABLE_DATA_ARRAY
 }
 
 #pragma mark -

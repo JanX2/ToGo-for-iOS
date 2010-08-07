@@ -160,7 +160,6 @@
 	[tableData addObject: eachSection];
 	
 	END_SECTION;
-	END_STANDARD_TABLE_DATA_ARRAY
 }
 
 -(void) updateInfo

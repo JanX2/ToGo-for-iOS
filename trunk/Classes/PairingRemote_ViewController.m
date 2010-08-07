@@ -102,7 +102,7 @@
 	
 	[tableData addObject: eachSection];
 	
-	END_STANDARD_TABLE_DATA_ARRAY
+	END_SECTION;
 }
 
 #pragma mark -

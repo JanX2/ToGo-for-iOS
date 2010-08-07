@@ -134,7 +134,6 @@ LOCAL(a), @"header", nil]
 #define END_SECTION [sectionData release]; \
 [eachSection release]
 #define STANDARD_TABLE_DATA_ARRAY NSMutableDictionary *eachSection = nil; NSMutableArray *sectionData = nil;
-#define END_STANDARD_TABLE_DATA_ARRAY destroy(sectionData); destroy(eachSection);
 #define IGNORE_EVENTS [[UIApplication sharedApplication] beginIgnoringInteractionEvents]
 #define END_IGNORE_EVENTS [[UIApplication sharedApplication] endIgnoringInteractionEvents]
 
